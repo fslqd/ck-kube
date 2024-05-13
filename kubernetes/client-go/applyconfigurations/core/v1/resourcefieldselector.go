@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	resource "ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	resource "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
 )
 
 // ResourceFieldSelectorApplyConfiguration represents an declarative configuration of the ResourceFieldSelector type for use

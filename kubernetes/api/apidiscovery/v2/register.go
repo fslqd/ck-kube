@@ -17,13 +17,13 @@ limitations under the License.
 package v2
 
 import (
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 // GroupName is the group name for this API.
-const GroupName = "apidiscovery.ck-kube/kubernetes"
+const GroupName = "apidiscovery.github.com/fslqd/ck-kube/kubernetes"
 
 // SchemeGroupVersion is group version used to register these objects
 var SchemeGroupVersion = schema.GroupVersion{Group: GroupName, Version: "v2"}

@@ -19,10 +19,10 @@ package discovery
 import (
 	"fmt"
 
-	apidiscovery "ck-kube/kubernetes/api/apidiscovery/v2"
-	apidiscoveryv2beta1 "ck-kube/kubernetes/api/apidiscovery/v2beta1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	apidiscovery "github.com/fslqd/ck-kube/kubernetes/api/apidiscovery/v2"
+	apidiscoveryv2beta1 "github.com/fslqd/ck-kube/kubernetes/api/apidiscovery/v2beta1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 // StaleGroupVersionError encasulates failed GroupVersion marked "stale"

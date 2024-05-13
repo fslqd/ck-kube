@@ -17,13 +17,13 @@ limitations under the License.
 package v1alpha1
 
 import (
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 // GroupName is the group name use in this package
-const GroupName = "certificates.ck-kube/kubernetes"
+const GroupName = "certificates.github.com/fslqd/ck-kube/kubernetes"
 
 // SchemeGroupVersion is group version used to register these objects
 var SchemeGroupVersion = schema.GroupVersion{Group: GroupName, Version: "v1alpha1"}

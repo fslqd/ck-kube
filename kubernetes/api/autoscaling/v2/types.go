@@ -19,13 +19,13 @@ limitations under the License.
 package v2
 
 import (
-	v1 "ck-kube/kubernetes/api/core/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/api/resource"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // HorizontalPodAutoscaler is the configuration for a horizontal pod
 // autoscaler, which automatically manages the replica count of any resource
@@ -33,12 +33,12 @@ import (
 type HorizontalPodAutoscaler struct {
 	metav1.TypeMeta `json:",inline"`
 	// metadata is the standard object metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// spec is the specification for the behaviour of the autoscaler.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
 	// +optional
 	Spec HorizontalPodAutoscalerSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
@@ -85,7 +85,7 @@ type HorizontalPodAutoscalerSpec struct {
 
 // CrossVersionObjectReference contains enough information to let you identify the referred resource.
 type CrossVersionObjectReference struct {
-	// kind is the kind of the referent; More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// kind is the kind of the referent; More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	Kind string `json:"kind" protobuf:"bytes,1,opt,name=kind"`
 
 	// name is the name of the referent; More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
@@ -572,7 +572,7 @@ type MetricValueStatus struct {
 	AverageUtilization *int32 `json:"averageUtilization,omitempty" protobuf:"bytes,3,opt,name=averageUtilization"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.
 type HorizontalPodAutoscalerList struct {

@@ -19,9 +19,9 @@ package internal
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 )
 
 type lastAppliedUpdater struct {

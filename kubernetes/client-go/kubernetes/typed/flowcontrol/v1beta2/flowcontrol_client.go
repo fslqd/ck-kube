@@ -21,9 +21,9 @@ package v1beta2
 import (
 	"net/http"
 
-	v1beta2 "ck-kube/kubernetes/api/flowcontrol/v1beta2"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1beta2 "github.com/fslqd/ck-kube/kubernetes/api/flowcontrol/v1beta2"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type FlowcontrolV1beta2Interface interface {
@@ -32,7 +32,7 @@ type FlowcontrolV1beta2Interface interface {
 	PriorityLevelConfigurationsGetter
 }
 
-// FlowcontrolV1beta2Client is used to interact with features provided by the flowcontrol.apiserver.ck-kube/kubernetes group.
+// FlowcontrolV1beta2Client is used to interact with features provided by the flowcontrol.apiserver.github.com/fslqd/ck-kube/kubernetes group.
 type FlowcontrolV1beta2Client struct {
 	restClient rest.Interface
 }

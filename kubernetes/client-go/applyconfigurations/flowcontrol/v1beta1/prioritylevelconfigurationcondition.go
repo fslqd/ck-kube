@@ -19,8 +19,8 @@ limitations under the License.
 package v1beta1
 
 import (
-	v1beta1 "ck-kube/kubernetes/api/flowcontrol/v1beta1"
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1beta1 "github.com/fslqd/ck-kube/kubernetes/api/flowcontrol/v1beta1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // PriorityLevelConfigurationConditionApplyConfiguration represents an declarative configuration of the PriorityLevelConfigurationCondition type for use

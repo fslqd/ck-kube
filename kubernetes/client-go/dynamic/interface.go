@@ -19,11 +19,11 @@ package dynamic
 import (
 	"context"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
 )
 
 type Interface interface {

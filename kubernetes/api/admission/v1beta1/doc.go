@@ -19,6 +19,6 @@ limitations under the License.
 // +k8s:openapi-gen=false
 // +k8s:prerelease-lifecycle-gen=true
 
-// +groupName=admission.ck-kube/kubernetes
+// +groupName=admission.github.com/fslqd/ck-kube/kubernetes
 
-package v1beta1 // import "ck-kube/kubernetes/api/admission/v1beta1"
+package v1beta1 // import "github.com/fslqd/ck-kube/kubernetes/api/admission/v1beta1"

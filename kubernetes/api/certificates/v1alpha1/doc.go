@@ -19,6 +19,6 @@ limitations under the License.
 // +k8s:openapi-gen=true
 // +k8s:prerelease-lifecycle-gen=true
 
-// +groupName=certificates.ck-kube/kubernetes
+// +groupName=certificates.github.com/fslqd/ck-kube/kubernetes
 
-package v1alpha1 // import "ck-kube/kubernetes/api/certificates/v1alpha1"
+package v1alpha1 // import "github.com/fslqd/ck-kube/kubernetes/api/certificates/v1alpha1"

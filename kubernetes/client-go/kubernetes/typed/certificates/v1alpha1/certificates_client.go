@@ -21,9 +21,9 @@ package v1alpha1
 import (
 	"net/http"
 
-	v1alpha1 "ck-kube/kubernetes/api/certificates/v1alpha1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/certificates/v1alpha1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type CertificatesV1alpha1Interface interface {
@@ -31,7 +31,7 @@ type CertificatesV1alpha1Interface interface {
 	ClusterTrustBundlesGetter
 }
 
-// CertificatesV1alpha1Client is used to interact with features provided by the certificates.ck-kube/kubernetes group.
+// CertificatesV1alpha1Client is used to interact with features provided by the certificates.github.com/fslqd/ck-kube/kubernetes group.
 type CertificatesV1alpha1Client struct {
 	restClient rest.Interface
 }

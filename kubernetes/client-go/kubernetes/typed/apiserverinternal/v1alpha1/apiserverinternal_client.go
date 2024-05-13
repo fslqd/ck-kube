@@ -21,9 +21,9 @@ package v1alpha1
 import (
 	"net/http"
 
-	v1alpha1 "ck-kube/kubernetes/api/apiserverinternal/v1alpha1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/apiserverinternal/v1alpha1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type InternalV1alpha1Interface interface {
@@ -31,7 +31,7 @@ type InternalV1alpha1Interface interface {
 	StorageVersionsGetter
 }
 
-// InternalV1alpha1Client is used to interact with features provided by the internal.apiserver.ck-kube/kubernetes group.
+// InternalV1alpha1Client is used to interact with features provided by the internal.apiserver.github.com/fslqd/ck-kube/kubernetes group.
 type InternalV1alpha1Client struct {
 	restClient rest.Interface
 }

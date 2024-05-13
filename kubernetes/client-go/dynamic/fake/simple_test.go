@@ -21,12 +21,12 @@ import (
 	"fmt"
 	"testing"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/equality"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/equality"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
 	"github.com/google/go-cmp/cmp"
 )
 

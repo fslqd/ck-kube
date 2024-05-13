@@ -20,14 +20,14 @@ import (
 	"fmt"
 	"strings"
 
-	apiequality "ck-kube/kubernetes/apimachinery/pkg/api/equality"
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	v1validation "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/validation"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
-	"ck-kube/kubernetes/apimachinery/pkg/util/validation"
-	"ck-kube/kubernetes/apimachinery/pkg/util/validation/field"
+	apiequality "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/equality"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1validation "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/validation"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/validation"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/validation/field"
 )
 
 // FieldImmutableErrorMsg is a error message for field is immutable.

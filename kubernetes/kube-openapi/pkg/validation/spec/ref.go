@@ -22,7 +22,7 @@ import (
 
 	"github.com/go-openapi/jsonreference"
 
-	"ck-kube/kubernetes/kube-openapi/pkg/internal"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/internal"
 )
 
 // Refable is a struct for things that accept a $ref property

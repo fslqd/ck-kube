@@ -19,7 +19,7 @@ limitations under the License.
 package v2beta1
 
 import (
-	v2beta1 "ck-kube/kubernetes/api/autoscaling/v2beta1"
+	v2beta1 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2beta1"
 )
 
 // MetricStatusApplyConfiguration represents an declarative configuration of the MetricStatus type for use

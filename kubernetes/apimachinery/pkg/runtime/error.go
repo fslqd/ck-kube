@@ -21,7 +21,7 @@ import (
 	"reflect"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 type notRegisteredErr struct {

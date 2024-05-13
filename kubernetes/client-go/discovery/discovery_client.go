@@ -33,18 +33,18 @@ import (
 	"github.com/golang/protobuf/proto"
 	openapi_v2 "github.com/google/gnostic-models/openapiv2"
 
-	apidiscoveryv2 "ck-kube/kubernetes/api/apidiscovery/v2"
-	apidiscoveryv2beta1 "ck-kube/kubernetes/api/apidiscovery/v2beta1"
-	"ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/version"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	"ck-kube/kubernetes/client-go/openapi"
-	restclient "ck-kube/kubernetes/client-go/rest"
+	apidiscoveryv2 "github.com/fslqd/ck-kube/kubernetes/api/apidiscovery/v2"
+	apidiscoveryv2beta1 "github.com/fslqd/ck-kube/kubernetes/api/apidiscovery/v2beta1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/version"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 const (
@@ -64,15 +64,15 @@ const (
 	// Aggregated discovery content-type (v2beta1). NOTE: content-type parameters
 	// MUST be ordered (g, v, as) for server in "Accept" header (BUT we are resilient
 	// to ordering when comparing returned values in "Content-Type" header).
-	AcceptV2Beta1 = runtime.ContentTypeJSON + ";" + "g=apidiscovery.ck-kube/kubernetes;v=v2beta1;as=APIGroupDiscoveryList"
-	AcceptV2      = runtime.ContentTypeJSON + ";" + "g=apidiscovery.ck-kube/kubernetes;v=v2;as=APIGroupDiscoveryList"
+	AcceptV2Beta1 = runtime.ContentTypeJSON + ";" + "g=apidiscovery.github.com/fslqd/ck-kube/kubernetes;v=v2beta1;as=APIGroupDiscoveryList"
+	AcceptV2      = runtime.ContentTypeJSON + ";" + "g=apidiscovery.github.com/fslqd/ck-kube/kubernetes;v=v2;as=APIGroupDiscoveryList"
 	// Prioritize aggregated discovery by placing first in the order of discovery accept types.
 	acceptDiscoveryFormats = AcceptV2 + "," + AcceptV2Beta1 + "," + AcceptV1
 )
 
 // Aggregated discovery content-type GVK.
-var v2Beta1GVK = schema.GroupVersionKind{Group: "apidiscovery.ck-kube/kubernetes", Version: "v2beta1", Kind: "APIGroupDiscoveryList"}
-var v2GVK = schema.GroupVersionKind{Group: "apidiscovery.ck-kube/kubernetes", Version: "v2", Kind: "APIGroupDiscoveryList"}
+var v2Beta1GVK = schema.GroupVersionKind{Group: "apidiscovery.github.com/fslqd/ck-kube/kubernetes", Version: "v2beta1", Kind: "APIGroupDiscoveryList"}
+var v2GVK = schema.GroupVersionKind{Group: "apidiscovery.github.com/fslqd/ck-kube/kubernetes", Version: "v2", Kind: "APIGroupDiscoveryList"}
 
 // DiscoveryInterface holds the methods that discover server-supported API groups,
 // versions and resources.
@@ -359,9 +359,9 @@ func (d *DiscoveryClient) downloadAPIs() (
 // content-type parameters, as well as parameters added by
 // intermediaries such as proxies or gateways. Examples:
 //
-//	("application/json; g=apidiscovery.ck-kube/kubernetes;v=v2beta1;as=APIGroupDiscoveryList", {apidiscovery.ck-kube/kubernetes, v2beta1, APIGroupDiscoveryList}) = (true, nil)
-//	("application/json; as=APIGroupDiscoveryList;v=v2beta1;g=apidiscovery.ck-kube/kubernetes", {apidiscovery.ck-kube/kubernetes, v2beta1, APIGroupDiscoveryList}) = (true, nil)
-//	("application/json; as=APIGroupDiscoveryList;v=v2beta1;g=apidiscovery.ck-kube/kubernetes;charset=utf-8", {apidiscovery.ck-kube/kubernetes, v2beta1, APIGroupDiscoveryList}) = (true, nil)
+//	("application/json; g=apidiscovery.github.com/fslqd/ck-kube/kubernetes;v=v2beta1;as=APIGroupDiscoveryList", {apidiscovery.github.com/fslqd/ck-kube/kubernetes, v2beta1, APIGroupDiscoveryList}) = (true, nil)
+//	("application/json; as=APIGroupDiscoveryList;v=v2beta1;g=apidiscovery.github.com/fslqd/ck-kube/kubernetes", {apidiscovery.github.com/fslqd/ck-kube/kubernetes, v2beta1, APIGroupDiscoveryList}) = (true, nil)
+//	("application/json; as=APIGroupDiscoveryList;v=v2beta1;g=apidiscovery.github.com/fslqd/ck-kube/kubernetes;charset=utf-8", {apidiscovery.github.com/fslqd/ck-kube/kubernetes, v2beta1, APIGroupDiscoveryList}) = (true, nil)
 //	("application/json", any GVK) = (false, nil)
 //	("application/json; charset=UTF-8", any GVK) = (false, nil)
 //	("malformed content type string", any GVK) = (false, error)
@@ -721,7 +721,7 @@ func setDiscoveryDefaults(config *restclient.Config) error {
 		// discovery is expected to be bursty, increase the default burst
 		// to accommodate looking up resource info for many API groups.
 		// matches burst set by ConfigFlags#ToDiscoveryClient().
-		// see https://issue.ck-kube/kubernetes/86149
+		// see https://issue.github.com/fslqd/ck-kube/kubernetes/86149
 		config.Burst = defaultBurst
 	}
 	codec := runtime.NoopEncoder{Decoder: scheme.Codecs.UniversalDecoder()}

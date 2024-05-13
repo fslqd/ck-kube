@@ -19,8 +19,8 @@ package openapitest
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/client-go/openapi"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi"
 )
 
 // FakeClient implements openapi.Client interface, with hard-coded

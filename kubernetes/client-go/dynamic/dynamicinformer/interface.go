@@ -17,9 +17,9 @@ limitations under the License.
 package dynamicinformer
 
 import (
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/client-go/informers"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/informers"
 )
 
 // DynamicSharedInformerFactory provides access to a shared informer and lister for dynamic client

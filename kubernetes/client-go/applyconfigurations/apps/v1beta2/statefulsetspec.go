@@ -19,9 +19,9 @@ limitations under the License.
 package v1beta2
 
 import (
-	v1beta2 "ck-kube/kubernetes/api/apps/v1beta2"
-	corev1 "ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	v1beta2 "github.com/fslqd/ck-kube/kubernetes/api/apps/v1beta2"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // StatefulSetSpecApplyConfiguration represents an declarative configuration of the StatefulSetSpec type for use

@@ -16,4 +16,4 @@ limitations under the License.
 
 // Package meta provides functions for retrieving API metadata from objects
 // belonging to the Kubernetes API
-package meta // import "ck-kube/kubernetes/apimachinery/pkg/api/meta"
+package meta // import "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"

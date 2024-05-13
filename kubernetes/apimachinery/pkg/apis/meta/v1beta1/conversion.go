@@ -19,8 +19,8 @@ package v1beta1
 import (
 	"unsafe"
 
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/conversion"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/conversion"
 )
 
 // Convert_Slice_string_To_v1beta1_IncludeObjectPolicy allows converting a URL query parameter value

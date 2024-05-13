@@ -17,13 +17,13 @@ limitations under the License.
 package v1alpha1
 
 import (
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
 // +genclient:nonNamespaced
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ClusterTrustBundle is a cluster-scoped container for X.509 trust anchors
 // (root certificates).
@@ -57,7 +57,7 @@ type ClusterTrustBundleSpec struct {
 	//
 	// In order to create or update a ClusterTrustBundle that sets signerName,
 	// you must have the following cluster-scoped permission:
-	// group=certificates.ck-kube/kubernetes resource=signers resourceName=<the signer name>
+	// group=certificates.github.com/fslqd/ck-kube/kubernetes resource=signers resourceName=<the signer name>
 	// verb=attest.
 	//
 	// If signerName is not empty, then the ClusterTrustBundle object must be
@@ -90,7 +90,7 @@ type ClusterTrustBundleSpec struct {
 }
 
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ClusterTrustBundleList is a collection of ClusterTrustBundle objects
 type ClusterTrustBundleList struct {

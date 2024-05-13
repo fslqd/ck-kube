@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
-	corev1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 func TestActivePods(t *testing.T) {

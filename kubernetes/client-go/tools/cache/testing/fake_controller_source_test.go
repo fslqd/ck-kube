@@ -20,9 +20,9 @@ import (
 	"sync"
 	"testing"
 
-	v1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
 )
 
 // ensure the watch delivers the requested and only the requested items.

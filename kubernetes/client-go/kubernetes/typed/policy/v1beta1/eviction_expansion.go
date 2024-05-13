@@ -19,7 +19,7 @@ package v1beta1
 import (
 	"context"
 
-	policy "ck-kube/kubernetes/api/policy/v1beta1"
+	policy "github.com/fslqd/ck-kube/kubernetes/api/policy/v1beta1"
 )
 
 // The EvictionExpansion interface allows manually adding extra methods to the ScaleInterface.

@@ -29,14 +29,14 @@ import (
 	"strings"
 	"time"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/client-go/pkg/version"
-	clientcmdapi "ck-kube/kubernetes/client-go/tools/clientcmd/api"
-	"ck-kube/kubernetes/client-go/transport"
-	certutil "ck-kube/kubernetes/client-go/util/cert"
-	"ck-kube/kubernetes/client-go/util/flowcontrol"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/pkg/version"
+	clientcmdapi "github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/transport"
+	certutil "github.com/fslqd/ck-kube/kubernetes/client-go/util/cert"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/flowcontrol"
 	"k8s.io/klog/v2"
 )
 

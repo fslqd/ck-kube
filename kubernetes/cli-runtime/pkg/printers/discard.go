@@ -19,7 +19,7 @@ package printers
 import (
 	"io"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 )
 
 // NewDiscardingPrinter is a printer that discards all objects

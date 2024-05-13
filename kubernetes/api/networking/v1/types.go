@@ -17,20 +17,20 @@ limitations under the License.
 package v1
 
 import (
-	v1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/util/intstr"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/intstr"
 )
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // NetworkPolicy describes what network traffic is allowed for a set of Pods
 type NetworkPolicy struct {
 	metav1.TypeMeta `json:",inline"`
 
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -153,7 +153,7 @@ type NetworkPolicyPort struct {
 	// protocol represents the protocol (TCP, UDP, or SCTP) which traffic must match.
 	// If not specified, this field defaults to TCP.
 	// +optional
-	Protocol *v1.Protocol `json:"protocol,omitempty" protobuf:"bytes,1,opt,name=protocol,casttype=ck-kube/kubernetes/api/core/v1.Protocol"`
+	Protocol *v1.Protocol `json:"protocol,omitempty" protobuf:"bytes,1,opt,name=protocol,casttype=github.com/fslqd/ck-kube/kubernetes/api/core/v1.Protocol"`
 
 	// port represents the port on the given protocol. This can either be a numerical or named
 	// port on a pod. If this field is not provided, this matches all port names and
@@ -213,14 +213,14 @@ type NetworkPolicyPeer struct {
 	IPBlock *IPBlock `json:"ipBlock,omitempty" protobuf:"bytes,3,rep,name=ipBlock"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // NetworkPolicyList is a list of NetworkPolicy objects.
 type NetworkPolicyList struct {
 	metav1.TypeMeta `json:",inline"`
 
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -229,7 +229,7 @@ type NetworkPolicyList struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Ingress is a collection of rules that allow inbound connections to reach the
 // endpoints defined by a backend. An Ingress can be configured to give services
@@ -239,29 +239,29 @@ type Ingress struct {
 	metav1.TypeMeta `json:",inline"`
 
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// spec is the desired state of the Ingress.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Spec IngressSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
 	// status is the current state of the Ingress.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Status IngressStatus `json:"status,omitempty" protobuf:"bytes,3,opt,name=status"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // IngressList is a collection of Ingress.
 type IngressList struct {
 	metav1.TypeMeta `json:",inline"`
 
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -541,7 +541,7 @@ type ServiceBackendPort struct {
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // IngressClass represents the class of the Ingress, referenced by the Ingress
 // Spec. The `ingressclass.kubernetes.io/is-default-class` annotation can be
@@ -552,12 +552,12 @@ type IngressClass struct {
 	metav1.TypeMeta `json:",inline"`
 
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// spec is the desired state of the IngressClass.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Spec IngressClassSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 }
@@ -615,7 +615,7 @@ type IngressClassParametersReference struct {
 	Namespace *string `json:"namespace,omitempty" protobuf:"bytes,5,opt,name=namespace"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // IngressClassList is a collection of IngressClasses.
 type IngressClassList struct {

@@ -17,7 +17,7 @@ limitations under the License.
 package v1
 
 import (
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // Authorization is calculated against
@@ -82,7 +82,7 @@ type Subject struct {
 	Kind string `json:"kind" protobuf:"bytes,1,opt,name=kind"`
 	// APIGroup holds the API group of the referenced subject.
 	// Defaults to "" for ServiceAccount subjects.
-	// Defaults to "rbac.authorization.ck-kube/kubernetes" for User and Group subjects.
+	// Defaults to "rbac.authorization.github.com/fslqd/ck-kube/kubernetes" for User and Group subjects.
 	// +optional
 	APIGroup string `json:"apiGroup,omitempty" protobuf:"bytes,2,opt.name=apiGroup"`
 	// Name of the object being referenced.
@@ -105,7 +105,7 @@ type RoleRef struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding.
 type Role struct {
@@ -121,7 +121,7 @@ type Role struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // RoleBinding references a role, but does not contain it.  It can reference a Role in the same namespace or a ClusterRole in the global namespace.
 // It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given
@@ -143,7 +143,7 @@ type RoleBinding struct {
 	RoleRef RoleRef `json:"roleRef" protobuf:"bytes,3,opt,name=roleRef"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // RoleBindingList is a collection of RoleBindings
 type RoleBindingList struct {
@@ -156,7 +156,7 @@ type RoleBindingList struct {
 	Items []RoleBinding `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // RoleList is a collection of Roles
 type RoleList struct {
@@ -171,7 +171,7 @@ type RoleList struct {
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding.
 type ClusterRole struct {
@@ -203,7 +203,7 @@ type AggregationRule struct {
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole in the global namespace,
 // and adds who information via Subject.
@@ -224,7 +224,7 @@ type ClusterRoleBinding struct {
 	RoleRef RoleRef `json:"roleRef" protobuf:"bytes,3,opt,name=roleRef"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ClusterRoleBindingList is a collection of ClusterRoleBindings
 type ClusterRoleBindingList struct {
@@ -237,7 +237,7 @@ type ClusterRoleBindingList struct {
 	Items []ClusterRoleBinding `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ClusterRoleList is a collection of ClusterRoles
 type ClusterRoleList struct {

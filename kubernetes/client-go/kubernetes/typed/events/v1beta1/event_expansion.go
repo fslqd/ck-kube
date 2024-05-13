@@ -20,8 +20,8 @@ import (
 	"context"
 	"fmt"
 
-	"ck-kube/kubernetes/api/events/v1beta1"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
+	"github.com/fslqd/ck-kube/kubernetes/api/events/v1beta1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
 )
 
 // The EventExpansion interface allows manually adding extra methods to the EventInterface.

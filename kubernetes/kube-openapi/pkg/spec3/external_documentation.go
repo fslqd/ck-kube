@@ -19,10 +19,10 @@ package spec3
 import (
 	"encoding/json"
 
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/internal"
+	jsonv2 "github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/internal/third_party/go-json-experiment/json"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/validation/spec"
 	"github.com/go-openapi/swag"
-	"ck-kube/kubernetes/kube-openapi/pkg/internal"
-	jsonv2 "ck-kube/kubernetes/kube-openapi/pkg/internal/third_party/go-json-experiment/json"
-	"ck-kube/kubernetes/kube-openapi/pkg/validation/spec"
 )
 
 type ExternalDocumentation struct {

@@ -33,7 +33,7 @@ import (
 	"strings"
 	"time"
 
-	"ck-kube/kubernetes/client-go/util/keyutil"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/keyutil"
 	netutils "k8s.io/utils/net"
 )
 

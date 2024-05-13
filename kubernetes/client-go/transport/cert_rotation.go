@@ -24,11 +24,11 @@ import (
 	"sync"
 	"time"
 
-	utilnet "ck-kube/kubernetes/apimachinery/pkg/util/net"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/wait"
-	"ck-kube/kubernetes/client-go/util/connrotation"
-	"ck-kube/kubernetes/client-go/util/workqueue"
+	utilnet "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/net"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/wait"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/connrotation"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/workqueue"
 	"k8s.io/klog/v2"
 )
 

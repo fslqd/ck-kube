@@ -29,9 +29,9 @@ package v1
 // AUTO-GENERATED FUNCTIONS START HERE. DO NOT EDIT.
 var map_CronJob = map[string]string{
 	"":         "CronJob represents the configuration of a single cron job.",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"spec":     "Specification of the desired behavior of a cron job, including the schedule. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
-	"status":   "Current status of a cron job. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "Specification of the desired behavior of a cron job, including the schedule. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"status":   "Current status of a cron job. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (CronJob) SwaggerDoc() map[string]string {
@@ -40,7 +40,7 @@ func (CronJob) SwaggerDoc() map[string]string {
 
 var map_CronJobList = map[string]string{
 	"":         "CronJobList is a collection of cron jobs.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"items":    "items is the list of CronJobs.",
 }
 
@@ -77,9 +77,9 @@ func (CronJobStatus) SwaggerDoc() map[string]string {
 
 var map_Job = map[string]string{
 	"":         "Job represents the configuration of a single job.",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"spec":     "Specification of the desired behavior of a job. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
-	"status":   "Current status of a job. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "Specification of the desired behavior of a job. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"status":   "Current status of a job. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (Job) SwaggerDoc() map[string]string {
@@ -102,7 +102,7 @@ func (JobCondition) SwaggerDoc() map[string]string {
 
 var map_JobList = map[string]string{
 	"":         "JobList is a collection of jobs.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"items":    "items is the list of Jobs.",
 }
 
@@ -155,8 +155,8 @@ func (JobStatus) SwaggerDoc() map[string]string {
 
 var map_JobTemplateSpec = map[string]string{
 	"":         "JobTemplateSpec describes the data a Job should have when created from a template",
-	"metadata": "Standard object's metadata of the jobs created from this template. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"spec":     "Specification of the desired behavior of the job. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "Standard object's metadata of the jobs created from this template. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "Specification of the desired behavior of the job. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (JobTemplateSpec) SwaggerDoc() map[string]string {

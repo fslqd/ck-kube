@@ -17,9 +17,9 @@ limitations under the License.
 package scheme
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer"
 )
 
 // All kubectl code should eventually switch to use this Registry and Scheme instead of the global ones.

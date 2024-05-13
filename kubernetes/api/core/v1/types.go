@@ -17,10 +17,10 @@ limitations under the License.
 package v1
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/api/resource"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
-	"ck-kube/kubernetes/apimachinery/pkg/util/intstr"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/intstr"
 )
 
 const (
@@ -87,11 +87,11 @@ type VolumeSource struct {
 	NFS *NFSVolumeSource `json:"nfs,omitempty" protobuf:"bytes,7,opt,name=nfs"`
 	// iscsi represents an ISCSI Disk resource that is attached to a
 	// kubelet's host machine and then exposed to the pod.
-	// More info: https://examples.ck-kube/kubernetes/volumes/iscsi/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/iscsi/README.md
 	// +optional
 	ISCSI *ISCSIVolumeSource `json:"iscsi,omitempty" protobuf:"bytes,8,opt,name=iscsi"`
 	// glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime.
-	// More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md
 	// +optional
 	Glusterfs *GlusterfsVolumeSource `json:"glusterfs,omitempty" protobuf:"bytes,9,opt,name=glusterfs"`
 	// persistentVolumeClaimVolumeSource represents a reference to a
@@ -100,7 +100,7 @@ type VolumeSource struct {
 	// +optional
 	PersistentVolumeClaim *PersistentVolumeClaimVolumeSource `json:"persistentVolumeClaim,omitempty" protobuf:"bytes,10,opt,name=persistentVolumeClaim"`
 	// rbd represents a Rados Block Device mount on the host that shares a pod's lifetime.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md
 	// +optional
 	RBD *RBDVolumeSource `json:"rbd,omitempty" protobuf:"bytes,11,opt,name=rbd"`
 	// flexVolume represents a generic volume resource that is
@@ -108,7 +108,7 @@ type VolumeSource struct {
 	// +optional
 	FlexVolume *FlexVolumeSource `json:"flexVolume,omitempty" protobuf:"bytes,12,opt,name=flexVolume"`
 	// cinder represents a cinder volume attached and mounted on kubelets host machine.
-	// More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md
 	// +optional
 	Cinder *CinderVolumeSource `json:"cinder,omitempty" protobuf:"bytes,13,opt,name=cinder"`
 	// cephFS represents a Ceph FS mount on the host that shares a pod's lifetime
@@ -219,7 +219,7 @@ type PersistentVolumeSource struct {
 	HostPath *HostPathVolumeSource `json:"hostPath,omitempty" protobuf:"bytes,3,opt,name=hostPath"`
 	// glusterfs represents a Glusterfs volume that is attached to a host and
 	// exposed to the pod. Provisioned by an admin.
-	// More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md
 	// +optional
 	Glusterfs *GlusterfsPersistentVolumeSource `json:"glusterfs,omitempty" protobuf:"bytes,4,opt,name=glusterfs"`
 	// nfs represents an NFS mount on the host. Provisioned by an admin.
@@ -227,7 +227,7 @@ type PersistentVolumeSource struct {
 	// +optional
 	NFS *NFSVolumeSource `json:"nfs,omitempty" protobuf:"bytes,5,opt,name=nfs"`
 	// rbd represents a Rados Block Device mount on the host that shares a pod's lifetime.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md
 	// +optional
 	RBD *RBDPersistentVolumeSource `json:"rbd,omitempty" protobuf:"bytes,6,opt,name=rbd"`
 	// iscsi represents an ISCSI Disk resource that is attached to a
@@ -235,7 +235,7 @@ type PersistentVolumeSource struct {
 	// +optional
 	ISCSI *ISCSIPersistentVolumeSource `json:"iscsi,omitempty" protobuf:"bytes,7,opt,name=iscsi"`
 	// cinder represents a cinder volume attached and mounted on kubelets host machine.
-	// More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md
 	// +optional
 	Cinder *CinderPersistentVolumeSource `json:"cinder,omitempty" protobuf:"bytes,8,opt,name=cinder"`
 	// cephFS represents a Ceph FS mount on the host that shares a pod's lifetime
@@ -275,7 +275,7 @@ type PersistentVolumeSource struct {
 	// +optional
 	Local *LocalVolumeSource `json:"local,omitempty" protobuf:"bytes,20,opt,name=local"`
 	// storageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod
-	// More info: https://examples.ck-kube/kubernetes/volumes/storageos/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/storageos/README.md
 	// +optional
 	StorageOS *StorageOSPersistentVolumeSource `json:"storageos,omitempty" protobuf:"bytes,21,opt,name=storageos"`
 	// csi represents storage that is handled by an external CSI driver (Beta feature).
@@ -294,7 +294,7 @@ const (
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PersistentVolume (PV) is a storage resource provisioned by an administrator.
 // It is analogous to a node.
@@ -302,7 +302,7 @@ const (
 type PersistentVolume struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -431,13 +431,13 @@ type PersistentVolumeStatus struct {
 	LastPhaseTransitionTime *metav1.Time `json:"lastPhaseTransitionTime,omitempty" protobuf:"bytes,4,opt,name=lastPhaseTransitionTime"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PersistentVolumeList is a list of PersistentVolume items.
 type PersistentVolumeList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// items is a list of persistent volumes.
@@ -446,13 +446,13 @@ type PersistentVolumeList struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PersistentVolumeClaim is a user's request for and claim to a persistent volume
 type PersistentVolumeClaim struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -468,13 +468,13 @@ type PersistentVolumeClaim struct {
 	Status PersistentVolumeClaimStatus `json:"status,omitempty" protobuf:"bytes,3,opt,name=status"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PersistentVolumeClaimList is a list of PersistentVolumeClaim items.
 type PersistentVolumeClaimList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// items is a list of persistent volume claims.
@@ -512,7 +512,7 @@ type PersistentVolumeClaimSpec struct {
 	// +optional
 	VolumeMode *PersistentVolumeMode `json:"volumeMode,omitempty" protobuf:"bytes,6,opt,name=volumeMode,casttype=PersistentVolumeMode"`
 	// dataSource field can be used to specify either:
-	// * An existing VolumeSnapshot object (snapshot.storage.ck-kube/kubernetes/VolumeSnapshot)
+	// * An existing VolumeSnapshot object (snapshot.storage.github.com/fslqd/ck-kube/kubernetes/VolumeSnapshot)
 	// * An existing PVC (PersistentVolumeClaim)
 	// If the provisioner or an external controller can support the specified data source,
 	// it will create a new volume based on the contents of the specified data source.
@@ -574,7 +574,7 @@ type TypedObjectReference struct {
 	// Name is the name of resource being referenced
 	Name string `json:"name" protobuf:"bytes,3,opt,name=name"`
 	// Namespace is the namespace of resource being referenced
-	// Note that when a namespace is specified, a gateway.networking.ck-kube/kubernetes/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.
+	// Note that when a namespace is specified, a gateway.networking.github.com/fslqd/ck-kube/kubernetes/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.
 	// (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled.
 	// +featureGate=CrossNamespaceVolumeDataSource
 	// +optional
@@ -884,16 +884,16 @@ type EmptyDirVolumeSource struct {
 // Glusterfs volumes do not support ownership management or SELinux relabeling.
 type GlusterfsVolumeSource struct {
 	// endpoints is the endpoint name that details Glusterfs topology.
-	// More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
 	EndpointsName string `json:"endpoints" protobuf:"bytes,1,opt,name=endpoints"`
 
 	// path is the Glusterfs volume path.
-	// More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
 	Path string `json:"path" protobuf:"bytes,2,opt,name=path"`
 
 	// readOnly here will force the Glusterfs volume to be mounted with read-only permissions.
 	// Defaults to false.
-	// More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
 	// +optional
 	ReadOnly bool `json:"readOnly,omitempty" protobuf:"varint,3,opt,name=readOnly"`
 }
@@ -902,22 +902,22 @@ type GlusterfsVolumeSource struct {
 // Glusterfs volumes do not support ownership management or SELinux relabeling.
 type GlusterfsPersistentVolumeSource struct {
 	// endpoints is the endpoint name that details Glusterfs topology.
-	// More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
 	EndpointsName string `json:"endpoints" protobuf:"bytes,1,opt,name=endpoints"`
 
 	// path is the Glusterfs volume path.
-	// More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
 	Path string `json:"path" protobuf:"bytes,2,opt,name=path"`
 
 	// readOnly here will force the Glusterfs volume to be mounted with read-only permissions.
 	// Defaults to false.
-	// More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
 	// +optional
 	ReadOnly bool `json:"readOnly,omitempty" protobuf:"varint,3,opt,name=readOnly"`
 
 	// endpointsNamespace is the namespace that contains Glusterfs endpoint.
 	// If this field is empty, the EndpointNamespace defaults to the same namespace as the bound PVC.
-	// More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod
 	// +optional
 	EndpointsNamespace *string `json:"endpointsNamespace,omitempty" protobuf:"bytes,4,opt,name=endpointsNamespace"`
 }
@@ -926,11 +926,11 @@ type GlusterfsPersistentVolumeSource struct {
 // RBD volumes support ownership management and SELinux relabeling.
 type RBDVolumeSource struct {
 	// monitors is a collection of Ceph monitors.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	// +listType=atomic
 	CephMonitors []string `json:"monitors" protobuf:"bytes,1,rep,name=monitors"`
 	// image is the rados image name.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	RBDImage string `json:"image" protobuf:"bytes,2,opt,name=image"`
 	// fsType is the filesystem type of the volume that you want to mount.
 	// Tip: Ensure that the filesystem type is supported by the host operating system.
@@ -941,28 +941,28 @@ type RBDVolumeSource struct {
 	FSType string `json:"fsType,omitempty" protobuf:"bytes,3,opt,name=fsType"`
 	// pool is the rados pool name.
 	// Default is rbd.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	// +optional
 	RBDPool string `json:"pool,omitempty" protobuf:"bytes,4,opt,name=pool"`
 	// user is the rados user name.
 	// Default is admin.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	// +optional
 	RadosUser string `json:"user,omitempty" protobuf:"bytes,5,opt,name=user"`
 	// keyring is the path to key ring for RBDUser.
 	// Default is /etc/ceph/keyring.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	// +optional
 	Keyring string `json:"keyring,omitempty" protobuf:"bytes,6,opt,name=keyring"`
 	// secretRef is name of the authentication secret for RBDUser. If provided
 	// overrides keyring.
 	// Default is nil.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	// +optional
 	SecretRef *LocalObjectReference `json:"secretRef,omitempty" protobuf:"bytes,7,opt,name=secretRef"`
 	// readOnly here will force the ReadOnly setting in VolumeMounts.
 	// Defaults to false.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	// +optional
 	ReadOnly bool `json:"readOnly,omitempty" protobuf:"varint,8,opt,name=readOnly"`
 }
@@ -971,11 +971,11 @@ type RBDVolumeSource struct {
 // RBD volumes support ownership management and SELinux relabeling.
 type RBDPersistentVolumeSource struct {
 	// monitors is a collection of Ceph monitors.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	// +listType=atomic
 	CephMonitors []string `json:"monitors" protobuf:"bytes,1,rep,name=monitors"`
 	// image is the rados image name.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	RBDImage string `json:"image" protobuf:"bytes,2,opt,name=image"`
 	// fsType is the filesystem type of the volume that you want to mount.
 	// Tip: Ensure that the filesystem type is supported by the host operating system.
@@ -986,28 +986,28 @@ type RBDPersistentVolumeSource struct {
 	FSType string `json:"fsType,omitempty" protobuf:"bytes,3,opt,name=fsType"`
 	// pool is the rados pool name.
 	// Default is rbd.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	// +optional
 	RBDPool string `json:"pool,omitempty" protobuf:"bytes,4,opt,name=pool"`
 	// user is the rados user name.
 	// Default is admin.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	// +optional
 	RadosUser string `json:"user,omitempty" protobuf:"bytes,5,opt,name=user"`
 	// keyring is the path to key ring for RBDUser.
 	// Default is /etc/ceph/keyring.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	// +optional
 	Keyring string `json:"keyring,omitempty" protobuf:"bytes,6,opt,name=keyring"`
 	// secretRef is name of the authentication secret for RBDUser. If provided
 	// overrides keyring.
 	// Default is nil.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	// +optional
 	SecretRef *SecretReference `json:"secretRef,omitempty" protobuf:"bytes,7,opt,name=secretRef"`
 	// readOnly here will force the ReadOnly setting in VolumeMounts.
 	// Defaults to false.
-	// More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it
 	// +optional
 	ReadOnly bool `json:"readOnly,omitempty" protobuf:"varint,8,opt,name=readOnly"`
 }
@@ -1018,17 +1018,17 @@ type RBDPersistentVolumeSource struct {
 // Cinder volumes support ownership management and SELinux relabeling.
 type CinderVolumeSource struct {
 	// volumeID used to identify the volume in cinder.
-	// More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md
 	VolumeID string `json:"volumeID" protobuf:"bytes,1,opt,name=volumeID"`
 	// fsType is the filesystem type to mount.
 	// Must be a filesystem type supported by the host operating system.
 	// Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
-	// More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md
 	// +optional
 	FSType string `json:"fsType,omitempty" protobuf:"bytes,2,opt,name=fsType"`
 	// readOnly defaults to false (read/write). ReadOnly here will force
 	// the ReadOnly setting in VolumeMounts.
-	// More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md
 	// +optional
 	ReadOnly bool `json:"readOnly,omitempty" protobuf:"varint,3,opt,name=readOnly"`
 	// secretRef is optional: points to a secret object containing parameters used to connect
@@ -1043,17 +1043,17 @@ type CinderVolumeSource struct {
 // Cinder volumes support ownership management and SELinux relabeling.
 type CinderPersistentVolumeSource struct {
 	// volumeID used to identify the volume in cinder.
-	// More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md
 	VolumeID string `json:"volumeID" protobuf:"bytes,1,opt,name=volumeID"`
 	// fsType Filesystem type to mount.
 	// Must be a filesystem type supported by the host operating system.
 	// Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
-	// More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md
 	// +optional
 	FSType string `json:"fsType,omitempty" protobuf:"bytes,2,opt,name=fsType"`
 	// readOnly is Optional: Defaults to false (read/write). ReadOnly here will force
 	// the ReadOnly setting in VolumeMounts.
-	// More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md
 	// +optional
 	ReadOnly bool `json:"readOnly,omitempty" protobuf:"varint,3,opt,name=readOnly"`
 	// secretRef is Optional: points to a secret object containing parameters used to connect
@@ -1066,27 +1066,27 @@ type CinderPersistentVolumeSource struct {
 // Cephfs volumes do not support ownership management or SELinux relabeling.
 type CephFSVolumeSource struct {
 	// monitors is Required: Monitors is a collection of Ceph monitors
-	// More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
 	// +listType=atomic
 	Monitors []string `json:"monitors" protobuf:"bytes,1,rep,name=monitors"`
 	// path is Optional: Used as the mounted root, rather than the full Ceph tree, default is /
 	// +optional
 	Path string `json:"path,omitempty" protobuf:"bytes,2,opt,name=path"`
 	// user is optional: User is the rados user name, default is admin
-	// More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
 	// +optional
 	User string `json:"user,omitempty" protobuf:"bytes,3,opt,name=user"`
 	// secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret
-	// More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
 	// +optional
 	SecretFile string `json:"secretFile,omitempty" protobuf:"bytes,4,opt,name=secretFile"`
 	// secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty.
-	// More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
 	// +optional
 	SecretRef *LocalObjectReference `json:"secretRef,omitempty" protobuf:"bytes,5,opt,name=secretRef"`
 	// readOnly is Optional: Defaults to false (read/write). ReadOnly here will force
 	// the ReadOnly setting in VolumeMounts.
-	// More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
 	// +optional
 	ReadOnly bool `json:"readOnly,omitempty" protobuf:"varint,6,opt,name=readOnly"`
 }
@@ -1107,27 +1107,27 @@ type SecretReference struct {
 // Cephfs volumes do not support ownership management or SELinux relabeling.
 type CephFSPersistentVolumeSource struct {
 	// monitors is Required: Monitors is a collection of Ceph monitors
-	// More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
 	// +listType=atomic
 	Monitors []string `json:"monitors" protobuf:"bytes,1,rep,name=monitors"`
 	// path is Optional: Used as the mounted root, rather than the full Ceph tree, default is /
 	// +optional
 	Path string `json:"path,omitempty" protobuf:"bytes,2,opt,name=path"`
 	// user is Optional: User is the rados user name, default is admin
-	// More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
 	// +optional
 	User string `json:"user,omitempty" protobuf:"bytes,3,opt,name=user"`
 	// secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret
-	// More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
 	// +optional
 	SecretFile string `json:"secretFile,omitempty" protobuf:"bytes,4,opt,name=secretFile"`
 	// secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty.
-	// More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
 	// +optional
 	SecretRef *SecretReference `json:"secretRef,omitempty" protobuf:"bytes,5,opt,name=secretRef"`
 	// readOnly is Optional: Defaults to false (read/write). ReadOnly here will force
 	// the ReadOnly setting in VolumeMounts.
-	// More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
+	// More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it
 	// +optional
 	ReadOnly bool `json:"readOnly,omitempty" protobuf:"varint,6,opt,name=readOnly"`
 }
@@ -3759,15 +3759,15 @@ type PodSpec struct {
 	// If specified, all readiness gates will be evaluated for pod readiness.
 	// A pod is ready when all its containers are ready AND
 	// all conditions specified in the readiness gates have status equal to "True"
-	// More info: https://git.ck-kube/kubernetes/enhancements/keps/sig-network/580-pod-readiness-gates
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/enhancements/keps/sig-network/580-pod-readiness-gates
 	// +optional
 	// +listType=atomic
 	ReadinessGates []PodReadinessGate `json:"readinessGates,omitempty" protobuf:"bytes,28,opt,name=readinessGates"`
-	// RuntimeClassName refers to a RuntimeClass object in the node.ck-kube/kubernetes group, which should be used
+	// RuntimeClassName refers to a RuntimeClass object in the node.github.com/fslqd/ck-kube/kubernetes group, which should be used
 	// to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run.
 	// If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit class with an
 	// empty definition that uses the default runtime handler.
-	// More info: https://git.ck-kube/kubernetes/enhancements/keps/sig-node/585-runtime-class
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/enhancements/keps/sig-node/585-runtime-class
 	// +optional
 	RuntimeClassName *string `json:"runtimeClassName,omitempty" protobuf:"bytes,29,opt,name=runtimeClassName"`
 	// EnableServiceLinks indicates whether information about services should be injected into pod's
@@ -3786,7 +3786,7 @@ type PodSpec struct {
 	// The RuntimeClass admission controller will reject Pod create requests which have the overhead already
 	// set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value
 	// defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero.
-	// More info: https://git.ck-kube/kubernetes/enhancements/keps/sig-node/688-pod-overhead/README.md
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/enhancements/keps/sig-node/688-pod-overhead/README.md
 	// +optional
 	Overhead ResourceList `json:"overhead,omitempty" protobuf:"bytes,32,opt,name=overhead"`
 	// TopologySpreadConstraints describes how a group of pods ought to spread across topology
@@ -4661,39 +4661,39 @@ type PodStatus struct {
 	ResourceClaimStatuses []PodResourceClaimStatus `json:"resourceClaimStatuses,omitempty" patchStrategy:"merge,retainKeys" patchMergeKey:"name" protobuf:"bytes,15,rep,name=resourceClaimStatuses"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PodStatusResult is a wrapper for PodStatus returned by kubelet that can be encode/decoded
 type PodStatusResult struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// Most recently observed status of the pod.
 	// This data may not be up to date.
 	// Populated by the system.
 	// Read-only.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Status PodStatus `json:"status,omitempty" protobuf:"bytes,2,opt,name=status"`
 }
 
 // +genclient
 // +genclient:method=UpdateEphemeralContainers,verb=update,subresource=ephemeralcontainers
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Pod is a collection of containers that can run on a host. This resource is created
 // by clients and scheduled onto hosts.
 type Pod struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// Specification of the desired behavior of the pod.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Spec PodSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
@@ -4701,63 +4701,63 @@ type Pod struct {
 	// This data may not be up to date.
 	// Populated by the system.
 	// Read-only.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Status PodStatus `json:"status,omitempty" protobuf:"bytes,3,opt,name=status"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PodList is a list of Pods.
 type PodList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// List of pods.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md
 	Items []Pod `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
 // PodTemplateSpec describes the data a pod should have when created from a template
 type PodTemplateSpec struct {
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// Specification of the desired behavior of the pod.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Spec PodSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PodTemplate describes a template for creating copies of a predefined pod.
 type PodTemplate struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// Template defines the pods that will be created from this pod template.
-	// https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Template PodTemplateSpec `json:"template,omitempty" protobuf:"bytes,2,opt,name=template"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PodTemplateList is a list of PodTemplates.
 type PodTemplateList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -4863,9 +4863,9 @@ type ReplicationControllerCondition struct {
 }
 
 // +genclient
-// +genclient:method=GetScale,verb=get,subresource=scale,result=ck-kube/kubernetes/api/autoscaling/v1.Scale
-// +genclient:method=UpdateScale,verb=update,subresource=scale,input=ck-kube/kubernetes/api/autoscaling/v1.Scale,result=ck-kube/kubernetes/api/autoscaling/v1.Scale
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +genclient:method=GetScale,verb=get,subresource=scale,result=github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v1.Scale
+// +genclient:method=UpdateScale,verb=update,subresource=scale,input=github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v1.Scale,result=github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v1.Scale
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ReplicationController represents the configuration of a replication controller.
 type ReplicationController struct {
@@ -4873,12 +4873,12 @@ type ReplicationController struct {
 
 	// If the Labels of a ReplicationController are empty, they are defaulted to
 	// be the same as the Pod(s) that the replication controller manages.
-	// Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// Spec defines the specification of the desired behavior of the replication controller.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Spec ReplicationControllerSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
@@ -4886,18 +4886,18 @@ type ReplicationController struct {
 	// This data may be out of date by some window of time.
 	// Populated by the system.
 	// Read-only.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Status ReplicationControllerStatus `json:"status,omitempty" protobuf:"bytes,3,opt,name=status"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ReplicationControllerList is a collection of replication controllers.
 type ReplicationControllerList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -5433,7 +5433,7 @@ type ServicePort struct {
 
 // +genclient
 // +genclient:skipVerbs=deleteCollection
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Service is a named abstraction of software service (for example, mysql) consisting of local port
 // (for example 3306) that the proxy listens on, and the selector that determines which pods
@@ -5441,19 +5441,19 @@ type ServicePort struct {
 type Service struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// Spec defines the behavior of a service.
-	// https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Spec ServiceSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
 	// Most recently observed status of the service.
 	// Populated by the system.
 	// Read-only.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Status ServiceStatus `json:"status,omitempty" protobuf:"bytes,3,opt,name=status"`
 }
@@ -5464,13 +5464,13 @@ const (
 	ClusterIPNone = "None"
 )
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ServiceList holds a list of services.
 type ServiceList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -5479,8 +5479,8 @@ type ServiceList struct {
 }
 
 // +genclient
-// +genclient:method=CreateToken,verb=create,subresource=token,input=ck-kube/kubernetes/api/authentication/v1.TokenRequest,result=ck-kube/kubernetes/api/authentication/v1.TokenRequest
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +genclient:method=CreateToken,verb=create,subresource=token,input=github.com/fslqd/ck-kube/kubernetes/api/authentication/v1.TokenRequest,result=github.com/fslqd/ck-kube/kubernetes/api/authentication/v1.TokenRequest
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ServiceAccount binds together:
 // * a name, understood by users, and perhaps by peripheral systems, for an identity
@@ -5489,7 +5489,7 @@ type ServiceList struct {
 type ServiceAccount struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -5519,13 +5519,13 @@ type ServiceAccount struct {
 	AutomountServiceAccountToken *bool `json:"automountServiceAccountToken,omitempty" protobuf:"varint,4,opt,name=automountServiceAccountToken"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ServiceAccountList is a list of ServiceAccount objects
 type ServiceAccountList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -5535,7 +5535,7 @@ type ServiceAccountList struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Endpoints is a collection of endpoints that implement the actual service. Example:
 //
@@ -5553,7 +5553,7 @@ type ServiceAccountList struct {
 type Endpoints struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -5656,13 +5656,13 @@ type EndpointPort struct {
 	AppProtocol *string `json:"appProtocol,omitempty" protobuf:"bytes,4,opt,name=appProtocol"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // EndpointsList is a list of endpoints.
 type EndpointsList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -5701,7 +5701,7 @@ type NodeSpec struct {
 	ConfigSource *NodeConfigSource `json:"configSource,omitempty" protobuf:"bytes,6,opt,name=configSource"`
 
 	// Deprecated. Not all kubelets will set this field. Remove field after 1.13.
-	// see: https://issues.ck-kube/kubernetes/61966
+	// see: https://issues.github.com/fslqd/ck-kube/kubernetes/61966
 	// +optional
 	DoNotUseExternalID string `json:"externalID,omitempty" protobuf:"bytes,2,opt,name=externalID"`
 }
@@ -5725,7 +5725,7 @@ type NodeConfigSource struct {
 }
 
 // ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node.
-// This API is deprecated since 1.22: https://git.ck-kube/kubernetes/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+// This API is deprecated since 1.22: https://git.github.com/fslqd/ck-kube/kubernetes/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
 type ConfigMapNodeConfigSource struct {
 	// Namespace is the metadata.namespace of the referenced ConfigMap.
 	// This field is required in all cases.
@@ -5892,7 +5892,7 @@ type NodeStatus struct {
 	// More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses
 	// Note: This field is declared as mergeable, but the merge key is not sufficiently
 	// unique, which can cause data corruption when it is merged. Callers should instead
-	// use a full-replacement patch. See https://pr.ck-kube/kubernetes/79391 for an example.
+	// use a full-replacement patch. See https://pr.github.com/fslqd/ck-kube/kubernetes/79391 for an example.
 	// Consumers should assume that addresses can change during the
 	// lifetime of a Node. However, there are some exceptions where this may not
 	// be possible, such as Pods that inherit a Node's address in its own status or
@@ -6124,37 +6124,37 @@ type ResourceList map[ResourceName]resource.Quantity
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Node is a worker node in Kubernetes.
 // Each node will have a unique identifier in the cache (i.e. in etcd).
 type Node struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// Spec defines the behavior of a node.
-	// https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Spec NodeSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
 	// Most recently observed status of the node.
 	// Populated by the system.
 	// Read-only.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Status NodeStatus `json:"status,omitempty" protobuf:"bytes,3,opt,name=status"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // NodeList is the whole list of all Nodes which have been registered with master.
 type NodeList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -6246,35 +6246,35 @@ type NamespaceCondition struct {
 // +genclient
 // +genclient:nonNamespaced
 // +genclient:skipVerbs=deleteCollection
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Namespace provides a scope for Names.
 // Use of multiple namespaces is optional.
 type Namespace struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// Spec defines the behavior of the Namespace.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Spec NamespaceSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
 	// Status describes the current status of a Namespace.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Status NamespaceStatus `json:"status,omitempty" protobuf:"bytes,3,opt,name=status"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // NamespaceList is a list of Namespaces.
 type NamespaceList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -6283,14 +6283,14 @@ type NamespaceList struct {
 	Items []Namespace `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Binding ties one object to another; for example, a pod is bound to a node by a scheduler.
 // Deprecated in 1.7, please use the bindings subresource of pods instead.
 type Binding struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -6303,11 +6303,11 @@ type Binding struct {
 type Preconditions struct {
 	// Specifies the target UID.
 	// +optional
-	UID *types.UID `json:"uid,omitempty" protobuf:"bytes,1,opt,name=uid,casttype=ck-kube/kubernetes/apimachinery/pkg/types.UID"`
+	UID *types.UID `json:"uid,omitempty" protobuf:"bytes,1,opt,name=uid,casttype=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types.UID"`
 }
 
 // +k8s:conversion-gen:explicit-from=net/url.Values
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PodLogOptions is the query options for a Pod's logs REST call.
 type PodLogOptions struct {
@@ -6359,7 +6359,7 @@ type PodLogOptions struct {
 }
 
 // +k8s:conversion-gen:explicit-from=net/url.Values
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PodAttachOptions is the query options to a Pod's remote attach call.
 // ---
@@ -6397,7 +6397,7 @@ type PodAttachOptions struct {
 }
 
 // +k8s:conversion-gen:explicit-from=net/url.Values
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PodExecOptions is the query options to a Pod's remote exec call.
 // ---
@@ -6435,7 +6435,7 @@ type PodExecOptions struct {
 }
 
 // +k8s:conversion-gen:explicit-from=net/url.Values
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PodPortForwardOptions is the query options to a Pod's port forward call
 // when using WebSockets.
@@ -6454,7 +6454,7 @@ type PodPortForwardOptions struct {
 }
 
 // +k8s:conversion-gen:explicit-from=net/url.Values
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // PodProxyOptions is the query options to a Pod's proxy call.
 type PodProxyOptions struct {
@@ -6466,7 +6466,7 @@ type PodProxyOptions struct {
 }
 
 // +k8s:conversion-gen:explicit-from=net/url.Values
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // NodeProxyOptions is the query options to a Node's proxy call.
 type NodeProxyOptions struct {
@@ -6478,7 +6478,7 @@ type NodeProxyOptions struct {
 }
 
 // +k8s:conversion-gen:explicit-from=net/url.Values
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ServiceProxyOptions is the query options to a Service's proxy call.
 type ServiceProxyOptions struct {
@@ -6509,11 +6509,11 @@ type ServiceProxyOptions struct {
 //
 // Instead of using this type, create a locally provided and used type that is well-focused on your reference.
 // For example, ServiceReferences for admission registration: https://github.com/kubernetes/api/blob/release-1.17/admissionregistration/v1/types.go#L533 .
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +structType=atomic
 type ObjectReference struct {
 	// Kind of the referent.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	Kind string `json:"kind,omitempty" protobuf:"bytes,1,opt,name=kind"`
 	// Namespace of the referent.
@@ -6527,12 +6527,12 @@ type ObjectReference struct {
 	// UID of the referent.
 	// More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids
 	// +optional
-	UID types.UID `json:"uid,omitempty" protobuf:"bytes,4,opt,name=uid,casttype=ck-kube/kubernetes/apimachinery/pkg/types.UID"`
+	UID types.UID `json:"uid,omitempty" protobuf:"bytes,4,opt,name=uid,casttype=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types.UID"`
 	// API version of the referent.
 	// +optional
 	APIVersion string `json:"apiVersion,omitempty" protobuf:"bytes,5,opt,name=apiVersion"`
 	// Specific resourceVersion to which this reference is made, if any.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
 	// +optional
 	ResourceVersion string `json:"resourceVersion,omitempty" protobuf:"bytes,6,opt,name=resourceVersion"`
 
@@ -6574,7 +6574,7 @@ type TypedLocalObjectReference struct {
 	Name string `json:"name" protobuf:"bytes,3,opt,name=name"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // SerializedReference is a reference to serialized object.
 type SerializedReference struct {
@@ -6603,7 +6603,7 @@ const (
 )
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Event is a report of an event somewhere in the cluster.  Events
 // have a limited retention time and triggers and messages may evolve
@@ -6614,7 +6614,7 @@ const (
 type Event struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	metav1.ObjectMeta `json:"metadata" protobuf:"bytes,1,opt,name=metadata"`
 
 	// The object that this event is about.
@@ -6687,13 +6687,13 @@ type EventSeries struct {
 	// +k8s:deprecated=state,protobuf=3
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // EventList is a list of events.
 type EventList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -6701,7 +6701,7 @@ type EventList struct {
 	Items []Event `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // List holds a list of objects, which may not be known by the server.
 type List metav1.List
@@ -6748,29 +6748,29 @@ type LimitRangeSpec struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // LimitRange sets resource usage limits for each kind of resource in a Namespace.
 type LimitRange struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// Spec defines the limits enforced.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Spec LimitRangeSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // LimitRangeList is a list of LimitRange items.
 type LimitRangeList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -6912,34 +6912,34 @@ type ResourceQuotaStatus struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ResourceQuota sets aggregate quota restrictions enforced per namespace
 type ResourceQuota struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
 	// Spec defines the desired quota.
-	// https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Spec ResourceQuotaSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
 	// Status defines the actual enforced quota and its current usage.
-	// https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+	// https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 	// +optional
 	Status ResourceQuotaStatus `json:"status,omitempty" protobuf:"bytes,3,opt,name=status"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ResourceQuotaList is a list of ResourceQuota items.
 type ResourceQuotaList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -6949,14 +6949,14 @@ type ResourceQuotaList struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Secret holds secret data of a certain type. The total bytes of the values in
 // the Data field must be less than MaxSecretSize bytes.
 type Secret struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -7075,13 +7075,13 @@ const (
 	SecretTypeBootstrapToken SecretType = "bootstrap.kubernetes.io/token"
 )
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // SecretList is a list of Secret.
 type SecretList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -7091,13 +7091,13 @@ type SecretList struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ConfigMap holds configuration data for pods to consume.
 type ConfigMap struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -7127,13 +7127,13 @@ type ConfigMap struct {
 	BinaryData map[string][]byte `json:"binaryData,omitempty" protobuf:"bytes,3,rep,name=binaryData"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ConfigMapList is a resource containing a list of ConfigMap objects.
 type ConfigMapList struct {
 	metav1.TypeMeta `json:",inline"`
 
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -7169,14 +7169,14 @@ type ComponentCondition struct {
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ComponentStatus (and ComponentStatusList) holds the cluster validation info.
 // Deprecated: This API is deprecated in v1.19+
 type ComponentStatus struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -7189,14 +7189,14 @@ type ComponentStatus struct {
 	Conditions []ComponentCondition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,2,rep,name=conditions"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Status of all the conditions for the component as a list of ComponentStatus objects.
 // Deprecated: This API is deprecated in v1.19+
 type ComponentStatusList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -7400,13 +7400,13 @@ type WindowsSecurityContextOptions struct {
 	HostProcess *bool `json:"hostProcess,omitempty" protobuf:"bytes,4,opt,name=hostProcess"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // RangeAllocation is not a public type.
 type RangeAllocation struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 

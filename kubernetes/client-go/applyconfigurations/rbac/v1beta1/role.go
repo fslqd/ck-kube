@@ -19,12 +19,12 @@ limitations under the License.
 package v1beta1
 
 import (
-	rbacv1beta1 "ck-kube/kubernetes/api/rbac/v1beta1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	rbacv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/rbac/v1beta1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // RoleApplyConfiguration represents an declarative configuration of the Role type for use
@@ -42,7 +42,7 @@ func Role(name, namespace string) *RoleApplyConfiguration {
 	b.WithName(name)
 	b.WithNamespace(namespace)
 	b.WithKind("Role")
-	b.WithAPIVersion("rbac.authorization.ck-kube/kubernetes/v1beta1")
+	b.WithAPIVersion("rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1beta1")
 	return b
 }
 
@@ -78,7 +78,7 @@ func extractRole(role *rbacv1beta1.Role, fieldManager string, subresource string
 	b.WithNamespace(role.Namespace)
 
 	b.WithKind("Role")
-	b.WithAPIVersion("rbac.authorization.ck-kube/kubernetes/v1beta1")
+	b.WithAPIVersion("rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1beta1")
 	return b, nil
 }
 

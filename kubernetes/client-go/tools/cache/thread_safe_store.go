@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"sync"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 )
 
 // ThreadSafeStore is an interface that allows concurrent indexed

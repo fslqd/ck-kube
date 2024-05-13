@@ -21,8 +21,8 @@ import (
 	"sync"
 	"time"
 
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/utils/clock"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/utils/clock"
 )
 
 // DelayingInterface is an Interface that can Add an item at a later time. This makes it easier to

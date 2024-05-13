@@ -21,18 +21,18 @@ import (
 	"io"
 	"testing"
 
-	"ck-kube/kubernetes/api/core/v1"
-	apiequality "ck-kube/kubernetes/apimachinery/pkg/api/equality"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	runtimejson "ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/json"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/streaming"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	restclientwatch "ck-kube/kubernetes/client-go/rest/watch"
+	"github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	apiequality "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/equality"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	runtimejson "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/json"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/streaming"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	restclientwatch "github.com/fslqd/ck-kube/kubernetes/client-go/rest/watch"
 )
 
-// getEncoder mimics how ck-kube/kubernetes/client-go/rest.createSerializers creates a encoder
+// getEncoder mimics how github.com/fslqd/ck-kube/kubernetes/client-go/rest.createSerializers creates a encoder
 func getEncoder() runtime.Encoder {
 	jsonSerializer := runtimejson.NewSerializer(runtimejson.DefaultMetaFactory, scheme.Scheme, scheme.Scheme, false)
 	directCodecFactory := scheme.Codecs.WithoutConversion()

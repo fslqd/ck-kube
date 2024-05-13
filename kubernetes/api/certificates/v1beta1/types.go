@@ -19,16 +19,16 @@ package v1beta1
 import (
 	"fmt"
 
-	v1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.12
 // +k8s:prerelease-lifecycle-gen:deprecated=1.19
-// +k8s:prerelease-lifecycle-gen:replacement=certificates.ck-kube/kubernetes,v1,CertificateSigningRequest
+// +k8s:prerelease-lifecycle-gen:replacement=certificates.github.com/fslqd/ck-kube/kubernetes,v1,CertificateSigningRequest
 
 // Describes a certificate signing request
 type CertificateSigningRequest struct {
@@ -200,7 +200,7 @@ type CertificateSigningRequestCondition struct {
 	// Defaults to "True".
 	// If unset, should be treated as "True".
 	// +optional
-	Status v1.ConditionStatus `json:"status" protobuf:"bytes,6,opt,name=status,casttype=ck-kube/kubernetes/api/core/v1.ConditionStatus"`
+	Status v1.ConditionStatus `json:"status" protobuf:"bytes,6,opt,name=status,casttype=github.com/fslqd/ck-kube/kubernetes/api/core/v1.ConditionStatus"`
 	// brief reason for the request state
 	// +optional
 	Reason string `json:"reason,omitempty" protobuf:"bytes,2,opt,name=reason"`
@@ -217,10 +217,10 @@ type CertificateSigningRequestCondition struct {
 	LastTransitionTime metav1.Time `json:"lastTransitionTime,omitempty" protobuf:"bytes,5,opt,name=lastTransitionTime"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.12
 // +k8s:prerelease-lifecycle-gen:deprecated=1.19
-// +k8s:prerelease-lifecycle-gen:replacement=certificates.ck-kube/kubernetes,v1,CertificateSigningRequestList
+// +k8s:prerelease-lifecycle-gen:replacement=certificates.github.com/fslqd/ck-kube/kubernetes,v1,CertificateSigningRequestList
 
 type CertificateSigningRequestList struct {
 	metav1.TypeMeta `json:",inline"`

@@ -21,9 +21,9 @@ package v2beta1
 import (
 	"net/http"
 
-	v2beta1 "ck-kube/kubernetes/api/autoscaling/v2beta1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v2beta1 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2beta1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type AutoscalingV2beta1Interface interface {

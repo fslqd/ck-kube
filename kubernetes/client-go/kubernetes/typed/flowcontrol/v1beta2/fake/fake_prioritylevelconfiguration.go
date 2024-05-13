@@ -23,13 +23,13 @@ import (
 	json "encoding/json"
 	"fmt"
 
-	v1beta2 "ck-kube/kubernetes/api/flowcontrol/v1beta2"
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	labels "ck-kube/kubernetes/apimachinery/pkg/labels"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	watch "ck-kube/kubernetes/apimachinery/pkg/watch"
-	flowcontrolv1beta2 "ck-kube/kubernetes/client-go/applyconfigurations/flowcontrol/v1beta2"
-	testing "ck-kube/kubernetes/client-go/testing"
+	v1beta2 "github.com/fslqd/ck-kube/kubernetes/api/flowcontrol/v1beta2"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	labels "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	watch "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	flowcontrolv1beta2 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/flowcontrol/v1beta2"
+	testing "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 // FakePriorityLevelConfigurations implements PriorityLevelConfigurationInterface

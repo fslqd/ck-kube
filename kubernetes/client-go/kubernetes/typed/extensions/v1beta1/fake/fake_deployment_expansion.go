@@ -19,9 +19,9 @@ package fake
 import (
 	"context"
 
-	"ck-kube/kubernetes/api/extensions/v1beta1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	core "ck-kube/kubernetes/client-go/testing"
+	"github.com/fslqd/ck-kube/kubernetes/api/extensions/v1beta1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	core "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 func (c *FakeDeployments) Rollback(ctx context.Context, deploymentRollback *v1beta1.DeploymentRollback, opts metav1.CreateOptions) error {

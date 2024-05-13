@@ -19,12 +19,12 @@ limitations under the License.
 package v1beta1
 
 import (
-	v1beta1 "ck-kube/kubernetes/api/policy/v1beta1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	v1beta1 "github.com/fslqd/ck-kube/kubernetes/api/policy/v1beta1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // EvictionApplyConfiguration represents an declarative configuration of the Eviction type for use

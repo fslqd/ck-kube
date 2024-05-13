@@ -21,9 +21,9 @@ package v1
 import (
 	"net/http"
 
-	v1 "ck-kube/kubernetes/api/batch/v1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/batch/v1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type BatchV1Interface interface {

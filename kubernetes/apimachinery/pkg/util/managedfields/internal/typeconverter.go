@@ -19,11 +19,11 @@ package internal
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/kube-openapi/pkg/schemaconv"
-	"ck-kube/kubernetes/kube-openapi/pkg/validation/spec"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/schemaconv"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/validation/spec"
 	smdschema "sigs.k8s.io/structured-merge-diff/v4/schema"
 	"sigs.k8s.io/structured-merge-diff/v4/typed"
 	"sigs.k8s.io/structured-merge-diff/v4/value"

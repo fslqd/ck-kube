@@ -27,8 +27,8 @@ import (
 	"strconv"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/conversion/queryparams"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/conversion/queryparams"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 	"k8s.io/klog/v2"
 )
 

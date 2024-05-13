@@ -26,7 +26,7 @@ import (
 
 	"strings"
 
-	netutils "ck-kube/kubernetes/utils/net"
+	netutils "github.com/fslqd/ck-kube/kubernetes/utils/net"
 	"k8s.io/klog/v2"
 )
 

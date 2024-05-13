@@ -18,6 +18,6 @@ limitations under the License.
 // +k8s:openapi-gen=true
 // +k8s:defaulter-gen=TypeMeta
 
-// +groupName=meta.ck-kube/kubernetes
+// +groupName=meta.github.com/fslqd/ck-kube/kubernetes
 
-package v1beta1 // import "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1beta1"
+package v1beta1 // import "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1beta1"

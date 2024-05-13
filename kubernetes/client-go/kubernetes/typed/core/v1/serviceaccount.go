@@ -24,14 +24,14 @@ import (
 	"fmt"
 	"time"
 
-	authenticationv1 "ck-kube/kubernetes/api/authentication/v1"
-	v1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	watch "ck-kube/kubernetes/apimachinery/pkg/watch"
-	corev1 "ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
-	scheme "ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	authenticationv1 "github.com/fslqd/ck-kube/kubernetes/api/authentication/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	watch "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
+	scheme "github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 // ServiceAccountsGetter has a method to return a ServiceAccountInterface.

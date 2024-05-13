@@ -17,10 +17,10 @@ limitations under the License.
 package term
 
 import (
-	"ck-kube/kubernetes/cli-runtime/pkg/printers"
+	"github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/printers"
 	"io"
 
-	"ck-kube/kubernetes/kubectl/pkg/util/interrupt"
+	"github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/util/interrupt"
 )
 
 // SafeFunc is a function to be invoked by TTY.

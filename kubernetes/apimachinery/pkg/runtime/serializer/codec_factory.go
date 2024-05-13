@@ -20,12 +20,12 @@ import (
 	"mime"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/json"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/protobuf"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/recognizer"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/versioning"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/json"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/protobuf"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/recognizer"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/versioning"
 )
 
 // serializerExtensions are for serializers that are conditionally compiled in

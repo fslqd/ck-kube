@@ -17,14 +17,14 @@ limitations under the License.
 package v1alpha1
 
 import (
-	v1 "ck-kube/kubernetes/api/authentication/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/authentication/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
 // +genclient:nonNamespaced
 // +genclient:onlyVerbs=create
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // SelfSubjectReview contains the user information that the kube-apiserver has about the user making this request.
@@ -33,7 +33,7 @@ import (
 type SelfSubjectReview struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// Status is filled in by the server with the user attributes.

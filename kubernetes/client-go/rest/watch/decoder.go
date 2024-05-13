@@ -19,10 +19,10 @@ package versioned
 import (
 	"fmt"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/streaming"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/streaming"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
 )
 
 // Decoder implements the watch.Decoder interface for io.ReadClosers that

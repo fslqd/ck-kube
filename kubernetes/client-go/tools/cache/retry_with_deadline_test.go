@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
-	apierrors "ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	testingclock "ck-kube/kubernetes/utils/clock/testing"
+	apierrors "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	testingclock "github.com/fslqd/ck-kube/kubernetes/utils/clock/testing"
 )
 
 type retryScenarioStep struct {

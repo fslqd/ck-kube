@@ -19,8 +19,8 @@ package meta
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	utilerrors "ck-kube/kubernetes/apimachinery/pkg/util/errors"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	utilerrors "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/errors"
 )
 
 var (

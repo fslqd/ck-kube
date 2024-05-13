@@ -23,15 +23,15 @@ import (
 	json "encoding/json"
 	"fmt"
 
-	v1 "ck-kube/kubernetes/api/apps/v1"
-	autoscalingv1 "ck-kube/kubernetes/api/autoscaling/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	labels "ck-kube/kubernetes/apimachinery/pkg/labels"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	watch "ck-kube/kubernetes/apimachinery/pkg/watch"
-	appsv1 "ck-kube/kubernetes/client-go/applyconfigurations/apps/v1"
-	applyconfigurationsautoscalingv1 "ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v1"
-	testing "ck-kube/kubernetes/client-go/testing"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/apps/v1"
+	autoscalingv1 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	labels "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	watch "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	appsv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/apps/v1"
+	applyconfigurationsautoscalingv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v1"
+	testing "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 // FakeDeployments implements DeploymentInterface

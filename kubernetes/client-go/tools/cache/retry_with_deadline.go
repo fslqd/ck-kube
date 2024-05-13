@@ -17,7 +17,7 @@ limitations under the License.
 package cache
 
 import (
-	"ck-kube/kubernetes/utils/clock"
+	"github.com/fslqd/ck-kube/kubernetes/utils/clock"
 	"time"
 )
 

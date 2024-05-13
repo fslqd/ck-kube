@@ -23,8 +23,8 @@ import (
 	"strings"
 	"unicode"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/validation/field"
-	netutils "ck-kube/kubernetes/utils/net"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/validation/field"
+	netutils "github.com/fslqd/ck-kube/kubernetes/utils/net"
 )
 
 const qnameCharFmt string = "[A-Za-z0-9]"

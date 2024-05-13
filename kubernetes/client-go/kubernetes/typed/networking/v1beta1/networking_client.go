@@ -21,9 +21,9 @@ package v1beta1
 import (
 	"net/http"
 
-	v1beta1 "ck-kube/kubernetes/api/networking/v1beta1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1beta1 "github.com/fslqd/ck-kube/kubernetes/api/networking/v1beta1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type NetworkingV1beta1Interface interface {
@@ -32,7 +32,7 @@ type NetworkingV1beta1Interface interface {
 	IngressClassesGetter
 }
 
-// NetworkingV1beta1Client is used to interact with features provided by the networking.ck-kube/kubernetes group.
+// NetworkingV1beta1Client is used to interact with features provided by the networking.github.com/fslqd/ck-kube/kubernetes group.
 type NetworkingV1beta1Client struct {
 	restClient rest.Interface
 }

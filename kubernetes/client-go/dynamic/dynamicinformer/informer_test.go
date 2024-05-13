@@ -21,14 +21,14 @@ import (
 	"testing"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/equality"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/client-go/dynamic/dynamicinformer"
-	"ck-kube/kubernetes/client-go/dynamic/fake"
-	"ck-kube/kubernetes/client-go/tools/cache"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/equality"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/dynamic/dynamicinformer"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/dynamic/fake"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/cache"
 	"github.com/google/go-cmp/cmp"
 )
 

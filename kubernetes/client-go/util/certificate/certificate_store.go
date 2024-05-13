@@ -25,7 +25,7 @@ import (
 	"path/filepath"
 	"time"
 
-	certutil "ck-kube/kubernetes/client-go/util/cert"
+	certutil "github.com/fslqd/ck-kube/kubernetes/client-go/util/cert"
 )
 
 const (

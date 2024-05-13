@@ -21,7 +21,7 @@ import (
 	"strings"
 	"testing"
 
-	"ck-kube/kubernetes/api/core/v1"
+	"github.com/fslqd/ck-kube/kubernetes/api/core/v1"
 )
 
 func TestConfigMapHash(t *testing.T) {

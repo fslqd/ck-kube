@@ -25,7 +25,7 @@ import (
 	"strings"
 	"unicode"
 
-	jsonutil "ck-kube/kubernetes/apimachinery/pkg/util/json"
+	jsonutil "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/json"
 
 	"sigs.k8s.io/yaml"
 )

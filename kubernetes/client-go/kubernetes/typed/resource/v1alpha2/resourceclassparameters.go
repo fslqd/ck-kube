@@ -24,13 +24,13 @@ import (
 	"fmt"
 	"time"
 
-	v1alpha2 "ck-kube/kubernetes/api/resource/v1alpha2"
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	watch "ck-kube/kubernetes/apimachinery/pkg/watch"
-	resourcev1alpha2 "ck-kube/kubernetes/client-go/applyconfigurations/resource/v1alpha2"
-	scheme "ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1alpha2 "github.com/fslqd/ck-kube/kubernetes/api/resource/v1alpha2"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	watch "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	resourcev1alpha2 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/resource/v1alpha2"
+	scheme "github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 // ResourceClassParametersGetter has a method to return a ResourceClassParametersInterface.

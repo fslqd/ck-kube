@@ -22,17 +22,17 @@ import (
 	"sync"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/wait"
-	"ck-kube/kubernetes/client-go/tools/cache/synctrack"
-	"ck-kube/kubernetes/utils/buffer"
-	"ck-kube/kubernetes/utils/clock"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/wait"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/cache/synctrack"
+	"github.com/fslqd/ck-kube/kubernetes/utils/buffer"
+	"github.com/fslqd/ck-kube/kubernetes/utils/clock"
 
 	"k8s.io/klog/v2"
 
-	clientgofeaturegate "ck-kube/kubernetes/client-go/features"
+	clientgofeaturegate "github.com/fslqd/ck-kube/kubernetes/client-go/features"
 )
 
 // SharedInformer provides eventually consistent linkage of its

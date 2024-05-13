@@ -19,7 +19,7 @@ limitations under the License.
 package v2
 
 import (
-	v2 "ck-kube/kubernetes/api/autoscaling/v2"
+	v2 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2"
 )
 
 // HPAScalingPolicyApplyConfiguration represents an declarative configuration of the HPAScalingPolicy type for use

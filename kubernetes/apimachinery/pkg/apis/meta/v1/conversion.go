@@ -22,12 +22,12 @@ import (
 	"strconv"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/resource"
-	"ck-kube/kubernetes/apimachinery/pkg/conversion"
-	"ck-kube/kubernetes/apimachinery/pkg/fields"
-	"ck-kube/kubernetes/apimachinery/pkg/labels"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
-	"ck-kube/kubernetes/apimachinery/pkg/util/intstr"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/conversion"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/fields"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/intstr"
 )
 
 func Convert_Pointer_float64_To_float64(in **float64, out *float64, s conversion.Scope) error {

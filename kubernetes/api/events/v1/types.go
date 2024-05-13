@@ -17,12 +17,12 @@ limitations under the License.
 package v1
 
 import (
-	corev1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Event is a report of an event somewhere in the cluster. It generally denotes some state change in the system.
 // Events have a limited retention time and triggers and messages may evolve
@@ -34,7 +34,7 @@ type Event struct {
 	metav1.TypeMeta `json:",inline"`
 
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -99,7 +99,7 @@ type Event struct {
 
 // EventSeries contain information on series of events, i.e. thing that was/is happening
 // continuously for some time. How often to update the EventSeries is up to the event reporters.
-// The default event reporter in "ck-kube/kubernetes/client-go/tools/events/event_broadcaster.go" shows
+// The default event reporter in "github.com/fslqd/ck-kube/kubernetes/client-go/tools/events/event_broadcaster.go" shows
 // how this struct is updated on heartbeats and can guide customized reporter implementations.
 type EventSeries struct {
 	// count is the number of occurrences in this series up to the last heartbeat time.
@@ -108,13 +108,13 @@ type EventSeries struct {
 	LastObservedTime metav1.MicroTime `json:"lastObservedTime" protobuf:"bytes,2,opt,name=lastObservedTime"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // EventList is a list of Event objects.
 type EventList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 

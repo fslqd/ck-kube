@@ -20,7 +20,7 @@ import (
 	"context"
 	"net/url"
 
-	"ck-kube/kubernetes/kube-openapi/pkg/handler3"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/handler3"
 )
 
 const ContentTypeOpenAPIV3PB = "application/com.github.proto-openapi.spec.v3@v1.0+protobuf"

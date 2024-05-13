@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
 )
 
 // For any test of the style:

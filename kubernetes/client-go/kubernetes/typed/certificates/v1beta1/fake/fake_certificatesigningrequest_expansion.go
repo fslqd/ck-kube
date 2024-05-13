@@ -19,9 +19,9 @@ package fake
 import (
 	"context"
 
-	certificates "ck-kube/kubernetes/api/certificates/v1beta1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	core "ck-kube/kubernetes/client-go/testing"
+	certificates "github.com/fslqd/ck-kube/kubernetes/api/certificates/v1beta1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	core "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 func (c *FakeCertificateSigningRequests) UpdateApproval(ctx context.Context, certificateSigningRequest *certificates.CertificateSigningRequest, opts metav1.UpdateOptions) (result *certificates.CertificateSigningRequest, err error) {

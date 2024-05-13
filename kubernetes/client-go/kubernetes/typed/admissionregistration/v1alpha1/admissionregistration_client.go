@@ -21,9 +21,9 @@ package v1alpha1
 import (
 	"net/http"
 
-	v1alpha1 "ck-kube/kubernetes/api/admissionregistration/v1alpha1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/admissionregistration/v1alpha1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type AdmissionregistrationV1alpha1Interface interface {
@@ -32,7 +32,7 @@ type AdmissionregistrationV1alpha1Interface interface {
 	ValidatingAdmissionPolicyBindingsGetter
 }
 
-// AdmissionregistrationV1alpha1Client is used to interact with features provided by the admissionregistration.ck-kube/kubernetes group.
+// AdmissionregistrationV1alpha1Client is used to interact with features provided by the admissionregistration.github.com/fslqd/ck-kube/kubernetes group.
 type AdmissionregistrationV1alpha1Client struct {
 	restClient rest.Interface
 }

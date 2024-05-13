@@ -29,7 +29,7 @@ package v1alpha1
 // AUTO-GENERATED FUNCTIONS START HERE. DO NOT EDIT.
 var map_ImageReview = map[string]string{
 	"":         "ImageReview checks if the set of images in a pod are allowed.",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"spec":     "Spec holds information about the pod being evaluated",
 	"status":   "Status is filled in by the backend and indicates whether the pod should be allowed.",
 }
@@ -50,7 +50,7 @@ func (ImageReviewContainerSpec) SwaggerDoc() map[string]string {
 var map_ImageReviewSpec = map[string]string{
 	"":            "ImageReviewSpec is a description of the pod creation request.",
 	"containers":  "Containers is a list of a subset of the information in each container of the Pod being created.",
-	"annotations": "Annotations is a list of key-value pairs extracted from the Pod's annotations. It only includes keys which match the pattern `*.image-policy.ck-kube/kubernetes/*`. It is up to each webhook backend to determine how to interpret these annotations, if at all.",
+	"annotations": "Annotations is a list of key-value pairs extracted from the Pod's annotations. It only includes keys which match the pattern `*.image-policy.github.com/fslqd/ck-kube/kubernetes/*`. It is up to each webhook backend to determine how to interpret these annotations, if at all.",
 	"namespace":   "Namespace is the namespace the pod is being created in.",
 }
 

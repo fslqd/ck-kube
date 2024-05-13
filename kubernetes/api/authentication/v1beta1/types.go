@@ -19,17 +19,17 @@ package v1beta1
 import (
 	"fmt"
 
-	v1 "ck-kube/kubernetes/api/authentication/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/authentication/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
 // +genclient:nonNamespaced
 // +genclient:onlyVerbs=create
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.4
 // +k8s:prerelease-lifecycle-gen:deprecated=1.19
-// +k8s:prerelease-lifecycle-gen:replacement=authentication.ck-kube/kubernetes,v1,TokenReview
+// +k8s:prerelease-lifecycle-gen:replacement=authentication.github.com/fslqd/ck-kube/kubernetes,v1,TokenReview
 
 // TokenReview attempts to authenticate a token to a known user.
 // Note: TokenReview requests may be cached by the webhook token authenticator
@@ -37,7 +37,7 @@ import (
 type TokenReview struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -121,7 +121,7 @@ func (t ExtraValue) String() string {
 // +genclient
 // +genclient:nonNamespaced
 // +genclient:onlyVerbs=create
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.27
 
 // SelfSubjectReview contains the user information that the kube-apiserver has about the user making this request.
@@ -130,7 +130,7 @@ func (t ExtraValue) String() string {
 type SelfSubjectReview struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// Status is filled in by the server with the user attributes.

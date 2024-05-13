@@ -19,13 +19,13 @@ limitations under the License.
 package v1beta1
 
 import (
-	eventsv1beta1 "ck-kube/kubernetes/api/events/v1beta1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	corev1 "ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	eventsv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/events/v1beta1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // EventApplyConfiguration represents an declarative configuration of the Event type for use
@@ -56,7 +56,7 @@ func Event(name, namespace string) *EventApplyConfiguration {
 	b.WithName(name)
 	b.WithNamespace(namespace)
 	b.WithKind("Event")
-	b.WithAPIVersion("events.ck-kube/kubernetes/v1beta1")
+	b.WithAPIVersion("events.github.com/fslqd/ck-kube/kubernetes/v1beta1")
 	return b
 }
 
@@ -92,7 +92,7 @@ func extractEvent(event *eventsv1beta1.Event, fieldManager string, subresource s
 	b.WithNamespace(event.Namespace)
 
 	b.WithKind("Event")
-	b.WithAPIVersion("events.ck-kube/kubernetes/v1beta1")
+	b.WithAPIVersion("events.github.com/fslqd/ck-kube/kubernetes/v1beta1")
 	return b, nil
 }
 

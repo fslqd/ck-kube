@@ -118,7 +118,7 @@ func (AzureFileVolumeSource) SwaggerDoc() map[string]string {
 
 var map_Binding = map[string]string{
 	"":         "Binding ties one object to another; for example, a pod is bound to a node by a scheduler. Deprecated in 1.7, please use the bindings subresource of pods instead.",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"target":   "The target object that you want to bind to the standard object.",
 }
 
@@ -169,12 +169,12 @@ func (Capabilities) SwaggerDoc() map[string]string {
 
 var map_CephFSPersistentVolumeSource = map[string]string{
 	"":           "Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.",
-	"monitors":   "monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
+	"monitors":   "monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
 	"path":       "path is Optional: Used as the mounted root, rather than the full Ceph tree, default is /",
-	"user":       "user is Optional: User is the rados user name, default is admin More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
-	"secretFile": "secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
-	"secretRef":  "secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
-	"readOnly":   "readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
+	"user":       "user is Optional: User is the rados user name, default is admin More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
+	"secretFile": "secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
+	"secretRef":  "secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
+	"readOnly":   "readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
 }
 
 func (CephFSPersistentVolumeSource) SwaggerDoc() map[string]string {
@@ -183,12 +183,12 @@ func (CephFSPersistentVolumeSource) SwaggerDoc() map[string]string {
 
 var map_CephFSVolumeSource = map[string]string{
 	"":           "Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.",
-	"monitors":   "monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
+	"monitors":   "monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
 	"path":       "path is Optional: Used as the mounted root, rather than the full Ceph tree, default is /",
-	"user":       "user is optional: User is the rados user name, default is admin More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
-	"secretFile": "secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
-	"secretRef":  "secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
-	"readOnly":   "readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
+	"user":       "user is optional: User is the rados user name, default is admin More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
+	"secretFile": "secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
+	"secretRef":  "secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
+	"readOnly":   "readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/cephfs/README.md#how-to-use-it",
 }
 
 func (CephFSVolumeSource) SwaggerDoc() map[string]string {
@@ -197,9 +197,9 @@ func (CephFSVolumeSource) SwaggerDoc() map[string]string {
 
 var map_CinderPersistentVolumeSource = map[string]string{
 	"":          "Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.",
-	"volumeID":  "volumeID used to identify the volume in cinder. More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md",
-	"fsType":    "fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md",
-	"readOnly":  "readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md",
+	"volumeID":  "volumeID used to identify the volume in cinder. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md",
+	"fsType":    "fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md",
+	"readOnly":  "readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md",
 	"secretRef": "secretRef is Optional: points to a secret object containing parameters used to connect to OpenStack.",
 }
 
@@ -209,9 +209,9 @@ func (CinderPersistentVolumeSource) SwaggerDoc() map[string]string {
 
 var map_CinderVolumeSource = map[string]string{
 	"":          "Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.",
-	"volumeID":  "volumeID used to identify the volume in cinder. More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md",
-	"fsType":    "fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md",
-	"readOnly":  "readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md",
+	"volumeID":  "volumeID used to identify the volume in cinder. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md",
+	"fsType":    "fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md",
+	"readOnly":  "readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md",
 	"secretRef": "secretRef is optional: points to a secret object containing parameters used to connect to OpenStack.",
 }
 
@@ -265,7 +265,7 @@ func (ComponentCondition) SwaggerDoc() map[string]string {
 
 var map_ComponentStatus = map[string]string{
 	"":           "ComponentStatus (and ComponentStatusList) holds the cluster validation info. Deprecated: This API is deprecated in v1.19+",
-	"metadata":   "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata":   "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"conditions": "List of component conditions observed",
 }
 
@@ -275,7 +275,7 @@ func (ComponentStatus) SwaggerDoc() map[string]string {
 
 var map_ComponentStatusList = map[string]string{
 	"":         "Status of all the conditions for the component as a list of ComponentStatus objects. Deprecated: This API is deprecated in v1.19+",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "List of ComponentStatus objects.",
 }
 
@@ -285,7 +285,7 @@ func (ComponentStatusList) SwaggerDoc() map[string]string {
 
 var map_ConfigMap = map[string]string{
 	"":           "ConfigMap holds configuration data for pods to consume.",
-	"metadata":   "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata":   "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"immutable":  "Immutable, if set to true, ensures that data stored in the ConfigMap cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil.",
 	"data":       "Data contains the configuration data. Each key must consist of alphanumeric characters, '-', '_' or '.'. Values with non-UTF-8 byte sequences must use the BinaryData field. The keys stored in Data must not overlap with the keys in the BinaryData field, this is enforced during validation process.",
 	"binaryData": "BinaryData contains the binary data. Each key must consist of alphanumeric characters, '-', '_' or '.'. BinaryData can contain byte sequences that are not in the UTF-8 range. The keys stored in BinaryData must not overlap with the ones in the Data field, this is enforced during validation process. Using this field will require 1.10+ apiserver and kubelet.",
@@ -316,7 +316,7 @@ func (ConfigMapKeySelector) SwaggerDoc() map[string]string {
 
 var map_ConfigMapList = map[string]string{
 	"":         "ConfigMapList is a resource containing a list of ConfigMap objects.",
-	"metadata": "More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata": "More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"items":    "Items is the list of ConfigMaps.",
 }
 
@@ -325,7 +325,7 @@ func (ConfigMapList) SwaggerDoc() map[string]string {
 }
 
 var map_ConfigMapNodeConfigSource = map[string]string{
-	"":                 "ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node. This API is deprecated since 1.22: https://git.ck-kube/kubernetes/enhancements/keps/sig-node/281-dynamic-kubelet-configuration",
+	"":                 "ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node. This API is deprecated since 1.22: https://git.github.com/fslqd/ck-kube/kubernetes/enhancements/keps/sig-node/281-dynamic-kubelet-configuration",
 	"namespace":        "Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.",
 	"name":             "Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.",
 	"uid":              "UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.",
@@ -575,7 +575,7 @@ func (EndpointSubset) SwaggerDoc() map[string]string {
 
 var map_Endpoints = map[string]string{
 	"":         "Endpoints is a collection of endpoints that implement the actual service. Example:\n\n\t Name: \"mysvc\",\n\t Subsets: [\n\t   {\n\t     Addresses: [{\"ip\": \"10.10.1.1\"}, {\"ip\": \"10.10.2.2\"}],\n\t     Ports: [{\"name\": \"a\", \"port\": 8675}, {\"name\": \"b\", \"port\": 309}]\n\t   },\n\t   {\n\t     Addresses: [{\"ip\": \"10.10.3.3\"}],\n\t     Ports: [{\"name\": \"a\", \"port\": 93}, {\"name\": \"b\", \"port\": 76}]\n\t   },\n\t]",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"subsets":  "The set of all endpoints is the union of all subsets. Addresses are placed into subsets according to the IPs they share. A single address with multiple ports, some of which are ready and some of which are not (because they come from different containers) will result in the address being displayed in different subsets for the different ports. No address will appear in both Addresses and NotReadyAddresses in the same subset. Sets of addresses and ports that comprise a service.",
 }
 
@@ -585,7 +585,7 @@ func (Endpoints) SwaggerDoc() map[string]string {
 
 var map_EndpointsList = map[string]string{
 	"":         "EndpointsList is a list of endpoints.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "List of endpoints.",
 }
 
@@ -679,7 +679,7 @@ func (EphemeralVolumeSource) SwaggerDoc() map[string]string {
 
 var map_Event = map[string]string{
 	"":                   "Event is a report of an event somewhere in the cluster.  Events have a limited retention time and triggers and messages may evolve with time.  Event consumers should not rely on the timing of an event with a given Reason reflecting a consistent underlying trigger, or the continued existence of events with that Reason.  Events should be treated as informative, best-effort, supplemental data.",
-	"metadata":           "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata":           "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"involvedObject":     "The object that this event is about.",
 	"reason":             "This should be a short, machine understandable string that gives the reason for the transition into the object's current status.",
 	"message":            "A human-readable description of the status of this operation.",
@@ -702,7 +702,7 @@ func (Event) SwaggerDoc() map[string]string {
 
 var map_EventList = map[string]string{
 	"":         "EventList is a list of events.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "List of events",
 }
 
@@ -822,10 +822,10 @@ func (GitRepoVolumeSource) SwaggerDoc() map[string]string {
 
 var map_GlusterfsPersistentVolumeSource = map[string]string{
 	"":                   "Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.",
-	"endpoints":          "endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
-	"path":               "path is the Glusterfs volume path. More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
-	"readOnly":           "readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
-	"endpointsNamespace": "endpointsNamespace is the namespace that contains Glusterfs endpoint. If this field is empty, the EndpointNamespace defaults to the same namespace as the bound PVC. More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
+	"endpoints":          "endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
+	"path":               "path is the Glusterfs volume path. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
+	"readOnly":           "readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
+	"endpointsNamespace": "endpointsNamespace is the namespace that contains Glusterfs endpoint. If this field is empty, the EndpointNamespace defaults to the same namespace as the bound PVC. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
 }
 
 func (GlusterfsPersistentVolumeSource) SwaggerDoc() map[string]string {
@@ -834,9 +834,9 @@ func (GlusterfsPersistentVolumeSource) SwaggerDoc() map[string]string {
 
 var map_GlusterfsVolumeSource = map[string]string{
 	"":          "Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.",
-	"endpoints": "endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
-	"path":      "path is the Glusterfs volume path. More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
-	"readOnly":  "readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
+	"endpoints": "endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
+	"path":      "path is the Glusterfs volume path. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
+	"readOnly":  "readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md#create-a-pod",
 }
 
 func (GlusterfsVolumeSource) SwaggerDoc() map[string]string {
@@ -968,8 +968,8 @@ func (LifecycleHandler) SwaggerDoc() map[string]string {
 
 var map_LimitRange = map[string]string{
 	"":         "LimitRange sets resource usage limits for each kind of resource in a Namespace.",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"spec":     "Spec defines the limits enforced. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "Spec defines the limits enforced. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (LimitRange) SwaggerDoc() map[string]string {
@@ -992,7 +992,7 @@ func (LimitRangeItem) SwaggerDoc() map[string]string {
 
 var map_LimitRangeList = map[string]string{
 	"":         "LimitRangeList is a list of LimitRange items.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "Items is a list of LimitRange objects. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/",
 }
 
@@ -1072,9 +1072,9 @@ func (NFSVolumeSource) SwaggerDoc() map[string]string {
 
 var map_Namespace = map[string]string{
 	"":         "Namespace provides a scope for Names. Use of multiple namespaces is optional.",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"spec":     "Spec defines the behavior of the Namespace. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
-	"status":   "Status describes the current status of a Namespace. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "Spec defines the behavior of the Namespace. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"status":   "Status describes the current status of a Namespace. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (Namespace) SwaggerDoc() map[string]string {
@@ -1093,7 +1093,7 @@ func (NamespaceCondition) SwaggerDoc() map[string]string {
 
 var map_NamespaceList = map[string]string{
 	"":         "NamespaceList is a list of Namespaces.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "Items is the list of Namespace objects in the list. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
 }
 
@@ -1122,9 +1122,9 @@ func (NamespaceStatus) SwaggerDoc() map[string]string {
 
 var map_Node = map[string]string{
 	"":         "Node is a worker node in Kubernetes. Each node will have a unique identifier in the cache (i.e. in etcd).",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"spec":     "Spec defines the behavior of a node. https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
-	"status":   "Most recently observed status of the node. Populated by the system. Read-only. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "Spec defines the behavior of a node. https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"status":   "Most recently observed status of the node. Populated by the system. Read-only. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (Node) SwaggerDoc() map[string]string {
@@ -1197,7 +1197,7 @@ func (NodeDaemonEndpoints) SwaggerDoc() map[string]string {
 
 var map_NodeList = map[string]string{
 	"":         "NodeList is the whole list of all Nodes which have been registered with master.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "List of nodes",
 }
 
@@ -1271,7 +1271,7 @@ var map_NodeSpec = map[string]string{
 	"unschedulable": "Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: https://kubernetes.io/docs/concepts/nodes/node/#manual-node-administration",
 	"taints":        "If specified, the node's taints.",
 	"configSource":  "Deprecated: Previously used to specify the source of the node's configuration for the DynamicKubeletConfig feature. This feature is removed.",
-	"externalID":    "Deprecated. Not all kubelets will set this field. Remove field after 1.13. see: https://issues.ck-kube/kubernetes/61966",
+	"externalID":    "Deprecated. Not all kubelets will set this field. Remove field after 1.13. see: https://issues.github.com/fslqd/ck-kube/kubernetes/61966",
 }
 
 func (NodeSpec) SwaggerDoc() map[string]string {
@@ -1284,7 +1284,7 @@ var map_NodeStatus = map[string]string{
 	"allocatable":     "Allocatable represents the resources of a node that are available for scheduling. Defaults to Capacity.",
 	"phase":           "NodePhase is the recently observed lifecycle phase of the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#phase The field is never populated, and now is deprecated.",
 	"conditions":      "Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition",
-	"addresses":       "List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See https://pr.ck-kube/kubernetes/79391 for an example. Consumers should assume that addresses can change during the lifetime of a Node. However, there are some exceptions where this may not be possible, such as Pods that inherit a Node's address in its own status or consumers of the downward API (status.hostIP).",
+	"addresses":       "List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See https://pr.github.com/fslqd/ck-kube/kubernetes/79391 for an example. Consumers should assume that addresses can change during the lifetime of a Node. However, there are some exceptions where this may not be possible, such as Pods that inherit a Node's address in its own status or consumers of the downward API (status.hostIP).",
 	"daemonEndpoints": "Endpoints of daemons running on the Node.",
 	"nodeInfo":        "Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info",
 	"images":          "List of container images on this node",
@@ -1328,12 +1328,12 @@ func (ObjectFieldSelector) SwaggerDoc() map[string]string {
 
 var map_ObjectReference = map[string]string{
 	"":                "ObjectReference contains enough information to let you inspect or modify the referred object.",
-	"kind":            "Kind of the referent. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"kind":            "Kind of the referent. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"namespace":       "Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
 	"name":            "Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names",
 	"uid":             "UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids",
 	"apiVersion":      "API version of the referent.",
-	"resourceVersion": "Specific resourceVersion to which this reference is made, if any. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency",
+	"resourceVersion": "Specific resourceVersion to which this reference is made, if any. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency",
 	"fieldPath":       "If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: \"spec.containers{name}\" (where \"name\" refers to the name of the container that triggered the event) or if no container name is specified \"spec.containers[2]\" (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object.",
 }
 
@@ -1343,7 +1343,7 @@ func (ObjectReference) SwaggerDoc() map[string]string {
 
 var map_PersistentVolume = map[string]string{
 	"":         "PersistentVolume (PV) is a storage resource provisioned by an administrator. It is analogous to a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"spec":     "spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes",
 	"status":   "status represents the current information/status for the persistent volume. Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes",
 }
@@ -1354,7 +1354,7 @@ func (PersistentVolume) SwaggerDoc() map[string]string {
 
 var map_PersistentVolumeClaim = map[string]string{
 	"":         "PersistentVolumeClaim is a user's request for and claim to a persistent volume",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"spec":     "spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims",
 	"status":   "status represents the current information/status of a persistent volume claim. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims",
 }
@@ -1377,7 +1377,7 @@ func (PersistentVolumeClaimCondition) SwaggerDoc() map[string]string {
 
 var map_PersistentVolumeClaimList = map[string]string{
 	"":         "PersistentVolumeClaimList is a list of PersistentVolumeClaim items.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "items is a list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims",
 }
 
@@ -1393,7 +1393,7 @@ var map_PersistentVolumeClaimSpec = map[string]string{
 	"volumeName":                "volumeName is the binding reference to the PersistentVolume backing this claim.",
 	"storageClassName":          "storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1",
 	"volumeMode":                "volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.",
-	"dataSource":                "dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.ck-kube/kubernetes/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource.",
+	"dataSource":                "dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.github.com/fslqd/ck-kube/kubernetes/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource.",
 	"dataSourceRef":             "dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef\n  allows any non-core object, as well as PersistentVolumeClaim objects.\n* While dataSource ignores disallowed values (dropping them), dataSourceRef\n  preserves all values, and generates an error if a disallowed value is\n  specified.\n* While dataSource only allows local objects, dataSourceRef allows objects\n  in any namespaces.\n(Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled.",
 	"volumeAttributesClassName": "volumeAttributesClassName may be used to set the VolumeAttributesClass used by this claim. If specified, the CSI driver will create or update the volume with the attributes defined in the corresponding VolumeAttributesClass. This has a different purpose than storageClassName, it can be changed after the claim is created. An empty string value means that no VolumeAttributesClass will be applied to the claim but it's not allowed to reset this field to empty string once it is set. If unspecified and the PersistentVolumeClaim is unbound, the default VolumeAttributesClass will be set by the persistentvolume controller if it exists. If the resource referred to by volumeAttributesClass does not exist, this PersistentVolumeClaim will be set to a Pending state, as reflected by the modifyVolumeStatus field, until such as a resource exists. More info: https://kubernetes.io/docs/concepts/storage/volume-attributes-classes/ (Alpha) Using this field requires the VolumeAttributesClass feature gate to be enabled.",
 }
@@ -1440,7 +1440,7 @@ func (PersistentVolumeClaimVolumeSource) SwaggerDoc() map[string]string {
 
 var map_PersistentVolumeList = map[string]string{
 	"":         "PersistentVolumeList is a list of PersistentVolume items.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "items is a list of persistent volumes. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes",
 }
 
@@ -1453,11 +1453,11 @@ var map_PersistentVolumeSource = map[string]string{
 	"gcePersistentDisk":    "gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk",
 	"awsElasticBlockStore": "awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore",
 	"hostPath":             "hostPath represents a directory on the host. Provisioned by a developer or tester. This is useful for single-node development and testing only! On-host storage is not supported in any way and WILL NOT WORK in a multi-node cluster. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath",
-	"glusterfs":            "glusterfs represents a Glusterfs volume that is attached to a host and exposed to the pod. Provisioned by an admin. More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md",
+	"glusterfs":            "glusterfs represents a Glusterfs volume that is attached to a host and exposed to the pod. Provisioned by an admin. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md",
 	"nfs":                  "nfs represents an NFS mount on the host. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs",
-	"rbd":                  "rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md",
+	"rbd":                  "rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md",
 	"iscsi":                "iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin.",
-	"cinder":               "cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md",
+	"cinder":               "cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md",
 	"cephfs":               "cephFS represents a Ceph FS mount on the host that shares a pod's lifetime",
 	"fc":                   "fc represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.",
 	"flocker":              "flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the pod for its usage. This depends on the Flocker control service being running",
@@ -1470,7 +1470,7 @@ var map_PersistentVolumeSource = map[string]string{
 	"portworxVolume":       "portworxVolume represents a portworx volume attached and mounted on kubelets host machine",
 	"scaleIO":              "scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.",
 	"local":                "local represents directly-attached storage with node affinity",
-	"storageos":            "storageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod More info: https://examples.ck-kube/kubernetes/volumes/storageos/README.md",
+	"storageos":            "storageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/storageos/README.md",
 	"csi":                  "csi represents storage that is handled by an external CSI driver (Beta feature).",
 }
 
@@ -1519,9 +1519,9 @@ func (PhotonPersistentDiskVolumeSource) SwaggerDoc() map[string]string {
 
 var map_Pod = map[string]string{
 	"":         "Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts.",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"spec":     "Specification of the desired behavior of the pod. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
-	"status":   "Most recently observed status of the pod. This data may not be up to date. Populated by the system. Read-only. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "Specification of the desired behavior of the pod. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"status":   "Most recently observed status of the pod. This data may not be up to date. Populated by the system. Read-only. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (Pod) SwaggerDoc() map[string]string {
@@ -1634,8 +1634,8 @@ func (PodIP) SwaggerDoc() map[string]string {
 
 var map_PodList = map[string]string{
 	"":         "PodList is a list of Pods.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
-	"items":    "List of pods. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"items":    "List of pods. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md",
 }
 
 func (PodList) SwaggerDoc() map[string]string {
@@ -1782,11 +1782,11 @@ var map_PodSpec = map[string]string{
 	"priorityClassName":             "If specified, indicates the pod's priority. \"system-node-critical\" and \"system-cluster-critical\" are two special keywords which indicate the highest priorities with the former being the highest priority. Any other name must be defined by creating a PriorityClass object with that name. If not specified, the pod priority will be default or zero if there is no default.",
 	"priority":                      "The priority value. Various system components use this field to find the priority of the pod. When Priority Admission Controller is enabled, it prevents users from setting this field. The admission controller populates this field from PriorityClassName. The higher the value, the higher the priority.",
 	"dnsConfig":                     "Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.",
-	"readinessGates":                "If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to \"True\" More info: https://git.ck-kube/kubernetes/enhancements/keps/sig-network/580-pod-readiness-gates",
-	"runtimeClassName":              "RuntimeClassName refers to a RuntimeClass object in the node.ck-kube/kubernetes group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the \"legacy\" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.ck-kube/kubernetes/enhancements/keps/sig-node/585-runtime-class",
+	"readinessGates":                "If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to \"True\" More info: https://git.github.com/fslqd/ck-kube/kubernetes/enhancements/keps/sig-network/580-pod-readiness-gates",
+	"runtimeClassName":              "RuntimeClassName refers to a RuntimeClass object in the node.github.com/fslqd/ck-kube/kubernetes group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the \"legacy\" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.github.com/fslqd/ck-kube/kubernetes/enhancements/keps/sig-node/585-runtime-class",
 	"enableServiceLinks":            "EnableServiceLinks indicates whether information about services should be injected into pod's environment variables, matching the syntax of Docker links. Optional: Defaults to true.",
 	"preemptionPolicy":              "PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset.",
-	"overhead":                      "Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.ck-kube/kubernetes/enhancements/keps/sig-node/688-pod-overhead/README.md",
+	"overhead":                      "Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.github.com/fslqd/ck-kube/kubernetes/enhancements/keps/sig-node/688-pod-overhead/README.md",
 	"topologySpreadConstraints":     "TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed.",
 	"setHostnameAsFQDN":             "If true the pod's hostname will be configured as the pod's FQDN, rather than the leaf name (the default). In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false.",
 	"os":                            "Specifies the OS of the containers in the pod. Some pod and container fields are restricted if this is set.\n\nIf the OS field is set to linux, the following fields must be unset: -securityContext.windowsOptions\n\nIf the OS field is set to windows, following fields must be unset: - spec.hostPID - spec.hostIPC - spec.hostUsers - spec.securityContext.appArmorProfile - spec.securityContext.seLinuxOptions - spec.securityContext.seccompProfile - spec.securityContext.fsGroup - spec.securityContext.fsGroupChangePolicy - spec.securityContext.sysctls - spec.shareProcessNamespace - spec.securityContext.runAsUser - spec.securityContext.runAsGroup - spec.securityContext.supplementalGroups - spec.containers[*].securityContext.appArmorProfile - spec.containers[*].securityContext.seLinuxOptions - spec.containers[*].securityContext.seccompProfile - spec.containers[*].securityContext.capabilities - spec.containers[*].securityContext.readOnlyRootFilesystem - spec.containers[*].securityContext.privileged - spec.containers[*].securityContext.allowPrivilegeEscalation - spec.containers[*].securityContext.procMount - spec.containers[*].securityContext.runAsUser - spec.containers[*].securityContext.runAsGroup",
@@ -1825,8 +1825,8 @@ func (PodStatus) SwaggerDoc() map[string]string {
 
 var map_PodStatusResult = map[string]string{
 	"":         "PodStatusResult is a wrapper for PodStatus returned by kubelet that can be encode/decoded",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"status":   "Most recently observed status of the pod. This data may not be up to date. Populated by the system. Read-only. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"status":   "Most recently observed status of the pod. This data may not be up to date. Populated by the system. Read-only. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (PodStatusResult) SwaggerDoc() map[string]string {
@@ -1835,8 +1835,8 @@ func (PodStatusResult) SwaggerDoc() map[string]string {
 
 var map_PodTemplate = map[string]string{
 	"":         "PodTemplate describes a template for creating copies of a predefined pod.",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"template": "Template defines the pods that will be created from this pod template. https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"template": "Template defines the pods that will be created from this pod template. https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (PodTemplate) SwaggerDoc() map[string]string {
@@ -1845,7 +1845,7 @@ func (PodTemplate) SwaggerDoc() map[string]string {
 
 var map_PodTemplateList = map[string]string{
 	"":         "PodTemplateList is a list of PodTemplates.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "List of pod templates",
 }
 
@@ -1855,8 +1855,8 @@ func (PodTemplateList) SwaggerDoc() map[string]string {
 
 var map_PodTemplateSpec = map[string]string{
 	"":         "PodTemplateSpec describes the data a pod should have when created from a template",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"spec":     "Specification of the desired behavior of the pod. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "Specification of the desired behavior of the pod. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (PodTemplateSpec) SwaggerDoc() map[string]string {
@@ -1967,14 +1967,14 @@ func (QuobyteVolumeSource) SwaggerDoc() map[string]string {
 
 var map_RBDPersistentVolumeSource = map[string]string{
 	"":          "Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.",
-	"monitors":  "monitors is a collection of Ceph monitors. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
-	"image":     "image is the rados image name. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"monitors":  "monitors is a collection of Ceph monitors. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"image":     "image is the rados image name. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
 	"fsType":    "fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd",
-	"pool":      "pool is the rados pool name. Default is rbd. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
-	"user":      "user is the rados user name. Default is admin. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
-	"keyring":   "keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
-	"secretRef": "secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
-	"readOnly":  "readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"pool":      "pool is the rados pool name. Default is rbd. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"user":      "user is the rados user name. Default is admin. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"keyring":   "keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"secretRef": "secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"readOnly":  "readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
 }
 
 func (RBDPersistentVolumeSource) SwaggerDoc() map[string]string {
@@ -1983,14 +1983,14 @@ func (RBDPersistentVolumeSource) SwaggerDoc() map[string]string {
 
 var map_RBDVolumeSource = map[string]string{
 	"":          "Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.",
-	"monitors":  "monitors is a collection of Ceph monitors. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
-	"image":     "image is the rados image name. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"monitors":  "monitors is a collection of Ceph monitors. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"image":     "image is the rados image name. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
 	"fsType":    "fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd",
-	"pool":      "pool is the rados pool name. Default is rbd. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
-	"user":      "user is the rados user name. Default is admin. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
-	"keyring":   "keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
-	"secretRef": "secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
-	"readOnly":  "readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"pool":      "pool is the rados pool name. Default is rbd. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"user":      "user is the rados user name. Default is admin. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"keyring":   "keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"secretRef": "secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
+	"readOnly":  "readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md#how-to-use-it",
 }
 
 func (RBDVolumeSource) SwaggerDoc() map[string]string {
@@ -1999,7 +1999,7 @@ func (RBDVolumeSource) SwaggerDoc() map[string]string {
 
 var map_RangeAllocation = map[string]string{
 	"":         "RangeAllocation is not a public type.",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"range":    "Range is string that identifies the range represented by 'data'.",
 	"data":     "Data is a bit array containing all allocated addresses in the previous segment.",
 }
@@ -2010,9 +2010,9 @@ func (RangeAllocation) SwaggerDoc() map[string]string {
 
 var map_ReplicationController = map[string]string{
 	"":         "ReplicationController represents the configuration of a replication controller.",
-	"metadata": "If the Labels of a ReplicationController are empty, they are defaulted to be the same as the Pod(s) that the replication controller manages. Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"spec":     "Spec defines the specification of the desired behavior of the replication controller. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
-	"status":   "Status is the most recently observed status of the replication controller. This data may be out of date by some window of time. Populated by the system. Read-only. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "If the Labels of a ReplicationController are empty, they are defaulted to be the same as the Pod(s) that the replication controller manages. Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "Spec defines the specification of the desired behavior of the replication controller. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"status":   "Status is the most recently observed status of the replication controller. This data may be out of date by some window of time. Populated by the system. Read-only. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (ReplicationController) SwaggerDoc() map[string]string {
@@ -2034,7 +2034,7 @@ func (ReplicationControllerCondition) SwaggerDoc() map[string]string {
 
 var map_ReplicationControllerList = map[string]string{
 	"":         "ReplicationControllerList is a collection of replication controllers.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "List of replication controllers. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller",
 }
 
@@ -2090,9 +2090,9 @@ func (ResourceFieldSelector) SwaggerDoc() map[string]string {
 
 var map_ResourceQuota = map[string]string{
 	"":         "ResourceQuota sets aggregate quota restrictions enforced per namespace",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"spec":     "Spec defines the desired quota. https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
-	"status":   "Status defines the actual enforced quota and its current usage. https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "Spec defines the desired quota. https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"status":   "Status defines the actual enforced quota and its current usage. https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (ResourceQuota) SwaggerDoc() map[string]string {
@@ -2101,7 +2101,7 @@ func (ResourceQuota) SwaggerDoc() map[string]string {
 
 var map_ResourceQuotaList = map[string]string{
 	"":         "ResourceQuotaList is a list of ResourceQuota items.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "Items is a list of ResourceQuota objects. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/",
 }
 
@@ -2221,7 +2221,7 @@ func (SeccompProfile) SwaggerDoc() map[string]string {
 
 var map_Secret = map[string]string{
 	"":           "Secret holds secret data of a certain type. The total bytes of the values in the Data field must be less than MaxSecretSize bytes.",
-	"metadata":   "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata":   "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"immutable":  "Immutable, if set to true, ensures that data stored in the Secret cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil.",
 	"data":       "Data contains the secret data. Each key must consist of alphanumeric characters, '-', '_' or '.'. The serialized form of the secret data is a base64 encoded string, representing the arbitrary (possibly non-string) data value here. Described in https://tools.ietf.org/html/rfc4648#section-4",
 	"stringData": "stringData allows specifying non-binary secret data in string form. It is provided as a write-only input field for convenience. All keys and values are merged into the data field on write, overwriting any existing values. The stringData field is never output when reading from the API.",
@@ -2253,7 +2253,7 @@ func (SecretKeySelector) SwaggerDoc() map[string]string {
 
 var map_SecretList = map[string]string{
 	"":         "SecretList is a list of Secret.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "Items is a list of secret objects. More info: https://kubernetes.io/docs/concepts/configuration/secret",
 }
 
@@ -2324,9 +2324,9 @@ func (SerializedReference) SwaggerDoc() map[string]string {
 
 var map_Service = map[string]string{
 	"":         "Service is a named abstraction of software service (for example, mysql) consisting of local port (for example 3306) that the proxy listens on, and the selector that determines which pods will answer requests sent through the proxy.",
-	"metadata": "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"spec":     "Spec defines the behavior of a service. https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
-	"status":   "Most recently observed status of the service. Populated by the system. Read-only. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"metadata": "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "Spec defines the behavior of a service. https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"status":   "Most recently observed status of the service. Populated by the system. Read-only. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (Service) SwaggerDoc() map[string]string {
@@ -2335,7 +2335,7 @@ func (Service) SwaggerDoc() map[string]string {
 
 var map_ServiceAccount = map[string]string{
 	"":                             "ServiceAccount binds together: * a name, understood by users, and perhaps by peripheral systems, for an identity * a principal that can be authenticated and authorized * a set of secrets",
-	"metadata":                     "Standard object's metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata":                     "Standard object's metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"secrets":                      "Secrets is a list of the secrets in the same namespace that pods running using this ServiceAccount are allowed to use. Pods are only limited to this list if this service account has a \"kubernetes.io/enforce-mountable-secrets\" annotation set to \"true\". This field should not be used to find auto-generated service account token secrets for use outside of pods. Instead, tokens can be requested directly using the TokenRequest API, or service account token secrets can be manually created. More info: https://kubernetes.io/docs/concepts/configuration/secret",
 	"imagePullSecrets":             "ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod",
 	"automountServiceAccountToken": "AutomountServiceAccountToken indicates whether pods running as this service account should have an API token automatically mounted. Can be overridden at the pod level.",
@@ -2347,7 +2347,7 @@ func (ServiceAccount) SwaggerDoc() map[string]string {
 
 var map_ServiceAccountList = map[string]string{
 	"":         "ServiceAccountList is a list of ServiceAccount objects",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "List of ServiceAccounts. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/",
 }
 
@@ -2368,7 +2368,7 @@ func (ServiceAccountTokenProjection) SwaggerDoc() map[string]string {
 
 var map_ServiceList = map[string]string{
 	"":         "ServiceList holds a list of services.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 	"items":    "List of services",
 }
 
@@ -2576,7 +2576,7 @@ var map_TypedObjectReference = map[string]string{
 	"apiGroup":  "APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.",
 	"kind":      "Kind is the type of resource being referenced",
 	"name":      "Name is the name of resource being referenced",
-	"namespace": "Namespace is the namespace of resource being referenced Note that when a namespace is specified, a gateway.networking.ck-kube/kubernetes/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details. (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled.",
+	"namespace": "Namespace is the namespace of resource being referenced Note that when a namespace is specified, a gateway.networking.github.com/fslqd/ck-kube/kubernetes/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details. (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled.",
 }
 
 func (TypedObjectReference) SwaggerDoc() map[string]string {
@@ -2670,12 +2670,12 @@ var map_VolumeSource = map[string]string{
 	"gitRepo":               "gitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.",
 	"secret":                "secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret",
 	"nfs":                   "nfs represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs",
-	"iscsi":                 "iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.ck-kube/kubernetes/volumes/iscsi/README.md",
-	"glusterfs":             "glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.ck-kube/kubernetes/volumes/glusterfs/README.md",
+	"iscsi":                 "iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/iscsi/README.md",
+	"glusterfs":             "glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/glusterfs/README.md",
 	"persistentVolumeClaim": "persistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims",
-	"rbd":                   "rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.ck-kube/kubernetes/volumes/rbd/README.md",
+	"rbd":                   "rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/volumes/rbd/README.md",
 	"flexVolume":            "flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.",
-	"cinder":                "cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.ck-kube/kubernetes/mysql-cinder-pd/README.md",
+	"cinder":                "cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.github.com/fslqd/ck-kube/kubernetes/mysql-cinder-pd/README.md",
 	"cephfs":                "cephFS represents a Ceph FS mount on the host that shares a pod's lifetime",
 	"flocker":               "flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running",
 	"downwardAPI":           "downwardAPI represents downward API about the pod that should populate this volume",

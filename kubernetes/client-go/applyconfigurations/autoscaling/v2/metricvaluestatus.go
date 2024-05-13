@@ -19,7 +19,7 @@ limitations under the License.
 package v2
 
 import (
-	resource "ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	resource "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
 )
 
 // MetricValueStatusApplyConfiguration represents an declarative configuration of the MetricValueStatus type for use

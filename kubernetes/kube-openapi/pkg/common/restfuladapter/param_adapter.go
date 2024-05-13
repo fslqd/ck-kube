@@ -1,9 +1,9 @@
 package restfuladapter
 
 import (
-	"ck-kube/kubernetes/kube-openapi/pkg/common"
 	"encoding/json"
 	"github.com/emicklei/go-restful/v3"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/common"
 )
 
 var _ common.Parameter = &ParamAdapter{}

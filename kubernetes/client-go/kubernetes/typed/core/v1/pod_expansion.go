@@ -19,13 +19,13 @@ package v1
 import (
 	"context"
 
-	v1 "ck-kube/kubernetes/api/core/v1"
-	policyv1 "ck-kube/kubernetes/api/policy/v1"
-	policyv1beta1 "ck-kube/kubernetes/api/policy/v1beta1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/util/net"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	restclient "ck-kube/kubernetes/client-go/rest"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	policyv1 "github.com/fslqd/ck-kube/kubernetes/api/policy/v1"
+	policyv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/policy/v1beta1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/net"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 // The PodExpansion interface allows manually adding extra methods to the PodInterface.

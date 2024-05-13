@@ -21,9 +21,9 @@ package v1
 import (
 	"net/http"
 
-	v1 "ck-kube/kubernetes/api/authorization/v1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/authorization/v1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type AuthorizationV1Interface interface {
@@ -34,7 +34,7 @@ type AuthorizationV1Interface interface {
 	SubjectAccessReviewsGetter
 }
 
-// AuthorizationV1Client is used to interact with features provided by the authorization.ck-kube/kubernetes group.
+// AuthorizationV1Client is used to interact with features provided by the authorization.github.com/fslqd/ck-kube/kubernetes group.
 type AuthorizationV1Client struct {
 	restClient rest.Interface
 }

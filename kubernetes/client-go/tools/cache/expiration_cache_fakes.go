@@ -17,8 +17,8 @@ limitations under the License.
 package cache
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
-	"ck-kube/kubernetes/utils/clock"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/utils/clock"
 )
 
 type fakeThreadSafeMap struct {

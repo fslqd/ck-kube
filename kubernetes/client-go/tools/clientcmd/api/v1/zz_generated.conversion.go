@@ -24,9 +24,9 @@ package v1
 import (
 	unsafe "unsafe"
 
-	conversion "ck-kube/kubernetes/apimachinery/pkg/conversion"
-	runtime "ck-kube/kubernetes/apimachinery/pkg/runtime"
-	api "ck-kube/kubernetes/client-go/tools/clientcmd/api"
+	conversion "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/conversion"
+	runtime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	api "github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api"
 )
 
 func init() {

@@ -22,11 +22,11 @@ import (
 	"strconv"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/selection"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
-	"ck-kube/kubernetes/apimachinery/pkg/util/validation"
-	"ck-kube/kubernetes/apimachinery/pkg/util/validation/field"
-	stringslices "ck-kube/kubernetes/utils/strings/slices"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/selection"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/validation"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/validation/field"
+	stringslices "github.com/fslqd/ck-kube/kubernetes/utils/strings/slices"
 	"k8s.io/klog/v2"
 )
 

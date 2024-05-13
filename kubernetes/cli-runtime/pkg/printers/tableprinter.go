@@ -23,12 +23,12 @@ import (
 	"strings"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/labels"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/duration"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/duration"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
 	"github.com/liggitt/tabwriter"
 )
 
@@ -194,7 +194,7 @@ func printTable(table *metav1.Table, output io.Writer, options PrintOptions) err
 		first := true
 		for i, cell := range row.Cells {
 			if i >= len(table.ColumnDefinitions) {
-				// https://issue.ck-kube/kubernetes/66379
+				// https://issue.github.com/fslqd/ck-kube/kubernetes/66379
 				// don't panic in case of bad output from the server, with more cells than column definitions
 				break
 			}

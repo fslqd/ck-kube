@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
-	"ck-kube/kubernetes/apimachinery/pkg/util/validation"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/validation"
 )
 
 // TODO(yue9944882): Remove this helper package once it's copied to k/apimachinery

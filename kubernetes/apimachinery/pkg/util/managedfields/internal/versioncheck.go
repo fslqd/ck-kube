@@ -19,9 +19,9 @@ package internal
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 type versionCheckManager struct {

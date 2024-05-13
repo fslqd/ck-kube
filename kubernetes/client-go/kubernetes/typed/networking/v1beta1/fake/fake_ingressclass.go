@@ -23,13 +23,13 @@ import (
 	json "encoding/json"
 	"fmt"
 
-	v1beta1 "ck-kube/kubernetes/api/networking/v1beta1"
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	labels "ck-kube/kubernetes/apimachinery/pkg/labels"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	watch "ck-kube/kubernetes/apimachinery/pkg/watch"
-	networkingv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/networking/v1beta1"
-	testing "ck-kube/kubernetes/client-go/testing"
+	v1beta1 "github.com/fslqd/ck-kube/kubernetes/api/networking/v1beta1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	labels "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	watch "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	networkingv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/networking/v1beta1"
+	testing "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 // FakeIngressClasses implements IngressClassInterface

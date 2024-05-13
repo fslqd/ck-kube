@@ -20,12 +20,12 @@ import (
 	"context"
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	metainternalversion "ck-kube/kubernetes/apimachinery/pkg/apis/meta/internalversion"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	metainternalversion "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/internalversion"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
 )
 
 const defaultPageSize = 500

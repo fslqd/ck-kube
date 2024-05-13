@@ -17,8 +17,8 @@ limitations under the License.
 package restmapper
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/client-go/discovery"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/discovery"
 )
 
 // CategoryExpander maps category strings to GroupResources.

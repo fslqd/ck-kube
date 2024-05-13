@@ -22,8 +22,8 @@ import (
 	"reflect"
 	"sync"
 
-	"ck-kube/kubernetes/apimachinery/pkg/conversion"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/conversion"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 )
 
 var (

@@ -17,7 +17,7 @@ limitations under the License.
 package validation
 
 import (
-	"ck-kube/kubernetes/kube-openapi/pkg/util/proto"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/util/proto"
 )
 
 func ValidateModel(obj interface{}, schema proto.Schema, name string) []error {

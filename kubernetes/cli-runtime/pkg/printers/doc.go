@@ -16,4 +16,4 @@ limitations under the License.
 
 // Package printers is helper for formatting and printing runtime objects into
 // primitives io.writer.
-package printers // import "ck-kube/kubernetes/cli-runtime/pkg/printers"
+package printers // import "github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/printers"

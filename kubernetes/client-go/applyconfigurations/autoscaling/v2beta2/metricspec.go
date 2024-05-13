@@ -19,7 +19,7 @@ limitations under the License.
 package v2beta2
 
 import (
-	v2beta2 "ck-kube/kubernetes/api/autoscaling/v2beta2"
+	v2beta2 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2beta2"
 )
 
 // MetricSpecApplyConfiguration represents an declarative configuration of the MetricSpec type for use

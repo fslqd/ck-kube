@@ -19,7 +19,7 @@ limitations under the License.
 package v1alpha2
 
 import (
-	runtime "ck-kube/kubernetes/apimachinery/pkg/runtime"
+	runtime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 )
 
 // VendorParametersApplyConfiguration represents an declarative configuration of the VendorParameters type for use

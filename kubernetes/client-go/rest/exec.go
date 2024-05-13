@@ -21,7 +21,7 @@ import (
 	"net/http"
 	"net/url"
 
-	clientauthenticationapi "ck-kube/kubernetes/client-go/pkg/apis/clientauthentication"
+	clientauthenticationapi "github.com/fslqd/ck-kube/kubernetes/client-go/pkg/apis/clientauthentication"
 )
 
 // This file contains Config logic related to exec credential plugins.

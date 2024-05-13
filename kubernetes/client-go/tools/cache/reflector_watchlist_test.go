@@ -25,15 +25,15 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	v1 "ck-kube/kubernetes/api/core/v1"
-	apierrors "ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
-	"ck-kube/kubernetes/utils/pointer"
-	"ck-kube/kubernetes/utils/ptr"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	apierrors "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	"github.com/fslqd/ck-kube/kubernetes/utils/pointer"
+	"github.com/fslqd/ck-kube/kubernetes/utils/ptr"
 )
 
 func TestWatchList(t *testing.T) {
@@ -174,7 +174,7 @@ func TestWatchList(t *testing.T) {
 				{Type: watch.Bookmark, Object: &v1.Pod{
 					ObjectMeta: metav1.ObjectMeta{
 						ResourceVersion: "2",
-						Annotations:     map[string]string{"ck-kube/kubernetes/initial-events-end": "true"},
+						Annotations:     map[string]string{"github.com/fslqd/ck-kube/kubernetes/initial-events-end": "true"},
 					},
 				}},
 			},
@@ -203,7 +203,7 @@ func TestWatchList(t *testing.T) {
 				{Type: watch.Bookmark, Object: &v1.Pod{
 					ObjectMeta: metav1.ObjectMeta{
 						ResourceVersion: "5",
-						Annotations:     map[string]string{"ck-kube/kubernetes/initial-events-end": "true"},
+						Annotations:     map[string]string{"github.com/fslqd/ck-kube/kubernetes/initial-events-end": "true"},
 					},
 				}},
 			},
@@ -241,7 +241,7 @@ func TestWatchList(t *testing.T) {
 				{Type: watch.Bookmark, Object: &v1.Pod{
 					ObjectMeta: metav1.ObjectMeta{
 						ResourceVersion: "2",
-						Annotations:     map[string]string{"ck-kube/kubernetes/initial-events-end": "true"},
+						Annotations:     map[string]string{"github.com/fslqd/ck-kube/kubernetes/initial-events-end": "true"},
 					},
 				}},
 			},
@@ -279,7 +279,7 @@ func TestWatchList(t *testing.T) {
 				{Type: watch.Bookmark, Object: &v1.Pod{
 					ObjectMeta: metav1.ObjectMeta{
 						ResourceVersion: "1",
-						Annotations:     map[string]string{"ck-kube/kubernetes/initial-events-end": "true"},
+						Annotations:     map[string]string{"github.com/fslqd/ck-kube/kubernetes/initial-events-end": "true"},
 					},
 				}},
 			},
@@ -310,7 +310,7 @@ func TestWatchList(t *testing.T) {
 				{Type: watch.Bookmark, Object: &v1.Pod{
 					ObjectMeta: metav1.ObjectMeta{
 						ResourceVersion: "2",
-						Annotations:     map[string]string{"ck-kube/kubernetes/initial-events-end": "true"},
+						Annotations:     map[string]string{"github.com/fslqd/ck-kube/kubernetes/initial-events-end": "true"},
 					},
 				}},
 				{Type: watch.Added, Object: makePod("p3", "3")},
@@ -351,7 +351,7 @@ func TestWatchList(t *testing.T) {
 				{Type: watch.Bookmark, Object: &v1.Pod{
 					ObjectMeta: metav1.ObjectMeta{
 						ResourceVersion: "2",
-						Annotations:     map[string]string{"ck-kube/kubernetes/initial-events-end": "true"},
+						Annotations:     map[string]string{"github.com/fslqd/ck-kube/kubernetes/initial-events-end": "true"},
 					},
 				}},
 				{Type: watch.Added, Object: makePod("p3", "3")},
@@ -382,7 +382,7 @@ func TestWatchList(t *testing.T) {
 				{Type: watch.Bookmark, Object: &v1.Pod{
 					ObjectMeta: metav1.ObjectMeta{
 						ResourceVersion: "2",
-						Annotations:     map[string]string{"ck-kube/kubernetes/initial-events-end": "false"},
+						Annotations:     map[string]string{"github.com/fslqd/ck-kube/kubernetes/initial-events-end": "false"},
 					},
 				}},
 			},

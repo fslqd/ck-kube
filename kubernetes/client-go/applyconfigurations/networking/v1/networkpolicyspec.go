@@ -19,8 +19,8 @@ limitations under the License.
 package v1
 
 import (
-	apinetworkingv1 "ck-kube/kubernetes/api/networking/v1"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	apinetworkingv1 "github.com/fslqd/ck-kube/kubernetes/api/networking/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // NetworkPolicySpecApplyConfiguration represents an declarative configuration of the NetworkPolicySpec type for use

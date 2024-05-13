@@ -67,7 +67,7 @@ import (
 	"encoding/json"
 	"os"
 
-	restclient "ck-kube/kubernetes/client-go/rest"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 // Info holds Kubernetes API authorization config.  It is intended

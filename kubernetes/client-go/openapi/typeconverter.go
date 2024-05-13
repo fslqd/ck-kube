@@ -20,9 +20,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	"ck-kube/kubernetes/kube-openapi/pkg/spec3"
-	"ck-kube/kubernetes/kube-openapi/pkg/validation/spec"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/spec3"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/validation/spec"
 )
 
 func NewTypeConverter(client Client, preserveUnknownFields bool) (managedfields.TypeConverter, error) {

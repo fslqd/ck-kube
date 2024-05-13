@@ -31,15 +31,15 @@ import (
 	"sync"
 	"time"
 
-	certificates "ck-kube/kubernetes/api/certificates/v1"
-	apierrors "ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
-	"ck-kube/kubernetes/apimachinery/pkg/util/wait"
-	clientset "ck-kube/kubernetes/client-go/kubernetes"
-	"ck-kube/kubernetes/client-go/util/cert"
-	"ck-kube/kubernetes/client-go/util/certificate/csr"
-	"ck-kube/kubernetes/client-go/util/keyutil"
+	certificates "github.com/fslqd/ck-kube/kubernetes/api/certificates/v1"
+	apierrors "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/wait"
+	clientset "github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/cert"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/certificate/csr"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/keyutil"
 )
 
 var (

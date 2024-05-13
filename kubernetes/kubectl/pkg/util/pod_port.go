@@ -19,7 +19,7 @@ package util
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/api/core/v1"
+	"github.com/fslqd/ck-kube/kubernetes/api/core/v1"
 )
 
 // LookupContainerPortNumberByName find containerPort number by its named port name

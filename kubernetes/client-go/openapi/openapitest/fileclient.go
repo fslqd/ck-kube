@@ -23,7 +23,7 @@ import (
 	"os"
 	"strings"
 
-	"ck-kube/kubernetes/client-go/openapi"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi"
 )
 
 //go:embed testdata/*_openapi.json

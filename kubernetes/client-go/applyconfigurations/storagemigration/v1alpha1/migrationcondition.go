@@ -19,9 +19,9 @@ limitations under the License.
 package v1alpha1
 
 import (
-	v1 "ck-kube/kubernetes/api/core/v1"
-	v1alpha1 "ck-kube/kubernetes/api/storagemigration/v1alpha1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	v1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/storagemigration/v1alpha1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // MigrationConditionApplyConfiguration represents an declarative configuration of the MigrationCondition type for use

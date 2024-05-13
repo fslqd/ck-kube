@@ -17,7 +17,7 @@ limitations under the License.
 package v1
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
 )
 
 // Returns string version of ResourceName.

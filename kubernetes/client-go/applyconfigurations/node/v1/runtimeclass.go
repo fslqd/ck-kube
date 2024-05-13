@@ -19,12 +19,12 @@ limitations under the License.
 package v1
 
 import (
-	apinodev1 "ck-kube/kubernetes/api/node/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	apinodev1 "github.com/fslqd/ck-kube/kubernetes/api/node/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // RuntimeClassApplyConfiguration represents an declarative configuration of the RuntimeClass type for use
@@ -43,7 +43,7 @@ func RuntimeClass(name string) *RuntimeClassApplyConfiguration {
 	b := &RuntimeClassApplyConfiguration{}
 	b.WithName(name)
 	b.WithKind("RuntimeClass")
-	b.WithAPIVersion("node.ck-kube/kubernetes/v1")
+	b.WithAPIVersion("node.github.com/fslqd/ck-kube/kubernetes/v1")
 	return b
 }
 
@@ -78,7 +78,7 @@ func extractRuntimeClass(runtimeClass *apinodev1.RuntimeClass, fieldManager stri
 	b.WithName(runtimeClass.Name)
 
 	b.WithKind("RuntimeClass")
-	b.WithAPIVersion("node.ck-kube/kubernetes/v1")
+	b.WithAPIVersion("node.github.com/fslqd/ck-kube/kubernetes/v1")
 	return b, nil
 }
 

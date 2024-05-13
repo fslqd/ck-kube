@@ -21,7 +21,7 @@ import (
 	"path"
 	"strings"
 
-	"ck-kube/kubernetes/kube-openapi/pkg/util/proto"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/util/proto"
 	"sigs.k8s.io/structured-merge-diff/v4/schema"
 )
 

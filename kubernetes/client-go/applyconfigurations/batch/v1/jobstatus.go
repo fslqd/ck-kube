@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // JobStatusApplyConfiguration represents an declarative configuration of the JobStatus type for use

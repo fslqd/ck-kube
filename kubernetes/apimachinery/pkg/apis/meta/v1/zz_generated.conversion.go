@@ -25,13 +25,13 @@ import (
 	url "net/url"
 	unsafe "unsafe"
 
-	resource "ck-kube/kubernetes/apimachinery/pkg/api/resource"
-	conversion "ck-kube/kubernetes/apimachinery/pkg/conversion"
-	fields "ck-kube/kubernetes/apimachinery/pkg/fields"
-	labels "ck-kube/kubernetes/apimachinery/pkg/labels"
-	runtime "ck-kube/kubernetes/apimachinery/pkg/runtime"
-	intstr "ck-kube/kubernetes/apimachinery/pkg/util/intstr"
-	watch "ck-kube/kubernetes/apimachinery/pkg/watch"
+	resource "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	conversion "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/conversion"
+	fields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/fields"
+	labels "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	runtime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	intstr "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/intstr"
+	watch "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
 )
 
 func init() {

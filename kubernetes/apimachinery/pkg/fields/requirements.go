@@ -16,7 +16,7 @@ limitations under the License.
 
 package fields
 
-import "ck-kube/kubernetes/apimachinery/pkg/selection"
+import "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/selection"
 
 // Requirements is AND of all requirements.
 type Requirements []Requirement

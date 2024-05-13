@@ -21,10 +21,10 @@ package v1beta1
 import (
 	"context"
 
-	v1beta1 "ck-kube/kubernetes/api/authorization/v1beta1"
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	scheme "ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1beta1 "github.com/fslqd/ck-kube/kubernetes/api/authorization/v1beta1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	scheme "github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 // SelfSubjectRulesReviewsGetter has a method to return a SelfSubjectRulesReviewInterface.

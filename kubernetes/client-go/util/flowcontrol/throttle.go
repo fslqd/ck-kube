@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"ck-kube/kubernetes/utils/clock"
+	"github.com/fslqd/ck-kube/kubernetes/utils/clock"
 	"golang.org/x/time/rate"
 )
 

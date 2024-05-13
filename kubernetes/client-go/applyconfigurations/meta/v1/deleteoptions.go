@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // DeleteOptionsApplyConfiguration represents an declarative configuration of the DeleteOptions type for use
@@ -38,7 +38,7 @@ type DeleteOptionsApplyConfiguration struct {
 func DeleteOptions() *DeleteOptionsApplyConfiguration {
 	b := &DeleteOptionsApplyConfiguration{}
 	b.WithKind("DeleteOptions")
-	b.WithAPIVersion("meta.ck-kube/kubernetes/v1")
+	b.WithAPIVersion("meta.github.com/fslqd/ck-kube/kubernetes/v1")
 	return b
 }
 

@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	v1 "ck-kube/kubernetes/api/storage/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/storage/v1"
 )
 
 // CSIDriverSpecApplyConfiguration represents an declarative configuration of the CSIDriverSpec type for use

@@ -19,12 +19,12 @@ limitations under the License.
 package v1beta1
 
 import (
-	certificatesv1beta1 "ck-kube/kubernetes/api/certificates/v1beta1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	certificatesv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/certificates/v1beta1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // CertificateSigningRequestApplyConfiguration represents an declarative configuration of the CertificateSigningRequest type for use
@@ -42,7 +42,7 @@ func CertificateSigningRequest(name string) *CertificateSigningRequestApplyConfi
 	b := &CertificateSigningRequestApplyConfiguration{}
 	b.WithName(name)
 	b.WithKind("CertificateSigningRequest")
-	b.WithAPIVersion("certificates.ck-kube/kubernetes/v1beta1")
+	b.WithAPIVersion("certificates.github.com/fslqd/ck-kube/kubernetes/v1beta1")
 	return b
 }
 
@@ -77,7 +77,7 @@ func extractCertificateSigningRequest(certificateSigningRequest *certificatesv1b
 	b.WithName(certificateSigningRequest.Name)
 
 	b.WithKind("CertificateSigningRequest")
-	b.WithAPIVersion("certificates.ck-kube/kubernetes/v1beta1")
+	b.WithAPIVersion("certificates.github.com/fslqd/ck-kube/kubernetes/v1beta1")
 	return b, nil
 }
 

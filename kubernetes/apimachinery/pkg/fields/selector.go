@@ -22,7 +22,7 @@ import (
 	"sort"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/selection"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/selection"
 )
 
 // Selector represents a field selector.

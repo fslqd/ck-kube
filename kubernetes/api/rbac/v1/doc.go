@@ -18,6 +18,6 @@ limitations under the License.
 // +k8s:protobuf-gen=package
 // +k8s:openapi-gen=true
 
-// +groupName=rbac.authorization.ck-kube/kubernetes
+// +groupName=rbac.authorization.github.com/fslqd/ck-kube/kubernetes
 
-package v1 // import "ck-kube/kubernetes/api/rbac/v1"
+package v1 // import "github.com/fslqd/ck-kube/kubernetes/api/rbac/v1"

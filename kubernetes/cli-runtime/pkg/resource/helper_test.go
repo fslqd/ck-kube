@@ -26,15 +26,15 @@ import (
 	"strings"
 	"testing"
 
-	apierrors "ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/labels"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/client-go/rest/fake"
+	apierrors "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/rest/fake"
 
 	// TODO we need to remove this linkage and create our own scheme
-	corev1 "ck-kube/kubernetes/api/core/v1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
 )
 
 func objBody(obj runtime.Object) io.ReadCloser {

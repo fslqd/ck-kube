@@ -19,7 +19,7 @@ package features
 import (
 	"errors"
 
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
 	"sync/atomic"
 )
 

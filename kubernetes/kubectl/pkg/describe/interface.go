@@ -17,9 +17,9 @@ limitations under the License.
 package describe
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/cli-runtime/pkg/genericclioptions"
 	"fmt"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/genericclioptions"
 )
 
 const (

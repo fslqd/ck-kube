@@ -18,6 +18,6 @@ limitations under the License.
 // +k8s:protobuf-gen=package
 // +k8s:openapi-gen=true
 
-// +groupName=scheduling.ck-kube/kubernetes
+// +groupName=scheduling.github.com/fslqd/ck-kube/kubernetes
 
-package v1alpha1 // import "ck-kube/kubernetes/api/scheduling/v1alpha1"
+package v1alpha1 // import "github.com/fslqd/ck-kube/kubernetes/api/scheduling/v1alpha1"

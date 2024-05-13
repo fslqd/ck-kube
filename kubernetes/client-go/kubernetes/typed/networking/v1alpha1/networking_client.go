@@ -21,9 +21,9 @@ package v1alpha1
 import (
 	"net/http"
 
-	v1alpha1 "ck-kube/kubernetes/api/networking/v1alpha1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/networking/v1alpha1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type NetworkingV1alpha1Interface interface {
@@ -32,7 +32,7 @@ type NetworkingV1alpha1Interface interface {
 	ServiceCIDRsGetter
 }
 
-// NetworkingV1alpha1Client is used to interact with features provided by the networking.ck-kube/kubernetes group.
+// NetworkingV1alpha1Client is used to interact with features provided by the networking.github.com/fslqd/ck-kube/kubernetes group.
 type NetworkingV1alpha1Client struct {
 	restClient rest.Interface
 }

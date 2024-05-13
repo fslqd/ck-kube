@@ -37,9 +37,9 @@ func (Overhead) SwaggerDoc() map[string]string {
 }
 
 var map_RuntimeClass = map[string]string{
-	"":         "RuntimeClass defines a class of container runtime supported in the cluster. The RuntimeClass is used to determine which container runtime is used to run all containers in a pod. RuntimeClasses are (currently) manually defined by a user or cluster provisioner, and referenced in the PodSpec. The Kubelet is responsible for resolving the RuntimeClassName reference before running the pod.  For more details, see https://git.ck-kube/kubernetes/enhancements/keps/sig-node/585-runtime-class",
-	"metadata": "More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
-	"spec":     "spec represents specification of the RuntimeClass More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
+	"":         "RuntimeClass defines a class of container runtime supported in the cluster. The RuntimeClass is used to determine which container runtime is used to run all containers in a pod. RuntimeClasses are (currently) manually defined by a user or cluster provisioner, and referenced in the PodSpec. The Kubelet is responsible for resolving the RuntimeClassName reference before running the pod.  For more details, see https://git.github.com/fslqd/ck-kube/kubernetes/enhancements/keps/sig-node/585-runtime-class",
+	"metadata": "More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "spec represents specification of the RuntimeClass More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 }
 
 func (RuntimeClass) SwaggerDoc() map[string]string {
@@ -48,7 +48,7 @@ func (RuntimeClass) SwaggerDoc() map[string]string {
 
 var map_RuntimeClassList = map[string]string{
 	"":         "RuntimeClassList is a list of RuntimeClass objects.",
-	"metadata": "Standard list metadata. More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"metadata": "Standard list metadata. More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 	"items":    "items is a list of schema objects.",
 }
 
@@ -59,7 +59,7 @@ func (RuntimeClassList) SwaggerDoc() map[string]string {
 var map_RuntimeClassSpec = map[string]string{
 	"":               "RuntimeClassSpec is a specification of a RuntimeClass. It contains parameters that are required to describe the RuntimeClass to the Container Runtime Interface (CRI) implementation, as well as any other components that need to understand how the pod will be run. The RuntimeClassSpec is immutable.",
 	"runtimeHandler": "runtimeHandler specifies the underlying runtime and configuration that the CRI implementation will use to handle pods of this class. The possible values are specific to the node & CRI configuration.  It is assumed that all handlers are available on every node, and handlers of the same name are equivalent on every node. For example, a handler called \"runc\" might specify that the runc OCI runtime (using native Linux containers) will be used to run the containers in a pod. The runtimeHandler must be lowercase, conform to the DNS Label (RFC 1123) requirements, and is immutable.",
-	"overhead":       "overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see https://git.ck-kube/kubernetes/enhancements/keps/sig-node/688-pod-overhead/README.md",
+	"overhead":       "overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see https://git.github.com/fslqd/ck-kube/kubernetes/enhancements/keps/sig-node/688-pod-overhead/README.md",
 	"scheduling":     "scheduling holds the scheduling constraints to ensure that pods running with this RuntimeClass are scheduled to nodes that support it. If scheduling is nil, this RuntimeClass is assumed to be supported by all nodes.",
 }
 

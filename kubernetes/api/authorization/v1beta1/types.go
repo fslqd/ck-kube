@@ -19,22 +19,22 @@ package v1beta1
 import (
 	"fmt"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
 // +genclient:nonNamespaced
 // +genclient:onlyVerbs=create
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.2
 // +k8s:prerelease-lifecycle-gen:deprecated=1.19
-// +k8s:prerelease-lifecycle-gen:replacement=authorization.ck-kube/kubernetes,v1,SubjectAccessReview
+// +k8s:prerelease-lifecycle-gen:replacement=authorization.github.com/fslqd/ck-kube/kubernetes,v1,SubjectAccessReview
 
 // SubjectAccessReview checks whether or not a user or group can perform an action.
 type SubjectAccessReview struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -49,10 +49,10 @@ type SubjectAccessReview struct {
 // +genclient
 // +genclient:nonNamespaced
 // +genclient:onlyVerbs=create
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.2
 // +k8s:prerelease-lifecycle-gen:deprecated=1.19
-// +k8s:prerelease-lifecycle-gen:replacement=authorization.ck-kube/kubernetes,v1,SelfSubjectAccessReview
+// +k8s:prerelease-lifecycle-gen:replacement=authorization.github.com/fslqd/ck-kube/kubernetes,v1,SelfSubjectAccessReview
 
 // SelfSubjectAccessReview checks whether or the current user can perform an action.  Not filling in a
 // spec.namespace means "in all namespaces".  Self is a special case, because users should always be able
@@ -60,7 +60,7 @@ type SubjectAccessReview struct {
 type SelfSubjectAccessReview struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -74,10 +74,10 @@ type SelfSubjectAccessReview struct {
 
 // +genclient
 // +genclient:onlyVerbs=create
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.2
 // +k8s:prerelease-lifecycle-gen:deprecated=1.19
-// +k8s:prerelease-lifecycle-gen:replacement=authorization.ck-kube/kubernetes,v1,LocalSubjectAccessReview
+// +k8s:prerelease-lifecycle-gen:replacement=authorization.github.com/fslqd/ck-kube/kubernetes,v1,LocalSubjectAccessReview
 
 // LocalSubjectAccessReview checks whether or not a user or group can perform an action in a given namespace.
 // Having a namespace scoped resource makes it much easier to grant namespace scoped policy that includes permissions
@@ -85,7 +85,7 @@ type SelfSubjectAccessReview struct {
 type LocalSubjectAccessReview struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -206,10 +206,10 @@ type SubjectAccessReviewStatus struct {
 // +genclient
 // +genclient:nonNamespaced
 // +genclient:onlyVerbs=create
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.8
 // +k8s:prerelease-lifecycle-gen:deprecated=1.19
-// +k8s:prerelease-lifecycle-gen:replacement=authorization.ck-kube/kubernetes,v1,SelfSubjectRulesReview
+// +k8s:prerelease-lifecycle-gen:replacement=authorization.github.com/fslqd/ck-kube/kubernetes,v1,SelfSubjectRulesReview
 
 // SelfSubjectRulesReview enumerates the set of actions the current user can perform within a namespace.
 // The returned list of actions may be incomplete depending on the server's authorization mode,
@@ -220,7 +220,7 @@ type SubjectAccessReviewStatus struct {
 type SelfSubjectRulesReview struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 

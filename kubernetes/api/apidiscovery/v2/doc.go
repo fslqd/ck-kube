@@ -18,6 +18,6 @@ limitations under the License.
 // +k8s:protobuf-gen=package
 // +k8s:openapi-gen=true
 
-// +groupName=apidiscovery.ck-kube/kubernetes
+// +groupName=apidiscovery.github.com/fslqd/ck-kube/kubernetes
 
-package v2 // import "ck-kube/kubernetes/api/apidiscovery/v2"
+package v2 // import "github.com/fslqd/ck-kube/kubernetes/api/apidiscovery/v2"

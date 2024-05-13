@@ -19,8 +19,8 @@ limitations under the License.
 package v1
 
 import (
-	v1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // TopologySpreadConstraintApplyConfiguration represents an declarative configuration of the TopologySpreadConstraint type for use

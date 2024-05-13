@@ -21,8 +21,8 @@ import (
 	"reflect"
 	"testing"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	metav1beta1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1beta1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	metav1beta1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1beta1"
 
 	"github.com/google/go-cmp/cmp"
 	fuzz "github.com/google/gofuzz"

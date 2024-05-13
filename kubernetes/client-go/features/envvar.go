@@ -23,14 +23,14 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/naming"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/naming"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
 	"k8s.io/klog/v2"
 )
 
 // internalPackages are packages that ignored when creating a name for featureGates. These packages are in the common
 // call chains, so they'd be unhelpful as names.
-var internalPackages = []string{"ck-kube/kubernetes/client-go/features/envvar.go"}
+var internalPackages = []string{"github.com/fslqd/ck-kube/kubernetes/client-go/features/envvar.go"}
 
 var _ Gates = &envVarFeatureGates{}
 

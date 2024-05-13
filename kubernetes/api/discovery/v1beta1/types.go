@@ -17,16 +17,16 @@ limitations under the License.
 package v1beta1
 
 import (
-	v1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.16
 // +k8s:prerelease-lifecycle-gen:deprecated=1.21
 // +k8s:prerelease-lifecycle-gen:removed=1.25
-// +k8s:prerelease-lifecycle-gen:replacement=discovery.ck-kube/kubernetes,v1,EndpointSlice
+// +k8s:prerelease-lifecycle-gen:replacement=discovery.github.com/fslqd/ck-kube/kubernetes,v1,EndpointSlice
 
 // EndpointSlice represents a subset of the endpoints that implement a service.
 // For a given service there may be multiple EndpointSlice objects, selected by
@@ -83,7 +83,7 @@ type Endpoint struct {
 	// must handle different types of addresses in the context of their own
 	// capabilities. This must contain at least one address but no more than
 	// 100. These are all assumed to be fungible and clients may choose to only
-	// use the first element. Refer to: https://issue.ck-kube/kubernetes/106267
+	// use the first element. Refer to: https://issue.github.com/fslqd/ck-kube/kubernetes/106267
 	// +listType=set
 	Addresses []string `json:"addresses" protobuf:"bytes,1,rep,name=addresses"`
 
@@ -200,11 +200,11 @@ type EndpointPort struct {
 	AppProtocol *string `json:"appProtocol,omitempty" protobuf:"bytes,4,name=appProtocol"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.16
 // +k8s:prerelease-lifecycle-gen:deprecated=1.21
 // +k8s:prerelease-lifecycle-gen:removed=1.25
-// +k8s:prerelease-lifecycle-gen:replacement=discovery.ck-kube/kubernetes,v1,EndpointSlice
+// +k8s:prerelease-lifecycle-gen:replacement=discovery.github.com/fslqd/ck-kube/kubernetes,v1,EndpointSlice
 
 // EndpointSliceList represents a list of endpoint slices
 type EndpointSliceList struct {

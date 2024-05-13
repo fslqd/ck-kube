@@ -25,10 +25,10 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/wait"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/wait"
 	"k8s.io/klog/v2"
 )
 

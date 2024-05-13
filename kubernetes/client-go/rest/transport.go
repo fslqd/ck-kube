@@ -21,9 +21,9 @@ import (
 	"errors"
 	"net/http"
 
-	"ck-kube/kubernetes/client-go/pkg/apis/clientauthentication"
-	"ck-kube/kubernetes/client-go/plugin/pkg/client/auth/exec"
-	"ck-kube/kubernetes/client-go/transport"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/pkg/apis/clientauthentication"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/plugin/pkg/client/auth/exec"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/transport"
 )
 
 // HTTPClientFor returns an http.Client that will provide the authentication

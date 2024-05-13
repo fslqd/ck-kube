@@ -22,15 +22,15 @@ import (
 
 	openapi_v2 "github.com/google/gnostic-models/openapiv2"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/version"
-	"ck-kube/kubernetes/client-go/discovery"
-	"ck-kube/kubernetes/client-go/openapi"
-	kubeversion "ck-kube/kubernetes/client-go/pkg/version"
-	restclient "ck-kube/kubernetes/client-go/rest"
-	"ck-kube/kubernetes/client-go/testing"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/version"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/discovery"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi"
+	kubeversion "github.com/fslqd/ck-kube/kubernetes/client-go/pkg/version"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 // FakeDiscovery implements discovery.DiscoveryInterface and sometimes calls testing.Fake.Invoke with an action,

@@ -27,7 +27,7 @@ import (
 	"sync"
 	"time"
 
-	utilnet "ck-kube/kubernetes/apimachinery/pkg/util/net"
+	utilnet "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/net"
 	"k8s.io/klog/v2"
 )
 

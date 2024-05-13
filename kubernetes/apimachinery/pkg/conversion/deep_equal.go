@@ -17,7 +17,7 @@ limitations under the License.
 package conversion
 
 import (
-	"ck-kube/kubernetes/apimachinery/third_party/forked/golang/reflect"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/third_party/forked/golang/reflect"
 )
 
 // The code for this type must be located in third_party, since it forks from

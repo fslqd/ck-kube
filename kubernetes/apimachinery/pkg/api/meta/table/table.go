@@ -19,10 +19,10 @@ package table
 import (
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/duration"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/duration"
 )
 
 // MetaToTableRow converts a list or object into one or more table rows. The provided rowFn is invoked for

@@ -19,8 +19,8 @@ package printers
 import (
 	"io"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 )
 
 // OmitManagedFieldsPrinter wraps an existing printer and omits the managed fields from the object

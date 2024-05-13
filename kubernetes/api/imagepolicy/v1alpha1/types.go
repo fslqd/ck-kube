@@ -17,19 +17,19 @@ limitations under the License.
 package v1alpha1
 
 import (
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
 // +genclient:nonNamespaced
 // +genclient:noVerbs
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ImageReview checks if the set of images in a pod are allowed.
 type ImageReview struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -48,7 +48,7 @@ type ImageReviewSpec struct {
 	// +listType=atomic
 	Containers []ImageReviewContainerSpec `json:"containers,omitempty" protobuf:"bytes,1,rep,name=containers"`
 	// Annotations is a list of key-value pairs extracted from the Pod's annotations.
-	// It only includes keys which match the pattern `*.image-policy.ck-kube/kubernetes/*`.
+	// It only includes keys which match the pattern `*.image-policy.github.com/fslqd/ck-kube/kubernetes/*`.
 	// It is up to each webhook backend to determine how to interpret these annotations, if at all.
 	// +optional
 	Annotations map[string]string `json:"annotations,omitempty" protobuf:"bytes,2,rep,name=annotations"`

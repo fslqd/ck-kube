@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"math/rand"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 )
 
 type skipNonAppliedManager struct {

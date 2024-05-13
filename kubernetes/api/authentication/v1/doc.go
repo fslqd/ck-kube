@@ -16,7 +16,7 @@ limitations under the License.
 
 // +k8s:deepcopy-gen=package
 // +k8s:protobuf-gen=package
-// +groupName=authentication.ck-kube/kubernetes
+// +groupName=authentication.github.com/fslqd/ck-kube/kubernetes
 // +k8s:openapi-gen=true
 
-package v1 // import "ck-kube/kubernetes/api/authentication/v1"
+package v1 // import "github.com/fslqd/ck-kube/kubernetes/api/authentication/v1"

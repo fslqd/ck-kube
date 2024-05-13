@@ -19,9 +19,9 @@ package v1beta1
 import (
 	"context"
 
-	"ck-kube/kubernetes/api/extensions/v1beta1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	scheme "ck-kube/kubernetes/client-go/kubernetes/scheme"
+	"github.com/fslqd/ck-kube/kubernetes/api/extensions/v1beta1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	scheme "github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
 )
 
 // The DeploymentExpansion interface allows manually adding extra methods to the DeploymentInterface.

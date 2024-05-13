@@ -17,8 +17,8 @@ limitations under the License.
 package v1
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 // SchemeGroupVersion is group version used to register these objects
@@ -26,8 +26,8 @@ import (
 var SchemeGroupVersion = schema.GroupVersion{Group: "", Version: "v1"}
 
 var (
-	// TODO: move SchemeBuilder with zz_generated.deepcopy.go to ck-kube/kubernetes/api.
-	// localSchemeBuilder and AddToScheme will stay in ck-kube/kubernetes/kubernetes.
+	// TODO: move SchemeBuilder with zz_generated.deepcopy.go to github.com/fslqd/ck-kube/kubernetes/api.
+	// localSchemeBuilder and AddToScheme will stay in github.com/fslqd/ck-kube/kubernetes/kubernetes.
 	SchemeBuilder      runtime.SchemeBuilder
 	localSchemeBuilder = &SchemeBuilder
 	AddToScheme        = localSchemeBuilder.AddToScheme

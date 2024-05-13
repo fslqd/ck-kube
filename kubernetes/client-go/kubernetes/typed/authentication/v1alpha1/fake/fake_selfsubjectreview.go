@@ -21,9 +21,9 @@ package fake
 import (
 	"context"
 
-	v1alpha1 "ck-kube/kubernetes/api/authentication/v1alpha1"
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	testing "ck-kube/kubernetes/client-go/testing"
+	v1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/authentication/v1alpha1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	testing "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 // FakeSelfSubjectReviews implements SelfSubjectReviewInterface

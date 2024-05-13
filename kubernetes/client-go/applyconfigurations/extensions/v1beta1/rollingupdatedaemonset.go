@@ -19,7 +19,7 @@ limitations under the License.
 package v1beta1
 
 import (
-	intstr "ck-kube/kubernetes/apimachinery/pkg/util/intstr"
+	intstr "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/intstr"
 )
 
 // RollingUpdateDaemonSetApplyConfiguration represents an declarative configuration of the RollingUpdateDaemonSet type for use

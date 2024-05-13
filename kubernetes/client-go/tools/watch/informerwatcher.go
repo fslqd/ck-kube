@@ -19,9 +19,9 @@ package watch
 import (
 	"sync"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
-	"ck-kube/kubernetes/client-go/tools/cache"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/cache"
 )
 
 func newEventProcessor(out chan<- watch.Event) *eventProcessor {

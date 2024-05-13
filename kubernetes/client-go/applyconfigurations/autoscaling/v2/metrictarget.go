@@ -19,8 +19,8 @@ limitations under the License.
 package v2
 
 import (
-	v2 "ck-kube/kubernetes/api/autoscaling/v2"
-	resource "ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	v2 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2"
+	resource "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
 )
 
 // MetricTargetApplyConfiguration represents an declarative configuration of the MetricTarget type for use

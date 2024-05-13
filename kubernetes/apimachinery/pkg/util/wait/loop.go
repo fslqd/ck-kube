@@ -20,7 +20,7 @@ import (
 	"context"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
 )
 
 // loopConditionUntilContext executes the provided condition at intervals defined by

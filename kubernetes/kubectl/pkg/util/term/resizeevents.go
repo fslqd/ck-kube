@@ -23,8 +23,8 @@ import (
 	"os"
 	"os/signal"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/client-go/tools/remotecommand"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/remotecommand"
 	"golang.org/x/sys/unix"
 )
 

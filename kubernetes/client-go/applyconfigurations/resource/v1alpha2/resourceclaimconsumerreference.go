@@ -19,7 +19,7 @@ limitations under the License.
 package v1alpha2
 
 import (
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
 )
 
 // ResourceClaimConsumerReferenceApplyConfiguration represents an declarative configuration of the ResourceClaimConsumerReference type for use

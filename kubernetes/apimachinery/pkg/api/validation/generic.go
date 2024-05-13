@@ -19,8 +19,8 @@ package validation
 import (
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/validation"
-	"ck-kube/kubernetes/apimachinery/pkg/util/validation/field"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/validation"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/validation/field"
 )
 
 // IsNegativeErrorMsg is a error message for value must be greater than or equal to 0.

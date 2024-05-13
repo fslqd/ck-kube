@@ -19,6 +19,6 @@ limitations under the License.
 // +k8s:openapi-gen=true
 // +k8s:prerelease-lifecycle-gen=true
 
-// +groupName=rbac.authorization.ck-kube/kubernetes
+// +groupName=rbac.authorization.github.com/fslqd/ck-kube/kubernetes
 
-package v1beta1 // import "ck-kube/kubernetes/api/rbac/v1beta1"
+package v1beta1 // import "github.com/fslqd/ck-kube/kubernetes/api/rbac/v1beta1"

@@ -19,14 +19,14 @@ package v1
 import (
 	"fmt"
 
-	v1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
 // +genclient:nonNamespaced
-// +genclient:method=UpdateApproval,verb=update,subresource=approval,input=ck-kube/kubernetes/api/certificates/v1.CertificateSigningRequest,result=ck-kube/kubernetes/api/certificates/v1.CertificateSigningRequest
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +genclient:method=UpdateApproval,verb=update,subresource=approval,input=github.com/fslqd/ck-kube/kubernetes/api/certificates/v1.CertificateSigningRequest,result=github.com/fslqd/ck-kube/kubernetes/api/certificates/v1.CertificateSigningRequest
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // CertificateSigningRequest objects provide a mechanism to obtain x509 certificates
 // by submitting a certificate signing request, and having it asynchronously approved and issued.
@@ -73,7 +73,7 @@ type CertificateSigningRequestSpec struct {
 	//  3. "kubernetes.io/kubelet-serving" issues serving certificates that kubelets use to serve TLS endpoints, which kube-apiserver can connect to securely.
 	//   Requests for this signer are never auto-approved by kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
 	//
-	// More details are available at https://ck-kube/kubernetes/docs/reference/access-authn-authz/certificate-signing-requests/#kubernetes-signers
+	// More details are available at https://github.com/fslqd/ck-kube/kubernetes/docs/reference/access-authn-authz/certificate-signing-requests/#kubernetes-signers
 	//
 	// Custom signerNames can also be specified. The signer defines:
 	//  1. Trust distribution: how trust (CA bundles) are distributed.
@@ -244,7 +244,7 @@ type CertificateSigningRequestCondition struct {
 	Type RequestConditionType `json:"type" protobuf:"bytes,1,opt,name=type,casttype=RequestConditionType"`
 	// status of the condition, one of True, False, Unknown.
 	// Approved, Denied, and Failed conditions may not be "False" or "Unknown".
-	Status v1.ConditionStatus `json:"status" protobuf:"bytes,6,opt,name=status,casttype=ck-kube/kubernetes/api/core/v1.ConditionStatus"`
+	Status v1.ConditionStatus `json:"status" protobuf:"bytes,6,opt,name=status,casttype=github.com/fslqd/ck-kube/kubernetes/api/core/v1.ConditionStatus"`
 	// reason indicates a brief reason for the request state
 	// +optional
 	Reason string `json:"reason,omitempty" protobuf:"bytes,2,opt,name=reason"`
@@ -261,7 +261,7 @@ type CertificateSigningRequestCondition struct {
 	LastTransitionTime metav1.Time `json:"lastTransitionTime,omitempty" protobuf:"bytes,5,opt,name=lastTransitionTime"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // CertificateSigningRequestList is a collection of CertificateSigningRequest objects
 type CertificateSigningRequestList struct {

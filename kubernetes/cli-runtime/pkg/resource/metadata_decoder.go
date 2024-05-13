@@ -17,10 +17,10 @@ limitations under the License.
 package resource
 
 import (
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	utiljson "ck-kube/kubernetes/apimachinery/pkg/util/json"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	utiljson "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/json"
 )
 
 // metadataValidatingDecoder wraps a decoder and additionally ensures metadata schema fields decode before returning an unstructured object
@@ -51,6 +51,6 @@ func (m *metadataValidatingDecoder) Decode(data []byte, defaults *schema.GroupVe
 }
 
 type metadataOnlyObject struct {
-	metav1.TypeMeta   `json:",inline"`
+	metav1.TypeMeta `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 }

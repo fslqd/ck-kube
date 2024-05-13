@@ -16,7 +16,7 @@ limitations under the License.
 
 package workqueue
 
-import "ck-kube/kubernetes/utils/clock"
+import "github.com/fslqd/ck-kube/kubernetes/utils/clock"
 
 // RateLimitingInterface is an interface that rate limits items being added to the queue.
 type RateLimitingInterface interface {

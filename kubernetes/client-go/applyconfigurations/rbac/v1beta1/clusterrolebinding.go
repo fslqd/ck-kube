@@ -19,12 +19,12 @@ limitations under the License.
 package v1beta1
 
 import (
-	rbacv1beta1 "ck-kube/kubernetes/api/rbac/v1beta1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	rbacv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/rbac/v1beta1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // ClusterRoleBindingApplyConfiguration represents an declarative configuration of the ClusterRoleBinding type for use
@@ -42,7 +42,7 @@ func ClusterRoleBinding(name string) *ClusterRoleBindingApplyConfiguration {
 	b := &ClusterRoleBindingApplyConfiguration{}
 	b.WithName(name)
 	b.WithKind("ClusterRoleBinding")
-	b.WithAPIVersion("rbac.authorization.ck-kube/kubernetes/v1beta1")
+	b.WithAPIVersion("rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1beta1")
 	return b
 }
 
@@ -77,7 +77,7 @@ func extractClusterRoleBinding(clusterRoleBinding *rbacv1beta1.ClusterRoleBindin
 	b.WithName(clusterRoleBinding.Name)
 
 	b.WithKind("ClusterRoleBinding")
-	b.WithAPIVersion("rbac.authorization.ck-kube/kubernetes/v1beta1")
+	b.WithAPIVersion("rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1beta1")
 	return b, nil
 }
 

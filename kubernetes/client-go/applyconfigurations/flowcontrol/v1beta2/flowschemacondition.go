@@ -19,8 +19,8 @@ limitations under the License.
 package v1beta2
 
 import (
-	v1beta2 "ck-kube/kubernetes/api/flowcontrol/v1beta2"
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1beta2 "github.com/fslqd/ck-kube/kubernetes/api/flowcontrol/v1beta2"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // FlowSchemaConditionApplyConfiguration represents an declarative configuration of the FlowSchemaCondition type for use

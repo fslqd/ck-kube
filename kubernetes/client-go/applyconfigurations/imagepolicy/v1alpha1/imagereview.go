@@ -19,12 +19,12 @@ limitations under the License.
 package v1alpha1
 
 import (
-	imagepolicyv1alpha1 "ck-kube/kubernetes/api/imagepolicy/v1alpha1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	imagepolicyv1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/imagepolicy/v1alpha1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // ImageReviewApplyConfiguration represents an declarative configuration of the ImageReview type for use
@@ -42,7 +42,7 @@ func ImageReview(name string) *ImageReviewApplyConfiguration {
 	b := &ImageReviewApplyConfiguration{}
 	b.WithName(name)
 	b.WithKind("ImageReview")
-	b.WithAPIVersion("imagepolicy.ck-kube/kubernetes/v1alpha1")
+	b.WithAPIVersion("imagepolicy.github.com/fslqd/ck-kube/kubernetes/v1alpha1")
 	return b
 }
 
@@ -77,7 +77,7 @@ func extractImageReview(imageReview *imagepolicyv1alpha1.ImageReview, fieldManag
 	b.WithName(imageReview.Name)
 
 	b.WithKind("ImageReview")
-	b.WithAPIVersion("imagepolicy.ck-kube/kubernetes/v1alpha1")
+	b.WithAPIVersion("imagepolicy.github.com/fslqd/ck-kube/kubernetes/v1alpha1")
 	return b, nil
 }
 

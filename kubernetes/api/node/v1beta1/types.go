@@ -17,13 +17,13 @@ limitations under the License.
 package v1beta1
 
 import (
-	corev1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.13
 // +k8s:prerelease-lifecycle-gen:deprecated=1.22
 
@@ -33,11 +33,11 @@ import (
 // user or cluster provisioner, and referenced in the PodSpec. The Kubelet is
 // responsible for resolving the RuntimeClassName reference before running the
 // pod.  For more details, see
-// https://git.ck-kube/kubernetes/enhancements/keps/sig-node/585-runtime-class
+// https://git.github.com/fslqd/ck-kube/kubernetes/enhancements/keps/sig-node/585-runtime-class
 type RuntimeClass struct {
 	metav1.TypeMeta `json:",inline"`
 
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 
@@ -55,7 +55,7 @@ type RuntimeClass struct {
 
 	// overhead represents the resource overhead associated with running a pod for a
 	// given RuntimeClass. For more details, see
-	// https://git.ck-kube/kubernetes/enhancements/keps/sig-node/688-pod-overhead/README.md
+	// https://git.github.com/fslqd/ck-kube/kubernetes/enhancements/keps/sig-node/688-pod-overhead/README.md
 	// +optional
 	Overhead *Overhead `json:"overhead,omitempty" protobuf:"bytes,3,opt,name=overhead"`
 
@@ -71,7 +71,7 @@ type RuntimeClass struct {
 type Overhead struct {
 	// podFixed represents the fixed resource overhead associated with running a pod.
 	// +optional
-	PodFixed corev1.ResourceList `json:"podFixed,omitempty" protobuf:"bytes,1,opt,name=podFixed,casttype=ck-kube/kubernetes/api/core/v1.ResourceList,castkey=ck-kube/kubernetes/api/core/v1.ResourceName,castvalue=ck-kube/kubernetes/apimachinery/pkg/api/resource.Quantity"`
+	PodFixed corev1.ResourceList `json:"podFixed,omitempty" protobuf:"bytes,1,opt,name=podFixed,casttype=github.com/fslqd/ck-kube/kubernetes/api/core/v1.ResourceList,castkey=github.com/fslqd/ck-kube/kubernetes/api/core/v1.ResourceName,castvalue=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource.Quantity"`
 }
 
 // Scheduling specifies the scheduling constraints for nodes supporting a
@@ -94,7 +94,7 @@ type Scheduling struct {
 	Tolerations []corev1.Toleration `json:"tolerations,omitempty" protobuf:"bytes,2,rep,name=tolerations"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.13
 // +k8s:prerelease-lifecycle-gen:deprecated=1.22
 
@@ -103,7 +103,7 @@ type RuntimeClassList struct {
 	metav1.TypeMeta `json:",inline"`
 
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 

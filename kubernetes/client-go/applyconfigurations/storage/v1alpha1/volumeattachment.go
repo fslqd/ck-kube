@@ -19,12 +19,12 @@ limitations under the License.
 package v1alpha1
 
 import (
-	storagev1alpha1 "ck-kube/kubernetes/api/storage/v1alpha1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	storagev1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/storage/v1alpha1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // VolumeAttachmentApplyConfiguration represents an declarative configuration of the VolumeAttachment type for use
@@ -42,7 +42,7 @@ func VolumeAttachment(name string) *VolumeAttachmentApplyConfiguration {
 	b := &VolumeAttachmentApplyConfiguration{}
 	b.WithName(name)
 	b.WithKind("VolumeAttachment")
-	b.WithAPIVersion("storage.ck-kube/kubernetes/v1alpha1")
+	b.WithAPIVersion("storage.github.com/fslqd/ck-kube/kubernetes/v1alpha1")
 	return b
 }
 
@@ -77,7 +77,7 @@ func extractVolumeAttachment(volumeAttachment *storagev1alpha1.VolumeAttachment,
 	b.WithName(volumeAttachment.Name)
 
 	b.WithKind("VolumeAttachment")
-	b.WithAPIVersion("storage.ck-kube/kubernetes/v1alpha1")
+	b.WithAPIVersion("storage.github.com/fslqd/ck-kube/kubernetes/v1alpha1")
 	return b, nil
 }
 

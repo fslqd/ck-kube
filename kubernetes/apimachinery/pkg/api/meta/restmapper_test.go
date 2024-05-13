@@ -21,7 +21,7 @@ import (
 	"strings"
 	"testing"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 func TestRESTMapperVersionAndKindForResource(t *testing.T) {

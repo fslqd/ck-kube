@@ -19,8 +19,8 @@ limitations under the License.
 package v1alpha1
 
 import (
-	admissionregistrationv1alpha1 "ck-kube/kubernetes/api/admissionregistration/v1alpha1"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	admissionregistrationv1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/admissionregistration/v1alpha1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // MatchResourcesApplyConfiguration represents an declarative configuration of the MatchResources type for use

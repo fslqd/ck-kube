@@ -17,8 +17,8 @@ limitations under the License.
 package v1
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
 )
 
 // TODO: move this, Object, List, and Type to a different package

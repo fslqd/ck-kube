@@ -16,4 +16,4 @@ limitations under the License.
 
 // This file exists to enforce this clientset's vanity import path.
 
-package kubernetes // import "ck-kube/kubernetes/client-go/kubernetes"
+package kubernetes // import "github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes"

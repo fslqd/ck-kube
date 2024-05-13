@@ -19,7 +19,7 @@ limitations under the License.
 // +k8s:openapi-gen=true
 // +k8s:prerelease-lifecycle-gen=true
 
-// +groupName=flowcontrol.apiserver.ck-kube/kubernetes
+// +groupName=flowcontrol.apiserver.github.com/fslqd/ck-kube/kubernetes
 
-// Package v1beta1 holds api types of version v1alpha1 for group "flowcontrol.apiserver.ck-kube/kubernetes".
-package v1beta1 // import "ck-kube/kubernetes/api/flowcontrol/v1beta1"
+// Package v1beta1 holds api types of version v1alpha1 for group "flowcontrol.apiserver.github.com/fslqd/ck-kube/kubernetes".
+package v1beta1 // import "github.com/fslqd/ck-kube/kubernetes/api/flowcontrol/v1beta1"

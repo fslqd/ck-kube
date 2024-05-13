@@ -28,7 +28,7 @@ import (
 
 	"github.com/chai2010/gettext-go"
 
-	"ck-kube/kubernetes/klog/v2"
+	"github.com/fslqd/ck-kube/kubernetes/klog/v2"
 )
 
 //go:embed translations
@@ -71,7 +71,7 @@ var (
 //
 //	package myi18n
 //
-//	import "ck-kube/kubernetes/kubectl/pkg/util/i18n"
+//	import "github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/util/i18n"
 //
 //	func init() {
 //		if err := i18n.SetLoadTranslationsFunc(loadCustomTranslations); err != nil {

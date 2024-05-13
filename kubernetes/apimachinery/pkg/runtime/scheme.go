@@ -21,11 +21,11 @@ import (
 	"reflect"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/conversion"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/util/naming"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/conversion"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/naming"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 )
 
 // Scheme defines methods for serializing and deserializing API objects, a type
@@ -703,4 +703,4 @@ func (s *Scheme) Name() string {
 
 // internalPackages are packages that ignored when creating a default reflector name. These packages are in the common
 // call chains to NewReflector, so they'd be low entropy names for reflectors
-var internalPackages = []string{"ck-kube/kubernetes/apimachinery/pkg/runtime/scheme.go"}
+var internalPackages = []string{"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/scheme.go"}

@@ -16,4 +16,4 @@ limitations under the License.
 
 // Package kubernetes holds packages which implement a clientset for Kubernetes
 // APIs.
-package kubernetes // import "ck-kube/kubernetes/client-go/kubernetes"
+package kubernetes // import "github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes"

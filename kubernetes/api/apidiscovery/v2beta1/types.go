@@ -17,10 +17,10 @@ limitations under the License.
 package v2beta1
 
 import (
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 // +k8s:prerelease-lifecycle-gen:deprecated=1.32
 // +k8s:prerelease-lifecycle-gen:removed=1.35
@@ -33,14 +33,14 @@ import (
 type APIGroupDiscoveryList struct {
 	v1.TypeMeta `json:",inline"`
 	// ResourceVersion will not be set, because this does not have a replayable ordering among multiple apiservers.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	v1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// items is the list of groups for discovery. The groups are listed in priority order.
 	Items []APIGroupDiscovery `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 // +k8s:prerelease-lifecycle-gen:deprecated=1.32
 // +k8s:prerelease-lifecycle-gen:removed=1.35
@@ -55,7 +55,7 @@ type APIGroupDiscovery struct {
 	// The only field completed will be name. For instance, resourceVersion will be empty.
 	// name is the name of the API group whose discovery information is presented here.
 	// name is allowed to be "" to represent the legacy, ungroupified resources.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional
 	v1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// versions are the versions supported in this group. They are sorted in descending order of preference,

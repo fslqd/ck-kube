@@ -25,7 +25,7 @@ import (
 	"encoding/pem"
 	"testing"
 
-	certificates "ck-kube/kubernetes/api/certificates/v1"
+	certificates "github.com/fslqd/ck-kube/kubernetes/api/certificates/v1"
 )
 
 func TestEnsureCompatible(t *testing.T) {

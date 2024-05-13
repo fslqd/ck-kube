@@ -19,7 +19,7 @@ limitations under the License.
 package v1beta1
 
 import (
-	v1beta1 "ck-kube/kubernetes/api/extensions/v1beta1"
+	v1beta1 "github.com/fslqd/ck-kube/kubernetes/api/extensions/v1beta1"
 )
 
 // HTTPIngressPathApplyConfiguration represents an declarative configuration of the HTTPIngressPath type for use

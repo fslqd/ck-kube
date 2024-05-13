@@ -22,12 +22,12 @@ import (
 	"fmt"
 	"os"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer"
-	"ck-kube/kubernetes/client-go/pkg/apis/clientauthentication"
-	"ck-kube/kubernetes/client-go/pkg/apis/clientauthentication/install"
-	"ck-kube/kubernetes/client-go/rest"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/pkg/apis/clientauthentication"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/pkg/apis/clientauthentication/install"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 const execInfoEnv = "KUBERNETES_EXEC_INFO"

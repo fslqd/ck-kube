@@ -17,10 +17,10 @@ limitations under the License.
 package testing
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/kube-openapi/pkg/util/proto"
-	"ck-kube/kubernetes/kube-openapi/pkg/util/proto/testing"
-	"ck-kube/kubernetes/kubectl/pkg/util/openapi"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/util/proto"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/util/proto/testing"
+	"github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/util/openapi"
 )
 
 // FakeResources is a wrapper to directly load the openapi schema from a

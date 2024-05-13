@@ -22,8 +22,8 @@ import (
 	"io"
 	"testing"
 
-	corev1 "ck-kube/kubernetes/api/core/v1"
-	cgtesting "ck-kube/kubernetes/client-go/testing"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	cgtesting "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 func TestFakePodsGetLogs(t *testing.T) {

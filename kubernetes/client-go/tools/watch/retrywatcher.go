@@ -24,13 +24,13 @@ import (
 	"net/http"
 	"time"
 
-	apierrors "ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/util/dump"
-	"ck-kube/kubernetes/apimachinery/pkg/util/net"
-	"ck-kube/kubernetes/apimachinery/pkg/util/wait"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
-	"ck-kube/kubernetes/client-go/tools/cache"
+	apierrors "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/dump"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/net"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/wait"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/cache"
 	"k8s.io/klog/v2"
 )
 

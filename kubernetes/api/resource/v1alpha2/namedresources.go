@@ -17,7 +17,7 @@ limitations under the License.
 package v1alpha2
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
 )
 
 // NamedResourcesResources is used in ResourceModel.

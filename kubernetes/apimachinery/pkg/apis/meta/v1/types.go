@@ -30,8 +30,8 @@ import (
 	"fmt"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
 )
 
 // TypeMeta describes an individual object in an API response or request

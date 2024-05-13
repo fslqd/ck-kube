@@ -17,7 +17,7 @@ limitations under the License.
 package v1
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 // IsControlledBy checks if the  object has a controllerRef set to the given owner

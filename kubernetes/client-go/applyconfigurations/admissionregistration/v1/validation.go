@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // ValidationApplyConfiguration represents an declarative configuration of the Validation type for use

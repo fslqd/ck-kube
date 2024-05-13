@@ -19,8 +19,8 @@ package cache
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 )
 
 // Indexer extends Store with multiple indices and restricts each

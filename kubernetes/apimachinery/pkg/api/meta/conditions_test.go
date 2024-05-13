@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 func TestSetStatusCondition(t *testing.T) {

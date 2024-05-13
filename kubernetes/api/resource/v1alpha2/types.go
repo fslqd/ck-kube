@@ -17,20 +17,20 @@ limitations under the License.
 package v1alpha2
 
 import (
-	v1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
 )
 
 const (
 	// Finalizer is the finalizer that gets set for claims
 	// which were allocated through a builtin controller.
-	Finalizer = "dra.ck-kube/kubernetes/delete-protection"
+	Finalizer = "dra.github.com/fslqd/ck-kube/kubernetes/delete-protection"
 )
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // ResourceClaim describes which resources are needed by a resource consumer.
@@ -256,7 +256,7 @@ type AllocationResultModel struct {
 	NamedResources *NamedResourcesAllocationResult `json:"namedResources,omitempty" protobuf:"bytes,1,opt,name=namedResources"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // ResourceClaimList is a collection of claims.
@@ -271,7 +271,7 @@ type ResourceClaimList struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // PodSchedulingContext objects hold information that is needed to schedule
@@ -354,7 +354,7 @@ type ResourceClaimSchedulingStatus struct {
 // of the API.
 const PodSchedulingNodeListMaxSize = 128
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // PodSchedulingContextList is a collection of Pod scheduling objects.
@@ -370,7 +370,7 @@ type PodSchedulingContextList struct {
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // ResourceClass is used by administrators to influence how resources
@@ -413,7 +413,7 @@ type ResourceClass struct {
 	StructuredParameters *bool `json:"structuredParameters,omitempty" protobuf:"bytes,5,opt,name=structuredParameters"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // ResourceClassList is a collection of classes.
@@ -481,7 +481,7 @@ type ResourceClaimConsumerReference struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // ResourceClaimTemplate is used to produce ResourceClaim objects.
@@ -513,7 +513,7 @@ type ResourceClaimTemplateSpec struct {
 	Spec ResourceClaimSpec `json:"spec" protobuf:"bytes,2,name=spec"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // ResourceClaimTemplateList is a collection of claim templates.
@@ -529,7 +529,7 @@ type ResourceClaimTemplateList struct {
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.30
 
 // ResourceSlice provides information about available
@@ -565,7 +565,7 @@ type ResourceModel struct {
 	NamedResources *NamedResourcesResources `json:"namedResources,omitempty" protobuf:"bytes,1,opt,name=namedResources"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.30
 
 // ResourceSliceList is a collection of ResourceSlices.
@@ -580,7 +580,7 @@ type ResourceSliceList struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.30
 
 // ResourceClaimParameters defines resource requests for a ResourceClaim in an
@@ -648,7 +648,7 @@ type ResourceRequestModel struct {
 	NamedResources *NamedResourcesRequest `json:"namedResources,omitempty" protobuf:"bytes,1,opt,name=namedResources"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.30
 
 // ResourceClaimParametersList is a collection of ResourceClaimParameters.
@@ -663,7 +663,7 @@ type ResourceClaimParametersList struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.30
 
 // ResourceClassParameters defines resource requests for a ResourceClass in an
@@ -710,7 +710,7 @@ type ResourceFilterModel struct {
 	NamedResources *NamedResourcesFilter `json:"namedResources,omitempty" protobuf:"bytes,1,opt,name=namedResources"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.30
 
 // ResourceClassParametersList is a collection of ResourceClassParameters.

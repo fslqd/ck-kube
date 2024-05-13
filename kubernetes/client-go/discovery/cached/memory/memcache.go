@@ -25,15 +25,15 @@ import (
 
 	openapi_v2 "github.com/google/gnostic-models/openapiv2"
 
-	errorsutil "ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/version"
-	"ck-kube/kubernetes/client-go/discovery"
-	"ck-kube/kubernetes/client-go/openapi"
-	cachedopenapi "ck-kube/kubernetes/client-go/openapi/cached"
-	restclient "ck-kube/kubernetes/client-go/rest"
+	errorsutil "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/version"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/discovery"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi"
+	cachedopenapi "github.com/fslqd/ck-kube/kubernetes/client-go/openapi/cached"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type cacheEntry struct {

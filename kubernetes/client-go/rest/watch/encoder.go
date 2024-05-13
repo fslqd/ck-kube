@@ -19,10 +19,10 @@ package versioned
 import (
 	"encoding/json"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/streaming"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/streaming"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
 )
 
 // Encoder serializes watch.Events into io.Writer. The internal objects

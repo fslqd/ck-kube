@@ -24,10 +24,10 @@ package v1
 import (
 	unsafe "unsafe"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	conversion "ck-kube/kubernetes/apimachinery/pkg/conversion"
-	runtime "ck-kube/kubernetes/apimachinery/pkg/runtime"
-	clientauthentication "ck-kube/kubernetes/client-go/pkg/apis/clientauthentication"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	conversion "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/conversion"
+	runtime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	clientauthentication "github.com/fslqd/ck-kube/kubernetes/client-go/pkg/apis/clientauthentication"
 )
 
 func init() {

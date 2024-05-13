@@ -17,7 +17,7 @@ limitations under the License.
 package v1
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 )
 
 func addDefaultingFuncs(scheme *runtime.Scheme) error {
@@ -27,7 +27,7 @@ func addDefaultingFuncs(scheme *runtime.Scheme) error {
 func SetDefaults_ExecConfig(exec *ExecConfig) {
 	if len(exec.InteractiveMode) == 0 {
 		switch exec.APIVersion {
-		case "client.authentication.ck-kube/kubernetes/v1beta1", "client.authentication.ck-kube/kubernetes/v1alpha1":
+		case "client.authentication.github.com/fslqd/ck-kube/kubernetes/v1beta1", "client.authentication.github.com/fslqd/ck-kube/kubernetes/v1alpha1":
 			// default to IfAvailableExecInteractiveMode for backwards compatibility
 			exec.InteractiveMode = IfAvailableExecInteractiveMode
 		default:

@@ -35,9 +35,9 @@ import (
 	"github.com/google/uuid"
 	"github.com/munnerz/goautoneg"
 
-	"ck-kube/kubernetes/kube-openapi/pkg/cached"
-	"ck-kube/kubernetes/kube-openapi/pkg/common"
-	"ck-kube/kubernetes/kube-openapi/pkg/spec3"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/cached"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/common"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/spec3"
 )
 
 const (

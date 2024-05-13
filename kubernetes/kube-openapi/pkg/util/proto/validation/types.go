@@ -20,7 +20,7 @@ import (
 	"reflect"
 	"sort"
 
-	"ck-kube/kubernetes/kube-openapi/pkg/util/proto"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/util/proto"
 )
 
 type validationItem interface {

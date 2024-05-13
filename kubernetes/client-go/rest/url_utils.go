@@ -21,7 +21,7 @@ import (
 	"net/url"
 	"path"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 // DefaultServerURL converts a host, host:port, or URL string to the default base server API path

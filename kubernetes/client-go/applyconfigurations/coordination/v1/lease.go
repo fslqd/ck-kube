@@ -19,12 +19,12 @@ limitations under the License.
 package v1
 
 import (
-	apicoordinationv1 "ck-kube/kubernetes/api/coordination/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	apicoordinationv1 "github.com/fslqd/ck-kube/kubernetes/api/coordination/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // LeaseApplyConfiguration represents an declarative configuration of the Lease type for use
@@ -42,7 +42,7 @@ func Lease(name, namespace string) *LeaseApplyConfiguration {
 	b.WithName(name)
 	b.WithNamespace(namespace)
 	b.WithKind("Lease")
-	b.WithAPIVersion("coordination.ck-kube/kubernetes/v1")
+	b.WithAPIVersion("coordination.github.com/fslqd/ck-kube/kubernetes/v1")
 	return b
 }
 
@@ -78,7 +78,7 @@ func extractLease(lease *apicoordinationv1.Lease, fieldManager string, subresour
 	b.WithNamespace(lease.Namespace)
 
 	b.WithKind("Lease")
-	b.WithAPIVersion("coordination.ck-kube/kubernetes/v1")
+	b.WithAPIVersion("coordination.github.com/fslqd/ck-kube/kubernetes/v1")
 	return b, nil
 }
 

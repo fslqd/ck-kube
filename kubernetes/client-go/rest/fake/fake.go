@@ -22,11 +22,11 @@ import (
 	"net/http"
 	"net/url"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
-	restclient "ck-kube/kubernetes/client-go/rest"
-	"ck-kube/kubernetes/client-go/util/flowcontrol"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/flowcontrol"
 )
 
 // CreateHTTPClient creates an http.Client that will invoke the provided roundTripper func

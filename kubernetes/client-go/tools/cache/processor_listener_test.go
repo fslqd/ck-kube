@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/wait"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/wait"
 )
 
 const (

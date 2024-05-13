@@ -19,11 +19,11 @@ package unstructuredscheme
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/json"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/versioning"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/json"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/versioning"
 )
 
 var scheme = runtime.NewScheme()

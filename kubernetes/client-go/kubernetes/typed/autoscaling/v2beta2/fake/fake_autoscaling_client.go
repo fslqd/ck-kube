@@ -19,9 +19,9 @@ limitations under the License.
 package fake
 
 import (
-	v2beta2 "ck-kube/kubernetes/client-go/kubernetes/typed/autoscaling/v2beta2"
-	rest "ck-kube/kubernetes/client-go/rest"
-	testing "ck-kube/kubernetes/client-go/testing"
+	v2beta2 "github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/typed/autoscaling/v2beta2"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
+	testing "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 type FakeAutoscalingV2beta2 struct {

@@ -21,7 +21,7 @@ import (
 	"sort"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/validation/field"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/validation/field"
 )
 
 // Labels allows you to present labels independently from their storage.

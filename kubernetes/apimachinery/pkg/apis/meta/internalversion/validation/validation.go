@@ -19,9 +19,9 @@ package validation
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/internalversion"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/util/validation/field"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/internalversion"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/validation/field"
 )
 
 // ValidateListOptions returns all validation errors found while validating the ListOptions.

@@ -23,13 +23,13 @@ import (
 	json "encoding/json"
 	"fmt"
 
-	v1alpha2 "ck-kube/kubernetes/api/resource/v1alpha2"
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	labels "ck-kube/kubernetes/apimachinery/pkg/labels"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	watch "ck-kube/kubernetes/apimachinery/pkg/watch"
-	resourcev1alpha2 "ck-kube/kubernetes/client-go/applyconfigurations/resource/v1alpha2"
-	testing "ck-kube/kubernetes/client-go/testing"
+	v1alpha2 "github.com/fslqd/ck-kube/kubernetes/api/resource/v1alpha2"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	labels "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	watch "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	resourcev1alpha2 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/resource/v1alpha2"
+	testing "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 // FakeResourceClaimParameters implements ResourceClaimParametersInterface

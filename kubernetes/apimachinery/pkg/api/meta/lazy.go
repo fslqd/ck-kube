@@ -19,7 +19,7 @@ package meta
 import (
 	"sync"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 // lazyObject defers loading the mapper and typer until necessary.

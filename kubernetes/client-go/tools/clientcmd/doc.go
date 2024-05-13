@@ -34,4 +34,4 @@ Sample usage from merged .kubeconfig files (local directory, home directory)
 	client, err := metav1.New(config)
 	// ...
 */
-package clientcmd // import "ck-kube/kubernetes/client-go/tools/clientcmd"
+package clientcmd // import "github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd"

@@ -18,7 +18,7 @@ limitations under the License.
 // +k8s:deepcopy-gen=package
 // +k8s:protobuf-gen=package
 
-// +groupName=resource.ck-kube/kubernetes
+// +groupName=resource.github.com/fslqd/ck-kube/kubernetes
 
 // Package v1alpha2 is the v1alpha2 version of the resource API.
-package v1alpha2 // import "ck-kube/kubernetes/api/resource/v1alpha2"
+package v1alpha2 // import "github.com/fslqd/ck-kube/kubernetes/api/resource/v1alpha2"

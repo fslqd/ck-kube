@@ -17,10 +17,10 @@ limitations under the License.
 // +k8s:deepcopy-gen=package
 // +k8s:protobuf-gen=package
 // +k8s:openapi-gen=true
-// +groupName=admissionregistration.ck-kube/kubernetes
+// +groupName=admissionregistration.github.com/fslqd/ck-kube/kubernetes
 
 // Package v1 is the v1 version of the API.
 // AdmissionConfiguration and AdmissionPluginConfiguration are legacy static admission plugin configuration
 // MutatingWebhookConfiguration and ValidatingWebhookConfiguration are for the
 // new dynamic admission controller configuration.
-package v1 // import "ck-kube/kubernetes/api/admissionregistration/v1"
+package v1 // import "github.com/fslqd/ck-kube/kubernetes/api/admissionregistration/v1"

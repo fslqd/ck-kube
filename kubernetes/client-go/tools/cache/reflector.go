@@ -28,22 +28,22 @@ import (
 	"sync"
 	"time"
 
-	apierrors "ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/util/naming"
-	utilnet "ck-kube/kubernetes/apimachinery/pkg/util/net"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/wait"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
-	"ck-kube/kubernetes/client-go/tools/pager"
-	"ck-kube/kubernetes/utils/clock"
-	"ck-kube/kubernetes/utils/pointer"
-	"ck-kube/kubernetes/utils/ptr"
-	"ck-kube/kubernetes/utils/trace"
+	apierrors "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/naming"
+	utilnet "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/net"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/wait"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/pager"
+	"github.com/fslqd/ck-kube/kubernetes/utils/clock"
+	"github.com/fslqd/ck-kube/kubernetes/utils/pointer"
+	"github.com/fslqd/ck-kube/kubernetes/utils/ptr"
+	"github.com/fslqd/ck-kube/kubernetes/utils/trace"
 	"k8s.io/klog/v2"
 )
 
@@ -679,7 +679,7 @@ func (r *Reflector) watchList(stopCh <-chan struct{}) (watch.Interface, error) {
 		}
 	}
 	// We successfully got initial state from watch-list confirmed by the
-	// "ck-kube/kubernetes/initial-events-end" bookmark.
+	// "github.com/fslqd/ck-kube/kubernetes/initial-events-end" bookmark.
 	initTrace.Step("Objects streamed", trace.Field{Key: "count", Value: len(temporaryStore.List())})
 	r.setIsLastSyncResourceVersionUnavailable(false)
 
@@ -780,7 +780,7 @@ loop:
 				}
 			case watch.Bookmark:
 				// A `Bookmark` means watch has synced here, just update the resourceVersion
-				if meta.GetAnnotations()["ck-kube/kubernetes/initial-events-end"] == "true" {
+				if meta.GetAnnotations()["github.com/fslqd/ck-kube/kubernetes/initial-events-end"] == "true" {
 					if exitOnInitialEventsEndBookmark != nil {
 						*exitOnInitialEventsEndBookmark = true
 					}

@@ -26,7 +26,7 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"ck-kube/kubernetes/kubectl/pkg/util/term"
+	"github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/util/term"
 )
 
 type FlagExposer interface {

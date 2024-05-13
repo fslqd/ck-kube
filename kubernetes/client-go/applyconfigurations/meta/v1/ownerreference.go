@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
 )
 
 // OwnerReferenceApplyConfiguration represents an declarative configuration of the OwnerReference type for use

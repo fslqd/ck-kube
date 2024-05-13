@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	corev1 "ck-kube/kubernetes/api/core/v1"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
 )
 
 // ServiceSpecApplyConfiguration represents an declarative configuration of the ServiceSpec type for use

@@ -19,9 +19,9 @@ package fake
 import (
 	"context"
 
-	v1 "ck-kube/kubernetes/api/core/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	core "ck-kube/kubernetes/client-go/testing"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	core "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 // TODO: Should take a PatchType as an argument probably.

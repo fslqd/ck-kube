@@ -19,12 +19,12 @@ limitations under the License.
 package v1
 
 import (
-	apinetworkingv1 "ck-kube/kubernetes/api/networking/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	apinetworkingv1 "github.com/fslqd/ck-kube/kubernetes/api/networking/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // NetworkPolicyApplyConfiguration represents an declarative configuration of the NetworkPolicy type for use
@@ -42,7 +42,7 @@ func NetworkPolicy(name, namespace string) *NetworkPolicyApplyConfiguration {
 	b.WithName(name)
 	b.WithNamespace(namespace)
 	b.WithKind("NetworkPolicy")
-	b.WithAPIVersion("networking.ck-kube/kubernetes/v1")
+	b.WithAPIVersion("networking.github.com/fslqd/ck-kube/kubernetes/v1")
 	return b
 }
 
@@ -78,7 +78,7 @@ func extractNetworkPolicy(networkPolicy *apinetworkingv1.NetworkPolicy, fieldMan
 	b.WithNamespace(networkPolicy.Namespace)
 
 	b.WithKind("NetworkPolicy")
-	b.WithAPIVersion("networking.ck-kube/kubernetes/v1")
+	b.WithAPIVersion("networking.github.com/fslqd/ck-kube/kubernetes/v1")
 	return b, nil
 }
 

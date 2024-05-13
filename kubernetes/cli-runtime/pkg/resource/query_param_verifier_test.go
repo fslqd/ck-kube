@@ -22,8 +22,8 @@ import (
 
 	openapi_v2 "github.com/google/gnostic-models/openapiv2"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	openapitesting "ck-kube/kubernetes/kube-openapi/pkg/util/proto/testing"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	openapitesting "github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/util/proto/testing"
 )
 
 var fakeSchema = openapitesting.Fake{Path: filepath.Join("..", "..", "artifacts", "openapi", "swagger.json")}

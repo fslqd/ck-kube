@@ -19,112 +19,112 @@ limitations under the License.
 package applyconfigurations
 
 import (
-	v1 "ck-kube/kubernetes/api/admissionregistration/v1"
-	v1alpha1 "ck-kube/kubernetes/api/admissionregistration/v1alpha1"
-	v1beta1 "ck-kube/kubernetes/api/admissionregistration/v1beta1"
-	apiserverinternalv1alpha1 "ck-kube/kubernetes/api/apiserverinternal/v1alpha1"
-	appsv1 "ck-kube/kubernetes/api/apps/v1"
-	appsv1beta1 "ck-kube/kubernetes/api/apps/v1beta1"
-	v1beta2 "ck-kube/kubernetes/api/apps/v1beta2"
-	autoscalingv1 "ck-kube/kubernetes/api/autoscaling/v1"
-	v2 "ck-kube/kubernetes/api/autoscaling/v2"
-	v2beta1 "ck-kube/kubernetes/api/autoscaling/v2beta1"
-	v2beta2 "ck-kube/kubernetes/api/autoscaling/v2beta2"
-	batchv1 "ck-kube/kubernetes/api/batch/v1"
-	batchv1beta1 "ck-kube/kubernetes/api/batch/v1beta1"
-	certificatesv1 "ck-kube/kubernetes/api/certificates/v1"
-	certificatesv1alpha1 "ck-kube/kubernetes/api/certificates/v1alpha1"
-	certificatesv1beta1 "ck-kube/kubernetes/api/certificates/v1beta1"
-	coordinationv1 "ck-kube/kubernetes/api/coordination/v1"
-	coordinationv1beta1 "ck-kube/kubernetes/api/coordination/v1beta1"
-	corev1 "ck-kube/kubernetes/api/core/v1"
-	discoveryv1 "ck-kube/kubernetes/api/discovery/v1"
-	discoveryv1beta1 "ck-kube/kubernetes/api/discovery/v1beta1"
-	eventsv1 "ck-kube/kubernetes/api/events/v1"
-	eventsv1beta1 "ck-kube/kubernetes/api/events/v1beta1"
-	extensionsv1beta1 "ck-kube/kubernetes/api/extensions/v1beta1"
-	flowcontrolv1 "ck-kube/kubernetes/api/flowcontrol/v1"
-	flowcontrolv1beta1 "ck-kube/kubernetes/api/flowcontrol/v1beta1"
-	flowcontrolv1beta2 "ck-kube/kubernetes/api/flowcontrol/v1beta2"
-	v1beta3 "ck-kube/kubernetes/api/flowcontrol/v1beta3"
-	imagepolicyv1alpha1 "ck-kube/kubernetes/api/imagepolicy/v1alpha1"
-	networkingv1 "ck-kube/kubernetes/api/networking/v1"
-	networkingv1alpha1 "ck-kube/kubernetes/api/networking/v1alpha1"
-	networkingv1beta1 "ck-kube/kubernetes/api/networking/v1beta1"
-	nodev1 "ck-kube/kubernetes/api/node/v1"
-	nodev1alpha1 "ck-kube/kubernetes/api/node/v1alpha1"
-	nodev1beta1 "ck-kube/kubernetes/api/node/v1beta1"
-	policyv1 "ck-kube/kubernetes/api/policy/v1"
-	policyv1beta1 "ck-kube/kubernetes/api/policy/v1beta1"
-	rbacv1 "ck-kube/kubernetes/api/rbac/v1"
-	rbacv1alpha1 "ck-kube/kubernetes/api/rbac/v1alpha1"
-	rbacv1beta1 "ck-kube/kubernetes/api/rbac/v1beta1"
-	v1alpha2 "ck-kube/kubernetes/api/resource/v1alpha2"
-	schedulingv1 "ck-kube/kubernetes/api/scheduling/v1"
-	schedulingv1alpha1 "ck-kube/kubernetes/api/scheduling/v1alpha1"
-	schedulingv1beta1 "ck-kube/kubernetes/api/scheduling/v1beta1"
-	storagev1 "ck-kube/kubernetes/api/storage/v1"
-	storagev1alpha1 "ck-kube/kubernetes/api/storage/v1alpha1"
-	storagev1beta1 "ck-kube/kubernetes/api/storage/v1beta1"
-	storagemigrationv1alpha1 "ck-kube/kubernetes/api/storagemigration/v1alpha1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	schema "ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	admissionregistrationv1 "ck-kube/kubernetes/client-go/applyconfigurations/admissionregistration/v1"
-	admissionregistrationv1alpha1 "ck-kube/kubernetes/client-go/applyconfigurations/admissionregistration/v1alpha1"
-	admissionregistrationv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/admissionregistration/v1beta1"
-	applyconfigurationsapiserverinternalv1alpha1 "ck-kube/kubernetes/client-go/applyconfigurations/apiserverinternal/v1alpha1"
-	applyconfigurationsappsv1 "ck-kube/kubernetes/client-go/applyconfigurations/apps/v1"
-	applyconfigurationsappsv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/apps/v1beta1"
-	appsv1beta2 "ck-kube/kubernetes/client-go/applyconfigurations/apps/v1beta2"
-	applyconfigurationsautoscalingv1 "ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v1"
-	autoscalingv2 "ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v2"
-	autoscalingv2beta1 "ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v2beta1"
-	autoscalingv2beta2 "ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v2beta2"
-	applyconfigurationsbatchv1 "ck-kube/kubernetes/client-go/applyconfigurations/batch/v1"
-	applyconfigurationsbatchv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/batch/v1beta1"
-	applyconfigurationscertificatesv1 "ck-kube/kubernetes/client-go/applyconfigurations/certificates/v1"
-	applyconfigurationscertificatesv1alpha1 "ck-kube/kubernetes/client-go/applyconfigurations/certificates/v1alpha1"
-	applyconfigurationscertificatesv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/certificates/v1beta1"
-	applyconfigurationscoordinationv1 "ck-kube/kubernetes/client-go/applyconfigurations/coordination/v1"
-	applyconfigurationscoordinationv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/coordination/v1beta1"
-	applyconfigurationscorev1 "ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
-	applyconfigurationsdiscoveryv1 "ck-kube/kubernetes/client-go/applyconfigurations/discovery/v1"
-	applyconfigurationsdiscoveryv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/discovery/v1beta1"
-	applyconfigurationseventsv1 "ck-kube/kubernetes/client-go/applyconfigurations/events/v1"
-	applyconfigurationseventsv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/events/v1beta1"
-	applyconfigurationsextensionsv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/extensions/v1beta1"
-	applyconfigurationsflowcontrolv1 "ck-kube/kubernetes/client-go/applyconfigurations/flowcontrol/v1"
-	applyconfigurationsflowcontrolv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/flowcontrol/v1beta1"
-	applyconfigurationsflowcontrolv1beta2 "ck-kube/kubernetes/client-go/applyconfigurations/flowcontrol/v1beta2"
-	flowcontrolv1beta3 "ck-kube/kubernetes/client-go/applyconfigurations/flowcontrol/v1beta3"
-	applyconfigurationsimagepolicyv1alpha1 "ck-kube/kubernetes/client-go/applyconfigurations/imagepolicy/v1alpha1"
-	applyconfigurationsmetav1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
-	applyconfigurationsnetworkingv1 "ck-kube/kubernetes/client-go/applyconfigurations/networking/v1"
-	applyconfigurationsnetworkingv1alpha1 "ck-kube/kubernetes/client-go/applyconfigurations/networking/v1alpha1"
-	applyconfigurationsnetworkingv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/networking/v1beta1"
-	applyconfigurationsnodev1 "ck-kube/kubernetes/client-go/applyconfigurations/node/v1"
-	applyconfigurationsnodev1alpha1 "ck-kube/kubernetes/client-go/applyconfigurations/node/v1alpha1"
-	applyconfigurationsnodev1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/node/v1beta1"
-	applyconfigurationspolicyv1 "ck-kube/kubernetes/client-go/applyconfigurations/policy/v1"
-	applyconfigurationspolicyv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/policy/v1beta1"
-	applyconfigurationsrbacv1 "ck-kube/kubernetes/client-go/applyconfigurations/rbac/v1"
-	applyconfigurationsrbacv1alpha1 "ck-kube/kubernetes/client-go/applyconfigurations/rbac/v1alpha1"
-	applyconfigurationsrbacv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/rbac/v1beta1"
-	resourcev1alpha2 "ck-kube/kubernetes/client-go/applyconfigurations/resource/v1alpha2"
-	applyconfigurationsschedulingv1 "ck-kube/kubernetes/client-go/applyconfigurations/scheduling/v1"
-	applyconfigurationsschedulingv1alpha1 "ck-kube/kubernetes/client-go/applyconfigurations/scheduling/v1alpha1"
-	applyconfigurationsschedulingv1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/scheduling/v1beta1"
-	applyconfigurationsstoragev1 "ck-kube/kubernetes/client-go/applyconfigurations/storage/v1"
-	applyconfigurationsstoragev1alpha1 "ck-kube/kubernetes/client-go/applyconfigurations/storage/v1alpha1"
-	applyconfigurationsstoragev1beta1 "ck-kube/kubernetes/client-go/applyconfigurations/storage/v1beta1"
-	applyconfigurationsstoragemigrationv1alpha1 "ck-kube/kubernetes/client-go/applyconfigurations/storagemigration/v1alpha1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/admissionregistration/v1"
+	v1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/admissionregistration/v1alpha1"
+	v1beta1 "github.com/fslqd/ck-kube/kubernetes/api/admissionregistration/v1beta1"
+	apiserverinternalv1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/apiserverinternal/v1alpha1"
+	appsv1 "github.com/fslqd/ck-kube/kubernetes/api/apps/v1"
+	appsv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/apps/v1beta1"
+	v1beta2 "github.com/fslqd/ck-kube/kubernetes/api/apps/v1beta2"
+	autoscalingv1 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v1"
+	v2 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2"
+	v2beta1 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2beta1"
+	v2beta2 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2beta2"
+	batchv1 "github.com/fslqd/ck-kube/kubernetes/api/batch/v1"
+	batchv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/batch/v1beta1"
+	certificatesv1 "github.com/fslqd/ck-kube/kubernetes/api/certificates/v1"
+	certificatesv1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/certificates/v1alpha1"
+	certificatesv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/certificates/v1beta1"
+	coordinationv1 "github.com/fslqd/ck-kube/kubernetes/api/coordination/v1"
+	coordinationv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/coordination/v1beta1"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	discoveryv1 "github.com/fslqd/ck-kube/kubernetes/api/discovery/v1"
+	discoveryv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/discovery/v1beta1"
+	eventsv1 "github.com/fslqd/ck-kube/kubernetes/api/events/v1"
+	eventsv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/events/v1beta1"
+	extensionsv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/extensions/v1beta1"
+	flowcontrolv1 "github.com/fslqd/ck-kube/kubernetes/api/flowcontrol/v1"
+	flowcontrolv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/flowcontrol/v1beta1"
+	flowcontrolv1beta2 "github.com/fslqd/ck-kube/kubernetes/api/flowcontrol/v1beta2"
+	v1beta3 "github.com/fslqd/ck-kube/kubernetes/api/flowcontrol/v1beta3"
+	imagepolicyv1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/imagepolicy/v1alpha1"
+	networkingv1 "github.com/fslqd/ck-kube/kubernetes/api/networking/v1"
+	networkingv1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/networking/v1alpha1"
+	networkingv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/networking/v1beta1"
+	nodev1 "github.com/fslqd/ck-kube/kubernetes/api/node/v1"
+	nodev1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/node/v1alpha1"
+	nodev1beta1 "github.com/fslqd/ck-kube/kubernetes/api/node/v1beta1"
+	policyv1 "github.com/fslqd/ck-kube/kubernetes/api/policy/v1"
+	policyv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/policy/v1beta1"
+	rbacv1 "github.com/fslqd/ck-kube/kubernetes/api/rbac/v1"
+	rbacv1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/rbac/v1alpha1"
+	rbacv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/rbac/v1beta1"
+	v1alpha2 "github.com/fslqd/ck-kube/kubernetes/api/resource/v1alpha2"
+	schedulingv1 "github.com/fslqd/ck-kube/kubernetes/api/scheduling/v1"
+	schedulingv1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/scheduling/v1alpha1"
+	schedulingv1beta1 "github.com/fslqd/ck-kube/kubernetes/api/scheduling/v1beta1"
+	storagev1 "github.com/fslqd/ck-kube/kubernetes/api/storage/v1"
+	storagev1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/storage/v1alpha1"
+	storagev1beta1 "github.com/fslqd/ck-kube/kubernetes/api/storage/v1beta1"
+	storagemigrationv1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/storagemigration/v1alpha1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	schema "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	admissionregistrationv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/admissionregistration/v1"
+	admissionregistrationv1alpha1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/admissionregistration/v1alpha1"
+	admissionregistrationv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/admissionregistration/v1beta1"
+	applyconfigurationsapiserverinternalv1alpha1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/apiserverinternal/v1alpha1"
+	applyconfigurationsappsv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/apps/v1"
+	applyconfigurationsappsv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/apps/v1beta1"
+	appsv1beta2 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/apps/v1beta2"
+	applyconfigurationsautoscalingv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v1"
+	autoscalingv2 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v2"
+	autoscalingv2beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v2beta1"
+	autoscalingv2beta2 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v2beta2"
+	applyconfigurationsbatchv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/batch/v1"
+	applyconfigurationsbatchv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/batch/v1beta1"
+	applyconfigurationscertificatesv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/certificates/v1"
+	applyconfigurationscertificatesv1alpha1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/certificates/v1alpha1"
+	applyconfigurationscertificatesv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/certificates/v1beta1"
+	applyconfigurationscoordinationv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/coordination/v1"
+	applyconfigurationscoordinationv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/coordination/v1beta1"
+	applyconfigurationscorev1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
+	applyconfigurationsdiscoveryv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/discovery/v1"
+	applyconfigurationsdiscoveryv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/discovery/v1beta1"
+	applyconfigurationseventsv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/events/v1"
+	applyconfigurationseventsv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/events/v1beta1"
+	applyconfigurationsextensionsv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/extensions/v1beta1"
+	applyconfigurationsflowcontrolv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/flowcontrol/v1"
+	applyconfigurationsflowcontrolv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/flowcontrol/v1beta1"
+	applyconfigurationsflowcontrolv1beta2 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/flowcontrol/v1beta2"
+	flowcontrolv1beta3 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/flowcontrol/v1beta3"
+	applyconfigurationsimagepolicyv1alpha1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/imagepolicy/v1alpha1"
+	applyconfigurationsmetav1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	applyconfigurationsnetworkingv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/networking/v1"
+	applyconfigurationsnetworkingv1alpha1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/networking/v1alpha1"
+	applyconfigurationsnetworkingv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/networking/v1beta1"
+	applyconfigurationsnodev1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/node/v1"
+	applyconfigurationsnodev1alpha1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/node/v1alpha1"
+	applyconfigurationsnodev1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/node/v1beta1"
+	applyconfigurationspolicyv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/policy/v1"
+	applyconfigurationspolicyv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/policy/v1beta1"
+	applyconfigurationsrbacv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/rbac/v1"
+	applyconfigurationsrbacv1alpha1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/rbac/v1alpha1"
+	applyconfigurationsrbacv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/rbac/v1beta1"
+	resourcev1alpha2 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/resource/v1alpha2"
+	applyconfigurationsschedulingv1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/scheduling/v1"
+	applyconfigurationsschedulingv1alpha1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/scheduling/v1alpha1"
+	applyconfigurationsschedulingv1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/scheduling/v1beta1"
+	applyconfigurationsstoragev1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/storage/v1"
+	applyconfigurationsstoragev1alpha1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/storage/v1alpha1"
+	applyconfigurationsstoragev1beta1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/storage/v1beta1"
+	applyconfigurationsstoragemigrationv1alpha1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/storagemigration/v1alpha1"
 )
 
 // ForKind returns an apply configuration type for the given GroupVersionKind, or nil if no
 // apply configuration type exists for the given GroupVersionKind.
 func ForKind(kind schema.GroupVersionKind) interface{} {
 	switch kind {
-	// Group=admissionregistration.ck-kube/kubernetes, Version=v1
+	// Group=admissionregistration.github.com/fslqd/ck-kube/kubernetes, Version=v1
 	case v1.SchemeGroupVersion.WithKind("AuditAnnotation"):
 		return &admissionregistrationv1.AuditAnnotationApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("ExpressionWarning"):
@@ -172,7 +172,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case v1.SchemeGroupVersion.WithKind("WebhookClientConfig"):
 		return &admissionregistrationv1.WebhookClientConfigApplyConfiguration{}
 
-		// Group=admissionregistration.ck-kube/kubernetes, Version=v1alpha1
+		// Group=admissionregistration.github.com/fslqd/ck-kube/kubernetes, Version=v1alpha1
 	case v1alpha1.SchemeGroupVersion.WithKind("AuditAnnotation"):
 		return &admissionregistrationv1alpha1.AuditAnnotationApplyConfiguration{}
 	case v1alpha1.SchemeGroupVersion.WithKind("ExpressionWarning"):
@@ -204,7 +204,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case v1alpha1.SchemeGroupVersion.WithKind("Variable"):
 		return &admissionregistrationv1alpha1.VariableApplyConfiguration{}
 
-		// Group=admissionregistration.ck-kube/kubernetes, Version=v1beta1
+		// Group=admissionregistration.github.com/fslqd/ck-kube/kubernetes, Version=v1beta1
 	case v1beta1.SchemeGroupVersion.WithKind("AuditAnnotation"):
 		return &admissionregistrationv1beta1.AuditAnnotationApplyConfiguration{}
 	case v1beta1.SchemeGroupVersion.WithKind("ExpressionWarning"):
@@ -578,7 +578,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case batchv1beta1.SchemeGroupVersion.WithKind("JobTemplateSpec"):
 		return &applyconfigurationsbatchv1beta1.JobTemplateSpecApplyConfiguration{}
 
-		// Group=certificates.ck-kube/kubernetes, Version=v1
+		// Group=certificates.github.com/fslqd/ck-kube/kubernetes, Version=v1
 	case certificatesv1.SchemeGroupVersion.WithKind("CertificateSigningRequest"):
 		return &applyconfigurationscertificatesv1.CertificateSigningRequestApplyConfiguration{}
 	case certificatesv1.SchemeGroupVersion.WithKind("CertificateSigningRequestCondition"):
@@ -588,13 +588,13 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case certificatesv1.SchemeGroupVersion.WithKind("CertificateSigningRequestStatus"):
 		return &applyconfigurationscertificatesv1.CertificateSigningRequestStatusApplyConfiguration{}
 
-		// Group=certificates.ck-kube/kubernetes, Version=v1alpha1
+		// Group=certificates.github.com/fslqd/ck-kube/kubernetes, Version=v1alpha1
 	case certificatesv1alpha1.SchemeGroupVersion.WithKind("ClusterTrustBundle"):
 		return &applyconfigurationscertificatesv1alpha1.ClusterTrustBundleApplyConfiguration{}
 	case certificatesv1alpha1.SchemeGroupVersion.WithKind("ClusterTrustBundleSpec"):
 		return &applyconfigurationscertificatesv1alpha1.ClusterTrustBundleSpecApplyConfiguration{}
 
-		// Group=certificates.ck-kube/kubernetes, Version=v1beta1
+		// Group=certificates.github.com/fslqd/ck-kube/kubernetes, Version=v1beta1
 	case certificatesv1beta1.SchemeGroupVersion.WithKind("CertificateSigningRequest"):
 		return &applyconfigurationscertificatesv1beta1.CertificateSigningRequestApplyConfiguration{}
 	case certificatesv1beta1.SchemeGroupVersion.WithKind("CertificateSigningRequestCondition"):
@@ -604,13 +604,13 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case certificatesv1beta1.SchemeGroupVersion.WithKind("CertificateSigningRequestStatus"):
 		return &applyconfigurationscertificatesv1beta1.CertificateSigningRequestStatusApplyConfiguration{}
 
-		// Group=coordination.ck-kube/kubernetes, Version=v1
+		// Group=coordination.github.com/fslqd/ck-kube/kubernetes, Version=v1
 	case coordinationv1.SchemeGroupVersion.WithKind("Lease"):
 		return &applyconfigurationscoordinationv1.LeaseApplyConfiguration{}
 	case coordinationv1.SchemeGroupVersion.WithKind("LeaseSpec"):
 		return &applyconfigurationscoordinationv1.LeaseSpecApplyConfiguration{}
 
-		// Group=coordination.ck-kube/kubernetes, Version=v1beta1
+		// Group=coordination.github.com/fslqd/ck-kube/kubernetes, Version=v1beta1
 	case coordinationv1beta1.SchemeGroupVersion.WithKind("Lease"):
 		return &applyconfigurationscoordinationv1beta1.LeaseApplyConfiguration{}
 	case coordinationv1beta1.SchemeGroupVersion.WithKind("LeaseSpec"):
@@ -1004,7 +1004,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case corev1.SchemeGroupVersion.WithKind("WindowsSecurityContextOptions"):
 		return &applyconfigurationscorev1.WindowsSecurityContextOptionsApplyConfiguration{}
 
-		// Group=discovery.ck-kube/kubernetes, Version=v1
+		// Group=discovery.github.com/fslqd/ck-kube/kubernetes, Version=v1
 	case discoveryv1.SchemeGroupVersion.WithKind("Endpoint"):
 		return &applyconfigurationsdiscoveryv1.EndpointApplyConfiguration{}
 	case discoveryv1.SchemeGroupVersion.WithKind("EndpointConditions"):
@@ -1018,7 +1018,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case discoveryv1.SchemeGroupVersion.WithKind("ForZone"):
 		return &applyconfigurationsdiscoveryv1.ForZoneApplyConfiguration{}
 
-		// Group=discovery.ck-kube/kubernetes, Version=v1beta1
+		// Group=discovery.github.com/fslqd/ck-kube/kubernetes, Version=v1beta1
 	case discoveryv1beta1.SchemeGroupVersion.WithKind("Endpoint"):
 		return &applyconfigurationsdiscoveryv1beta1.EndpointApplyConfiguration{}
 	case discoveryv1beta1.SchemeGroupVersion.WithKind("EndpointConditions"):
@@ -1032,13 +1032,13 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case discoveryv1beta1.SchemeGroupVersion.WithKind("ForZone"):
 		return &applyconfigurationsdiscoveryv1beta1.ForZoneApplyConfiguration{}
 
-		// Group=events.ck-kube/kubernetes, Version=v1
+		// Group=events.github.com/fslqd/ck-kube/kubernetes, Version=v1
 	case eventsv1.SchemeGroupVersion.WithKind("Event"):
 		return &applyconfigurationseventsv1.EventApplyConfiguration{}
 	case eventsv1.SchemeGroupVersion.WithKind("EventSeries"):
 		return &applyconfigurationseventsv1.EventSeriesApplyConfiguration{}
 
-		// Group=events.ck-kube/kubernetes, Version=v1beta1
+		// Group=events.github.com/fslqd/ck-kube/kubernetes, Version=v1beta1
 	case eventsv1beta1.SchemeGroupVersion.WithKind("Event"):
 		return &applyconfigurationseventsv1beta1.EventApplyConfiguration{}
 	case eventsv1beta1.SchemeGroupVersion.WithKind("EventSeries"):
@@ -1120,7 +1120,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case extensionsv1beta1.SchemeGroupVersion.WithKind("Scale"):
 		return &applyconfigurationsextensionsv1beta1.ScaleApplyConfiguration{}
 
-		// Group=flowcontrol.apiserver.ck-kube/kubernetes, Version=v1
+		// Group=flowcontrol.apiserver.github.com/fslqd/ck-kube/kubernetes, Version=v1
 	case flowcontrolv1.SchemeGroupVersion.WithKind("ExemptPriorityLevelConfiguration"):
 		return &applyconfigurationsflowcontrolv1.ExemptPriorityLevelConfigurationApplyConfiguration{}
 	case flowcontrolv1.SchemeGroupVersion.WithKind("FlowDistinguisherMethod"):
@@ -1164,7 +1164,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case flowcontrolv1.SchemeGroupVersion.WithKind("UserSubject"):
 		return &applyconfigurationsflowcontrolv1.UserSubjectApplyConfiguration{}
 
-		// Group=flowcontrol.apiserver.ck-kube/kubernetes, Version=v1beta1
+		// Group=flowcontrol.apiserver.github.com/fslqd/ck-kube/kubernetes, Version=v1beta1
 	case flowcontrolv1beta1.SchemeGroupVersion.WithKind("ExemptPriorityLevelConfiguration"):
 		return &applyconfigurationsflowcontrolv1beta1.ExemptPriorityLevelConfigurationApplyConfiguration{}
 	case flowcontrolv1beta1.SchemeGroupVersion.WithKind("FlowDistinguisherMethod"):
@@ -1208,7 +1208,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case flowcontrolv1beta1.SchemeGroupVersion.WithKind("UserSubject"):
 		return &applyconfigurationsflowcontrolv1beta1.UserSubjectApplyConfiguration{}
 
-		// Group=flowcontrol.apiserver.ck-kube/kubernetes, Version=v1beta2
+		// Group=flowcontrol.apiserver.github.com/fslqd/ck-kube/kubernetes, Version=v1beta2
 	case flowcontrolv1beta2.SchemeGroupVersion.WithKind("ExemptPriorityLevelConfiguration"):
 		return &applyconfigurationsflowcontrolv1beta2.ExemptPriorityLevelConfigurationApplyConfiguration{}
 	case flowcontrolv1beta2.SchemeGroupVersion.WithKind("FlowDistinguisherMethod"):
@@ -1252,7 +1252,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case flowcontrolv1beta2.SchemeGroupVersion.WithKind("UserSubject"):
 		return &applyconfigurationsflowcontrolv1beta2.UserSubjectApplyConfiguration{}
 
-		// Group=flowcontrol.apiserver.ck-kube/kubernetes, Version=v1beta3
+		// Group=flowcontrol.apiserver.github.com/fslqd/ck-kube/kubernetes, Version=v1beta3
 	case v1beta3.SchemeGroupVersion.WithKind("ExemptPriorityLevelConfiguration"):
 		return &flowcontrolv1beta3.ExemptPriorityLevelConfigurationApplyConfiguration{}
 	case v1beta3.SchemeGroupVersion.WithKind("FlowDistinguisherMethod"):
@@ -1296,7 +1296,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case v1beta3.SchemeGroupVersion.WithKind("UserSubject"):
 		return &flowcontrolv1beta3.UserSubjectApplyConfiguration{}
 
-		// Group=imagepolicy.ck-kube/kubernetes, Version=v1alpha1
+		// Group=imagepolicy.github.com/fslqd/ck-kube/kubernetes, Version=v1alpha1
 	case imagepolicyv1alpha1.SchemeGroupVersion.WithKind("ImageReview"):
 		return &applyconfigurationsimagepolicyv1alpha1.ImageReviewApplyConfiguration{}
 	case imagepolicyv1alpha1.SchemeGroupVersion.WithKind("ImageReviewContainerSpec"):
@@ -1306,7 +1306,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case imagepolicyv1alpha1.SchemeGroupVersion.WithKind("ImageReviewStatus"):
 		return &applyconfigurationsimagepolicyv1alpha1.ImageReviewStatusApplyConfiguration{}
 
-		// Group=internal.apiserver.ck-kube/kubernetes, Version=v1alpha1
+		// Group=internal.apiserver.github.com/fslqd/ck-kube/kubernetes, Version=v1alpha1
 	case apiserverinternalv1alpha1.SchemeGroupVersion.WithKind("ServerStorageVersion"):
 		return &applyconfigurationsapiserverinternalv1alpha1.ServerStorageVersionApplyConfiguration{}
 	case apiserverinternalv1alpha1.SchemeGroupVersion.WithKind("StorageVersion"):
@@ -1316,7 +1316,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case apiserverinternalv1alpha1.SchemeGroupVersion.WithKind("StorageVersionStatus"):
 		return &applyconfigurationsapiserverinternalv1alpha1.StorageVersionStatusApplyConfiguration{}
 
-		// Group=meta.ck-kube/kubernetes, Version=v1
+		// Group=meta.github.com/fslqd/ck-kube/kubernetes, Version=v1
 	case metav1.SchemeGroupVersion.WithKind("Condition"):
 		return &applyconfigurationsmetav1.ConditionApplyConfiguration{}
 	case metav1.SchemeGroupVersion.WithKind("DeleteOptions"):
@@ -1336,7 +1336,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case metav1.SchemeGroupVersion.WithKind("TypeMeta"):
 		return &applyconfigurationsmetav1.TypeMetaApplyConfiguration{}
 
-		// Group=networking.ck-kube/kubernetes, Version=v1
+		// Group=networking.github.com/fslqd/ck-kube/kubernetes, Version=v1
 	case networkingv1.SchemeGroupVersion.WithKind("HTTPIngressPath"):
 		return &applyconfigurationsnetworkingv1.HTTPIngressPathApplyConfiguration{}
 	case networkingv1.SchemeGroupVersion.WithKind("HTTPIngressRuleValue"):
@@ -1386,7 +1386,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case networkingv1.SchemeGroupVersion.WithKind("ServiceBackendPort"):
 		return &applyconfigurationsnetworkingv1.ServiceBackendPortApplyConfiguration{}
 
-		// Group=networking.ck-kube/kubernetes, Version=v1alpha1
+		// Group=networking.github.com/fslqd/ck-kube/kubernetes, Version=v1alpha1
 	case networkingv1alpha1.SchemeGroupVersion.WithKind("IPAddress"):
 		return &applyconfigurationsnetworkingv1alpha1.IPAddressApplyConfiguration{}
 	case networkingv1alpha1.SchemeGroupVersion.WithKind("IPAddressSpec"):
@@ -1400,7 +1400,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case networkingv1alpha1.SchemeGroupVersion.WithKind("ServiceCIDRStatus"):
 		return &applyconfigurationsnetworkingv1alpha1.ServiceCIDRStatusApplyConfiguration{}
 
-		// Group=networking.ck-kube/kubernetes, Version=v1beta1
+		// Group=networking.github.com/fslqd/ck-kube/kubernetes, Version=v1beta1
 	case networkingv1beta1.SchemeGroupVersion.WithKind("HTTPIngressPath"):
 		return &applyconfigurationsnetworkingv1beta1.HTTPIngressPathApplyConfiguration{}
 	case networkingv1beta1.SchemeGroupVersion.WithKind("HTTPIngressRuleValue"):
@@ -1432,7 +1432,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case networkingv1beta1.SchemeGroupVersion.WithKind("IngressTLS"):
 		return &applyconfigurationsnetworkingv1beta1.IngressTLSApplyConfiguration{}
 
-		// Group=node.ck-kube/kubernetes, Version=v1
+		// Group=node.github.com/fslqd/ck-kube/kubernetes, Version=v1
 	case nodev1.SchemeGroupVersion.WithKind("Overhead"):
 		return &applyconfigurationsnodev1.OverheadApplyConfiguration{}
 	case nodev1.SchemeGroupVersion.WithKind("RuntimeClass"):
@@ -1440,7 +1440,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case nodev1.SchemeGroupVersion.WithKind("Scheduling"):
 		return &applyconfigurationsnodev1.SchedulingApplyConfiguration{}
 
-		// Group=node.ck-kube/kubernetes, Version=v1alpha1
+		// Group=node.github.com/fslqd/ck-kube/kubernetes, Version=v1alpha1
 	case nodev1alpha1.SchemeGroupVersion.WithKind("Overhead"):
 		return &applyconfigurationsnodev1alpha1.OverheadApplyConfiguration{}
 	case nodev1alpha1.SchemeGroupVersion.WithKind("RuntimeClass"):
@@ -1450,7 +1450,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case nodev1alpha1.SchemeGroupVersion.WithKind("Scheduling"):
 		return &applyconfigurationsnodev1alpha1.SchedulingApplyConfiguration{}
 
-		// Group=node.ck-kube/kubernetes, Version=v1beta1
+		// Group=node.github.com/fslqd/ck-kube/kubernetes, Version=v1beta1
 	case nodev1beta1.SchemeGroupVersion.WithKind("Overhead"):
 		return &applyconfigurationsnodev1beta1.OverheadApplyConfiguration{}
 	case nodev1beta1.SchemeGroupVersion.WithKind("RuntimeClass"):
@@ -1478,7 +1478,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case policyv1beta1.SchemeGroupVersion.WithKind("PodDisruptionBudgetStatus"):
 		return &applyconfigurationspolicyv1beta1.PodDisruptionBudgetStatusApplyConfiguration{}
 
-		// Group=rbac.authorization.ck-kube/kubernetes, Version=v1
+		// Group=rbac.authorization.github.com/fslqd/ck-kube/kubernetes, Version=v1
 	case rbacv1.SchemeGroupVersion.WithKind("AggregationRule"):
 		return &applyconfigurationsrbacv1.AggregationRuleApplyConfiguration{}
 	case rbacv1.SchemeGroupVersion.WithKind("ClusterRole"):
@@ -1496,7 +1496,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case rbacv1.SchemeGroupVersion.WithKind("Subject"):
 		return &applyconfigurationsrbacv1.SubjectApplyConfiguration{}
 
-		// Group=rbac.authorization.ck-kube/kubernetes, Version=v1alpha1
+		// Group=rbac.authorization.github.com/fslqd/ck-kube/kubernetes, Version=v1alpha1
 	case rbacv1alpha1.SchemeGroupVersion.WithKind("AggregationRule"):
 		return &applyconfigurationsrbacv1alpha1.AggregationRuleApplyConfiguration{}
 	case rbacv1alpha1.SchemeGroupVersion.WithKind("ClusterRole"):
@@ -1514,7 +1514,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case rbacv1alpha1.SchemeGroupVersion.WithKind("Subject"):
 		return &applyconfigurationsrbacv1alpha1.SubjectApplyConfiguration{}
 
-		// Group=rbac.authorization.ck-kube/kubernetes, Version=v1beta1
+		// Group=rbac.authorization.github.com/fslqd/ck-kube/kubernetes, Version=v1beta1
 	case rbacv1beta1.SchemeGroupVersion.WithKind("AggregationRule"):
 		return &applyconfigurationsrbacv1beta1.AggregationRuleApplyConfiguration{}
 	case rbacv1beta1.SchemeGroupVersion.WithKind("ClusterRole"):
@@ -1532,7 +1532,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case rbacv1beta1.SchemeGroupVersion.WithKind("Subject"):
 		return &applyconfigurationsrbacv1beta1.SubjectApplyConfiguration{}
 
-		// Group=resource.ck-kube/kubernetes, Version=v1alpha2
+		// Group=resource.github.com/fslqd/ck-kube/kubernetes, Version=v1alpha2
 	case v1alpha2.SchemeGroupVersion.WithKind("AllocationResult"):
 		return &resourcev1alpha2.AllocationResultApplyConfiguration{}
 	case v1alpha2.SchemeGroupVersion.WithKind("AllocationResultModel"):
@@ -1608,19 +1608,19 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case v1alpha2.SchemeGroupVersion.WithKind("VendorParameters"):
 		return &resourcev1alpha2.VendorParametersApplyConfiguration{}
 
-		// Group=scheduling.ck-kube/kubernetes, Version=v1
+		// Group=scheduling.github.com/fslqd/ck-kube/kubernetes, Version=v1
 	case schedulingv1.SchemeGroupVersion.WithKind("PriorityClass"):
 		return &applyconfigurationsschedulingv1.PriorityClassApplyConfiguration{}
 
-		// Group=scheduling.ck-kube/kubernetes, Version=v1alpha1
+		// Group=scheduling.github.com/fslqd/ck-kube/kubernetes, Version=v1alpha1
 	case schedulingv1alpha1.SchemeGroupVersion.WithKind("PriorityClass"):
 		return &applyconfigurationsschedulingv1alpha1.PriorityClassApplyConfiguration{}
 
-		// Group=scheduling.ck-kube/kubernetes, Version=v1beta1
+		// Group=scheduling.github.com/fslqd/ck-kube/kubernetes, Version=v1beta1
 	case schedulingv1beta1.SchemeGroupVersion.WithKind("PriorityClass"):
 		return &applyconfigurationsschedulingv1beta1.PriorityClassApplyConfiguration{}
 
-		// Group=storage.ck-kube/kubernetes, Version=v1
+		// Group=storage.github.com/fslqd/ck-kube/kubernetes, Version=v1
 	case storagev1.SchemeGroupVersion.WithKind("CSIDriver"):
 		return &applyconfigurationsstoragev1.CSIDriverApplyConfiguration{}
 	case storagev1.SchemeGroupVersion.WithKind("CSIDriverSpec"):
@@ -1650,7 +1650,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case storagev1.SchemeGroupVersion.WithKind("VolumeNodeResources"):
 		return &applyconfigurationsstoragev1.VolumeNodeResourcesApplyConfiguration{}
 
-		// Group=storage.ck-kube/kubernetes, Version=v1alpha1
+		// Group=storage.github.com/fslqd/ck-kube/kubernetes, Version=v1alpha1
 	case storagev1alpha1.SchemeGroupVersion.WithKind("CSIStorageCapacity"):
 		return &applyconfigurationsstoragev1alpha1.CSIStorageCapacityApplyConfiguration{}
 	case storagev1alpha1.SchemeGroupVersion.WithKind("VolumeAttachment"):
@@ -1666,7 +1666,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case storagev1alpha1.SchemeGroupVersion.WithKind("VolumeError"):
 		return &applyconfigurationsstoragev1alpha1.VolumeErrorApplyConfiguration{}
 
-		// Group=storage.ck-kube/kubernetes, Version=v1beta1
+		// Group=storage.github.com/fslqd/ck-kube/kubernetes, Version=v1beta1
 	case storagev1beta1.SchemeGroupVersion.WithKind("CSIDriver"):
 		return &applyconfigurationsstoragev1beta1.CSIDriverApplyConfiguration{}
 	case storagev1beta1.SchemeGroupVersion.WithKind("CSIDriverSpec"):
@@ -1696,7 +1696,7 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 	case storagev1beta1.SchemeGroupVersion.WithKind("VolumeNodeResources"):
 		return &applyconfigurationsstoragev1beta1.VolumeNodeResourcesApplyConfiguration{}
 
-		// Group=storagemigration.ck-kube/kubernetes, Version=v1alpha1
+		// Group=storagemigration.github.com/fslqd/ck-kube/kubernetes, Version=v1alpha1
 	case storagemigrationv1alpha1.SchemeGroupVersion.WithKind("GroupVersionResource"):
 		return &applyconfigurationsstoragemigrationv1alpha1.GroupVersionResourceApplyConfiguration{}
 	case storagemigrationv1alpha1.SchemeGroupVersion.WithKind("MigrationCondition"):

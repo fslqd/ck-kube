@@ -19,9 +19,9 @@ limitations under the License.
 package v1alpha2
 
 import (
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // ResourceClaimTemplateSpecApplyConfiguration represents an declarative configuration of the ResourceClaimTemplateSpec type for use

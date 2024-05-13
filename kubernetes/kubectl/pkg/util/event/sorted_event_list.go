@@ -17,7 +17,7 @@ limitations under the License.
 package event
 
 import (
-	corev1 "ck-kube/kubernetes/api/core/v1"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
 )
 
 // SortableEvents implements sort.Interface for []api.Event based on the Timestamp field

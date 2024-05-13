@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"io"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 // TypeSetterPrinter is an implementation of ResourcePrinter wraps another printer with types set on the objects

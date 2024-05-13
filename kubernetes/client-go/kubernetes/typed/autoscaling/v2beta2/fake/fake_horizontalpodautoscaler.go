@@ -23,13 +23,13 @@ import (
 	json "encoding/json"
 	"fmt"
 
-	v2beta2 "ck-kube/kubernetes/api/autoscaling/v2beta2"
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	labels "ck-kube/kubernetes/apimachinery/pkg/labels"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	watch "ck-kube/kubernetes/apimachinery/pkg/watch"
-	autoscalingv2beta2 "ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v2beta2"
-	testing "ck-kube/kubernetes/client-go/testing"
+	v2beta2 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2beta2"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	labels "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	watch "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	autoscalingv2beta2 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v2beta2"
+	testing "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 // FakeHorizontalPodAutoscalers implements HorizontalPodAutoscalerInterface

@@ -23,7 +23,7 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	"ck-kube/kubernetes/kubectl/pkg/util/openapi"
+	"github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/util/openapi"
 )
 
 // FakeCounter returns a "null" document and the specified error. It

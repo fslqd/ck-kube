@@ -17,9 +17,9 @@ limitations under the License.
 package genericclioptions
 
 import (
-	restclient "ck-kube/kubernetes/client-go/rest"
-	"ck-kube/kubernetes/client-go/tools/clientcmd"
-	clientcmdapi "ck-kube/kubernetes/client-go/tools/clientcmd/api"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd"
+	clientcmdapi "github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api"
 )
 
 var (

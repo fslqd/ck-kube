@@ -17,11 +17,11 @@ limitations under the License.
 package equality
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/api/resource"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/conversion"
-	"ck-kube/kubernetes/apimachinery/pkg/fields"
-	"ck-kube/kubernetes/apimachinery/pkg/labels"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/conversion"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/fields"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
 )
 
 // Semantic can do semantic deep equality checks for api objects.

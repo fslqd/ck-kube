@@ -19,13 +19,13 @@ limitations under the License.
 package v1alpha2
 
 import (
-	resourcev1alpha2 "ck-kube/kubernetes/api/resource/v1alpha2"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	corev1 "ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	resourcev1alpha2 "github.com/fslqd/ck-kube/kubernetes/api/resource/v1alpha2"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // ResourceClassApplyConfiguration represents an declarative configuration of the ResourceClass type for use
@@ -45,7 +45,7 @@ func ResourceClass(name string) *ResourceClassApplyConfiguration {
 	b := &ResourceClassApplyConfiguration{}
 	b.WithName(name)
 	b.WithKind("ResourceClass")
-	b.WithAPIVersion("resource.ck-kube/kubernetes/v1alpha2")
+	b.WithAPIVersion("resource.github.com/fslqd/ck-kube/kubernetes/v1alpha2")
 	return b
 }
 
@@ -80,7 +80,7 @@ func extractResourceClass(resourceClass *resourcev1alpha2.ResourceClass, fieldMa
 	b.WithName(resourceClass.Name)
 
 	b.WithKind("ResourceClass")
-	b.WithAPIVersion("resource.ck-kube/kubernetes/v1alpha2")
+	b.WithAPIVersion("resource.github.com/fslqd/ck-kube/kubernetes/v1alpha2")
 	return b, nil
 }
 

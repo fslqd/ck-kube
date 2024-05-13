@@ -21,10 +21,10 @@ import (
 	"fmt"
 	"reflect"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/client-go/dynamic"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/dynamic"
 )
 
 // CRDGetter is a function that can download the list of GVK for all
@@ -34,7 +34,7 @@ type CRDGetter func() ([]schema.GroupKind, error)
 func CRDFromDynamic(client dynamic.Interface) CRDGetter {
 	return func() ([]schema.GroupKind, error) {
 		list, err := client.Resource(schema.GroupVersionResource{
-			Group:    "apiextensions.ck-kube/kubernetes",
+			Group:    "apiextensions.github.com/fslqd/ck-kube/kubernetes",
 			Version:  "v1",
 			Resource: "customresourcedefinitions",
 		}).List(context.TODO(), metav1.ListOptions{})

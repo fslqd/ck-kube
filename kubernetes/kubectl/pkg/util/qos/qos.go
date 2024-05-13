@@ -17,9 +17,9 @@ limitations under the License.
 package qos
 
 import (
-	core "ck-kube/kubernetes/api/core/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/api/resource"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	core "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 )
 
 var supportedQoSComputeResources = sets.NewString(string(core.ResourceCPU), string(core.ResourceMemory))

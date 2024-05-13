@@ -19,7 +19,7 @@ package net
 import (
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 )
 
 var validSchemes = sets.NewString("http", "https", "")

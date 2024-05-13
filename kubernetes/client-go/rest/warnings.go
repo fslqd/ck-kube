@@ -24,7 +24,7 @@ import (
 
 	"k8s.io/klog/v2"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/net"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/net"
 )
 
 // WarningHandler is an interface for handling warning headers

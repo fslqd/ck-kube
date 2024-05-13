@@ -19,7 +19,7 @@ package meta
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 const (

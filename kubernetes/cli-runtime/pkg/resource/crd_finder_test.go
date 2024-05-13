@@ -20,7 +20,7 @@ import (
 	"errors"
 	"testing"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 func TestCacheCRDFinder(t *testing.T) {

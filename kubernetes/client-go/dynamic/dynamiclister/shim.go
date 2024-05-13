@@ -17,9 +17,9 @@ limitations under the License.
 package dynamiclister
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/labels"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/client-go/tools/cache"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/cache"
 )
 
 var _ cache.GenericLister = &dynamicListerShim{}

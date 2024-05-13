@@ -26,16 +26,16 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	corev1 "ck-kube/kubernetes/api/core/v1"
-	apierrors "ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/util/dump"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
-	fakeclientset "ck-kube/kubernetes/client-go/kubernetes/fake"
-	testcore "ck-kube/kubernetes/client-go/testing"
-	"ck-kube/kubernetes/client-go/tools/cache"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	apierrors "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/dump"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	fakeclientset "github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/fake"
+	testcore "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/cache"
 )
 
 // TestEventProcessorExit is expected to timeout if the event processor fails
@@ -281,7 +281,7 @@ func TestNewInformerWatcher(t *testing.T) {
 // TestInformerWatcherDeletedFinalStateUnknown tests the code path when `DeleteFunc`
 // in `NewIndexerInformerWatcher` receives a `cache.DeletedFinalStateUnknown`
 // object from the underlying `DeltaFIFO`. The triggering condition is described
-// at https://github.com/kubernetes/kubernetes/blob/dc39ab2417bfddcec37be4011131c59921fdbe98/staging/src/ck-kube/kubernetes/client-go/tools/cache/delta_fifo.go#L736-L739.
+// at https://github.com/kubernetes/kubernetes/blob/dc39ab2417bfddcec37be4011131c59921fdbe98/staging/src/github.com/fslqd/ck-kube/kubernetes/client-go/tools/cache/delta_fifo.go#L736-L739.
 //
 // Code from @liggitt
 func TestInformerWatcherDeletedFinalStateUnknown(t *testing.T) {

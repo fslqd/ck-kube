@@ -19,8 +19,8 @@ package openapi
 import (
 	openapi_v2 "github.com/google/gnostic-models/openapiv2"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/kube-openapi/pkg/util/proto"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/util/proto"
 	"sigs.k8s.io/yaml"
 )
 

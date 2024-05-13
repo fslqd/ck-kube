@@ -22,8 +22,8 @@ import (
 	"sort"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 // Implements RESTScope interface
@@ -231,7 +231,7 @@ func (m *DefaultRESTMapper) ResourcesFor(input schema.GroupVersionResource) ([]s
 		}
 
 		// if you didn't find an exact match, match on group prefixing. This allows storageclass.storage to match
-		// storageclass.storage.ck-kube/kubernetes
+		// storageclass.storage.github.com/fslqd/ck-kube/kubernetes
 		if !foundExactMatch {
 			for plural, singular := range m.pluralToSingular {
 				if !strings.HasPrefix(plural.Group, requestedGroupResource.Group) {
@@ -319,7 +319,7 @@ func (m *DefaultRESTMapper) KindsFor(input schema.GroupVersionResource) ([]schem
 		}
 
 		// if you didn't find an exact match, match on group prefixing. This allows storageclass.storage to match
-		// storageclass.storage.ck-kube/kubernetes
+		// storageclass.storage.github.com/fslqd/ck-kube/kubernetes
 		if !foundExactMatch {
 			for currResource, currKind := range m.resourceToKind {
 				if !strings.HasPrefix(currResource.Group, requestedGroupResource.Group) {

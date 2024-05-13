@@ -22,8 +22,8 @@ import (
 
 	"github.com/emicklei/go-restful/v3"
 
-	"ck-kube/kubernetes/kube-openapi/pkg/spec3"
-	"ck-kube/kubernetes/kube-openapi/pkg/validation/spec"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/spec3"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/validation/spec"
 )
 
 const (

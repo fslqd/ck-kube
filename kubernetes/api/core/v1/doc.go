@@ -19,4 +19,4 @@ limitations under the License.
 // +k8s:protobuf-gen=package
 
 // Package v1 is the v1 version of the core API.
-package v1 // import "ck-kube/kubernetes/api/core/v1"
+package v1 // import "github.com/fslqd/ck-kube/kubernetes/api/core/v1"

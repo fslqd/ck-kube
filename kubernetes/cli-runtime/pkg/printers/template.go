@@ -23,8 +23,8 @@ import (
 	"reflect"
 	"text/template"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/json"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/json"
 )
 
 // GoTemplatePrinter is an implementation of ResourcePrinter which formats data with a Go Template.

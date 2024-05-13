@@ -20,7 +20,7 @@ import (
 	"errors"
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 )
 
 // MessageCountMap contains occurrence for each error message.

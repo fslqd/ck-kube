@@ -23,14 +23,14 @@ import (
 	"testing"
 	"time"
 
-	v1 "ck-kube/kubernetes/api/core/v1"
-	apiequality "ck-kube/kubernetes/apimachinery/pkg/api/equality"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
-	"ck-kube/kubernetes/apimachinery/pkg/util/wait"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
-	fcache "ck-kube/kubernetes/client-go/tools/cache/testing"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	apiequality "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/equality"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/wait"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	fcache "github.com/fslqd/ck-kube/kubernetes/client-go/tools/cache/testing"
 
 	fuzz "github.com/google/gofuzz"
 )

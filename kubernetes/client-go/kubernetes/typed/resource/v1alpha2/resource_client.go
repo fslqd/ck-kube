@@ -21,9 +21,9 @@ package v1alpha2
 import (
 	"net/http"
 
-	v1alpha2 "ck-kube/kubernetes/api/resource/v1alpha2"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1alpha2 "github.com/fslqd/ck-kube/kubernetes/api/resource/v1alpha2"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type ResourceV1alpha2Interface interface {
@@ -37,7 +37,7 @@ type ResourceV1alpha2Interface interface {
 	ResourceSlicesGetter
 }
 
-// ResourceV1alpha2Client is used to interact with features provided by the resource.ck-kube/kubernetes group.
+// ResourceV1alpha2Client is used to interact with features provided by the resource.github.com/fslqd/ck-kube/kubernetes group.
 type ResourceV1alpha2Client struct {
 	restClient rest.Interface
 }

@@ -36,17 +36,17 @@ import (
 
 	"golang.org/x/net/http2"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/streaming"
-	"ck-kube/kubernetes/apimachinery/pkg/util/net"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
-	restclientwatch "ck-kube/kubernetes/client-go/rest/watch"
-	"ck-kube/kubernetes/client-go/tools/metrics"
-	"ck-kube/kubernetes/client-go/util/flowcontrol"
-	"ck-kube/kubernetes/utils/clock"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/streaming"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/net"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	restclientwatch "github.com/fslqd/ck-kube/kubernetes/client-go/rest/watch"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/metrics"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/flowcontrol"
+	"github.com/fslqd/ck-kube/kubernetes/utils/clock"
 	"k8s.io/klog/v2"
 )
 

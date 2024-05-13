@@ -19,9 +19,9 @@ limitations under the License.
 package fake
 
 import (
-	v1 "ck-kube/kubernetes/client-go/kubernetes/typed/apps/v1"
-	rest "ck-kube/kubernetes/client-go/rest"
-	testing "ck-kube/kubernetes/client-go/testing"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/typed/apps/v1"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
+	testing "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 type FakeAppsV1 struct {

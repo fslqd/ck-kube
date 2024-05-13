@@ -17,6 +17,6 @@ limitations under the License.
 // +k8s:deepcopy-gen=package
 // +k8s:protobuf-gen=package
 // +k8s:openapi-gen=true
-// +groupName=discovery.ck-kube/kubernetes
+// +groupName=discovery.github.com/fslqd/ck-kube/kubernetes
 
-package v1 // import "ck-kube/kubernetes/api/discovery/v1"
+package v1 // import "github.com/fslqd/ck-kube/kubernetes/api/discovery/v1"

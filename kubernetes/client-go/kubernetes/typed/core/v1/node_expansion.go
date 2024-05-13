@@ -19,8 +19,8 @@ package v1
 import (
 	"context"
 
-	v1 "ck-kube/kubernetes/api/core/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
 )
 
 // The NodeExpansion interface allows manually adding extra methods to the NodeInterface.

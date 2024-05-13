@@ -17,8 +17,8 @@ limitations under the License.
 package v1
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/util/net"
-	restclient "ck-kube/kubernetes/client-go/rest"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/net"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 // The ServiceExpansion interface allows manually adding extra methods to the ServiceInterface.

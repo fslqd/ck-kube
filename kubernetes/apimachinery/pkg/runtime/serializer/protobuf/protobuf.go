@@ -25,20 +25,20 @@ import (
 
 	//"github.com/gogo/protobuf/proto"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/recognizer"
-	"ck-kube/kubernetes/apimachinery/pkg/util/framer"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/recognizer"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/framer"
 )
 
 var (
 	// protoEncodingPrefix serves as a magic number for an encoded protobuf message on this serializer. All
 	// proto messages serialized by this schema will be preceded by the bytes 0x6b 0x38 0x73, with the fourth
 	// byte being reserved for the encoding style. The only encoding style defined is 0x00, which means that
-	// the rest of the byte stream is a message of type ck-kube/kubernetes.kubernetes.pkg.runtime.Unknown (proto2).
+	// the rest of the byte stream is a message of type github.com/fslqd/ck-kube/kubernetes.kubernetes.pkg.runtime.Unknown (proto2).
 	//
-	// See ck-kube/kubernetes/apimachinery/pkg/runtime/generated.proto for details of the runtime.Unknown message.
+	// See github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/generated.proto for details of the runtime.Unknown message.
 	//
 	// This encoding scheme is experimental, and is subject to change at any time.
 	protoEncodingPrefix = []byte{0x6b, 0x38, 0x73, 0x00}

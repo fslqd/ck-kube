@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"runtime"
 
-	apimachineryversion "ck-kube/kubernetes/apimachinery/pkg/version"
+	apimachineryversion "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/version"
 )
 
 // Get returns the overall codebase version. It's for detecting

@@ -19,7 +19,7 @@ limitations under the License.
 package v1beta2
 
 import (
-	intstr "ck-kube/kubernetes/apimachinery/pkg/util/intstr"
+	intstr "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/intstr"
 )
 
 // RollingUpdateStatefulSetStrategyApplyConfiguration represents an declarative configuration of the RollingUpdateStatefulSetStrategy type for use

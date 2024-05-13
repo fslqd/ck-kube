@@ -1,6 +1,6 @@
 package v1
 
-import metav1 "ck-kube/kubernetes/apis/meta/v1"
+import metav1 "github.com/fslqd/ck-kube/kubernetes/apis/meta/v1"
 
 type DeploymentList struct {
 	metav1.TypeMeta `json:",inline"`

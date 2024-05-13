@@ -23,8 +23,8 @@ import (
 	"io"
 	"reflect"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/client-go/util/jsonpath"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/jsonpath"
 )
 
 // exists returns true if it would be possible to call the index function

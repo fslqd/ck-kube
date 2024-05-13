@@ -19,7 +19,7 @@ limitations under the License.
 package v1alpha1
 
 import (
-	admissionregistrationv1alpha1 "ck-kube/kubernetes/api/admissionregistration/v1alpha1"
+	admissionregistrationv1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/admissionregistration/v1alpha1"
 )
 
 // ValidatingAdmissionPolicySpecApplyConfiguration represents an declarative configuration of the ValidatingAdmissionPolicySpec type for use

@@ -17,13 +17,13 @@ limitations under the License.
 package v1
 
 import (
-	authenticationv1 "ck-kube/kubernetes/api/authentication/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
+	authenticationv1 "github.com/fslqd/ck-kube/kubernetes/api/authentication/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
 )
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // AdmissionReview describes an admission review request/response.
 type AdmissionReview struct {
@@ -104,10 +104,10 @@ type AdmissionRequest struct {
 	// +optional
 	DryRun *bool `json:"dryRun,omitempty" protobuf:"varint,11,opt,name=dryRun"`
 	// Options is the operation option structure of the operation being performed.
-	// e.g. `meta.ck-kube/kubernetes/v1.DeleteOptions` or `meta.ck-kube/kubernetes/v1.CreateOptions`. This may be
+	// e.g. `meta.github.com/fslqd/ck-kube/kubernetes/v1.DeleteOptions` or `meta.github.com/fslqd/ck-kube/kubernetes/v1.CreateOptions`. This may be
 	// different than the options the caller provided. e.g. for a patch request the performed
 	// Operation might be a CREATE, in which case the Options will a
-	// `meta.ck-kube/kubernetes/v1.CreateOptions` even though the caller provided `meta.ck-kube/kubernetes/v1.PatchOptions`.
+	// `meta.github.com/fslqd/ck-kube/kubernetes/v1.CreateOptions` even though the caller provided `meta.github.com/fslqd/ck-kube/kubernetes/v1.PatchOptions`.
 	// +optional
 	Options runtime.RawExtension `json:"options,omitempty" protobuf:"bytes,12,opt,name=options"`
 }

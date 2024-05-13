@@ -19,7 +19,7 @@ package util
 import (
 	"testing"
 
-	"ck-kube/kubernetes/api/core/v1"
+	"github.com/fslqd/ck-kube/kubernetes/api/core/v1"
 )
 
 func TestLookupContainerPortNumberByName(t *testing.T) {

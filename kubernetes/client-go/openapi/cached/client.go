@@ -19,7 +19,7 @@ package cached
 import (
 	"sync"
 
-	"ck-kube/kubernetes/client-go/openapi"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi"
 )
 
 type client struct {

@@ -17,11 +17,11 @@ limitations under the License.
 package dynamiclister
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/labels"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/client-go/tools/cache"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/cache"
 )
 
 var _ Lister = &dynamicLister{}

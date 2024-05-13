@@ -20,8 +20,8 @@ import (
 	"net/url"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
-	"ck-kube/kubernetes/client-go/util/flowcontrol"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/flowcontrol"
 	"k8s.io/klog/v2"
 )
 

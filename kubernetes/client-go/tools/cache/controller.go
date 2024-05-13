@@ -21,10 +21,10 @@ import (
 	"sync"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/wait"
-	"ck-kube/kubernetes/utils/clock"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/wait"
+	"github.com/fslqd/ck-kube/kubernetes/utils/clock"
 )
 
 // This file implements a low-level controller that is used in

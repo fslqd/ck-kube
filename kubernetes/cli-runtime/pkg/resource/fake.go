@@ -17,8 +17,8 @@ limitations under the License.
 package resource
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/client-go/restmapper"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/restmapper"
 )
 
 // FakeCategoryExpander is for testing only

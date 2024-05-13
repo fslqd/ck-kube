@@ -24,11 +24,11 @@ import (
 	kjson "sigs.k8s.io/json"
 	"sigs.k8s.io/yaml"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/recognizer"
-	"ck-kube/kubernetes/apimachinery/pkg/util/framer"
-	utilyaml "ck-kube/kubernetes/apimachinery/pkg/util/yaml"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/recognizer"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/framer"
+	utilyaml "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/yaml"
 	"k8s.io/klog/v2"
 )
 

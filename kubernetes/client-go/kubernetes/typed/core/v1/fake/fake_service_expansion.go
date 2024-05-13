@@ -17,8 +17,8 @@ limitations under the License.
 package fake
 
 import (
-	restclient "ck-kube/kubernetes/client-go/rest"
-	core "ck-kube/kubernetes/client-go/testing"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
+	core "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 func (c *FakeServices) ProxyGet(scheme, name, port, path string, params map[string]string) restclient.ResponseWrapper {

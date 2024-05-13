@@ -23,14 +23,14 @@ import (
 	json "encoding/json"
 	"fmt"
 
-	autoscalingv1 "ck-kube/kubernetes/api/autoscaling/v1"
-	v1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	labels "ck-kube/kubernetes/apimachinery/pkg/labels"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	watch "ck-kube/kubernetes/apimachinery/pkg/watch"
-	corev1 "ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
-	testing "ck-kube/kubernetes/client-go/testing"
+	autoscalingv1 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	labels "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	watch "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
+	testing "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 // FakeReplicationControllers implements ReplicationControllerInterface

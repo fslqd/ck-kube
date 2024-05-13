@@ -21,15 +21,15 @@ import (
 	"sort"
 	"strconv"
 
-	appsv1 "ck-kube/kubernetes/api/apps/v1"
-	corev1 "ck-kube/kubernetes/api/core/v1"
-	apiequality "ck-kube/kubernetes/apimachinery/pkg/api/equality"
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	intstrutil "ck-kube/kubernetes/apimachinery/pkg/util/intstr"
-	runtimeresource "ck-kube/kubernetes/cli-runtime/pkg/resource"
-	appsclient "ck-kube/kubernetes/client-go/kubernetes/typed/apps/v1"
+	appsv1 "github.com/fslqd/ck-kube/kubernetes/api/apps/v1"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	apiequality "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/equality"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	intstrutil "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/intstr"
+	runtimeresource "github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/resource"
+	appsclient "github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/typed/apps/v1"
 )
 
 const (

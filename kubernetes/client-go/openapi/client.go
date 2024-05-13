@@ -21,8 +21,8 @@ import (
 	"encoding/json"
 	"strings"
 
-	"ck-kube/kubernetes/client-go/rest"
-	"ck-kube/kubernetes/kube-openapi/pkg/handler3"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/rest"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/handler3"
 )
 
 type Client interface {

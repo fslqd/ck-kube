@@ -25,9 +25,9 @@ import (
 	"strings"
 	"unicode"
 
-	restclient "ck-kube/kubernetes/client-go/rest"
-	clientauth "ck-kube/kubernetes/client-go/tools/auth"
-	clientcmdapi "ck-kube/kubernetes/client-go/tools/clientcmd/api"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
+	clientauth "github.com/fslqd/ck-kube/kubernetes/client-go/tools/auth"
+	clientcmdapi "github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api"
 	"k8s.io/klog/v2"
 
 	"github.com/imdario/mergo"
@@ -35,7 +35,7 @@ import (
 
 const (
 	// clusterExtensionKey is reserved in the cluster extensions list for exec plugin config.
-	clusterExtensionKey = "client.authentication.ck-kube/kubernetes/exec"
+	clusterExtensionKey = "client.authentication.github.com/fslqd/ck-kube/kubernetes/exec"
 )
 
 var (

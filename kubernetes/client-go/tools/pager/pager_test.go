@@ -23,11 +23,11 @@ import (
 	"testing"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	metainternalversion "ck-kube/kubernetes/apimachinery/pkg/apis/meta/internalversion"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	metav1beta1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1beta1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	metainternalversion "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/internalversion"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	metav1beta1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1beta1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 )
 
 func list(count int, rv string) *metainternalversion.List {

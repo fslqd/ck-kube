@@ -19,9 +19,9 @@ limitations under the License.
 package v1beta1
 
 import (
-	v1 "ck-kube/kubernetes/api/core/v1"
-	v1beta1 "ck-kube/kubernetes/api/extensions/v1beta1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	v1beta1 "github.com/fslqd/ck-kube/kubernetes/api/extensions/v1beta1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // ReplicaSetConditionApplyConfiguration represents an declarative configuration of the ReplicaSetCondition type for use

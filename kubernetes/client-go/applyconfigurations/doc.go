@@ -20,14 +20,14 @@ configurations that are used to constructs Server-side Apply requests.
 
 # Basics
 
-The Apply functions in the typed client (see the ck-kube/kubernetes/client-go/kubernetes/typed packages) offer
+The Apply functions in the typed client (see the github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/typed packages) offer
 a direct and typesafe way of calling Server-side Apply. Each Apply function takes an "apply
 configuration" type as an argument, which is a structured representation of an Apply request. For
 example:
 
 	import (
 	     ...
-	     v1ac "ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v1"
+	     v1ac "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v1"
 	)
 	hpaApplyConfig := v1ac.HorizontalPodAutoscaler(autoscalerName, ns).
 	     WithSpec(v1ac.HorizontalPodAutoscalerSpec().
@@ -148,4 +148,4 @@ reconciliation code that performs a "read/modify-in-place/update" (or patch) wor
 	    // apply
 	    applied, err := deploymentClient.Apply(ctx, extractedDeployment, metav1.ApplyOptions{FieldManager: fieldMgr})
 */
-package applyconfigurations // import "ck-kube/kubernetes/client-go/applyconfigurations"
+package applyconfigurations // import "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations"

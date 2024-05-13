@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/util/json"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/json"
 )
 
 // CheckCodec makes sure that the codec can encode objects like internalType,

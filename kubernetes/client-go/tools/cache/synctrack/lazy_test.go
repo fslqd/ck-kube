@@ -23,7 +23,7 @@ import (
 	"testing"
 	"time"
 
-	"ck-kube/kubernetes/client-go/tools/cache/synctrack"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/cache/synctrack"
 )
 
 func TestLazy(t *testing.T) {

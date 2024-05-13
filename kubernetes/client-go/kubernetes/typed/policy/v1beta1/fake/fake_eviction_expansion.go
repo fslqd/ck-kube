@@ -19,9 +19,9 @@ package fake
 import (
 	"context"
 
-	policy "ck-kube/kubernetes/api/policy/v1beta1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	core "ck-kube/kubernetes/client-go/testing"
+	policy "github.com/fslqd/ck-kube/kubernetes/api/policy/v1beta1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	core "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 func (c *FakeEvictions) Evict(ctx context.Context, eviction *policy.Eviction) error {

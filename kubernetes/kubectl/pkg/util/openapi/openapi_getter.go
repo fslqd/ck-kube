@@ -19,7 +19,7 @@ package openapi
 import (
 	"sync"
 
-	"ck-kube/kubernetes/client-go/discovery"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/discovery"
 	openapi_v2 "github.com/google/gnostic-models/openapiv2"
 )
 

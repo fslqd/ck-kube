@@ -17,4 +17,4 @@ limitations under the License.
 // +k8s:openapi-gen=true
 
 // Package version supplies the type for version information collected at build time.
-package version // import "ck-kube/kubernetes/apimachinery/pkg/version"
+package version // import "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/version"

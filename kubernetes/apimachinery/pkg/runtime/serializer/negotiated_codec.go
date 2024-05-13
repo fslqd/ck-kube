@@ -17,7 +17,7 @@ limitations under the License.
 package serializer
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 )
 
 // TODO: We should split negotiated serializers that we can change versions on from those we can change

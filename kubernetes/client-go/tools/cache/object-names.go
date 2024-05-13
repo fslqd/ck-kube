@@ -17,7 +17,7 @@ limitations under the License.
 package cache
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/types"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
 )
 
 // ObjectName is a reference to an object of some implicit kind

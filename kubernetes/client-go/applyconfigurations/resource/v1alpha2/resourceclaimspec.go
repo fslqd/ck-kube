@@ -19,7 +19,7 @@ limitations under the License.
 package v1alpha2
 
 import (
-	resourcev1alpha2 "ck-kube/kubernetes/api/resource/v1alpha2"
+	resourcev1alpha2 "github.com/fslqd/ck-kube/kubernetes/api/resource/v1alpha2"
 )
 
 // ResourceClaimSpecApplyConfiguration represents an declarative configuration of the ResourceClaimSpec type for use

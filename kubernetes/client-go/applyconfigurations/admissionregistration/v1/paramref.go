@@ -19,8 +19,8 @@ limitations under the License.
 package v1
 
 import (
-	admissionregistrationv1 "ck-kube/kubernetes/api/admissionregistration/v1"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	admissionregistrationv1 "github.com/fslqd/ck-kube/kubernetes/api/admissionregistration/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // ParamRefApplyConfiguration represents an declarative configuration of the ParamRef type for use

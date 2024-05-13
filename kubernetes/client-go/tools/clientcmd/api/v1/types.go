@@ -17,14 +17,14 @@ limitations under the License.
 package v1
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 )
 
 // Where possible, json tags match the cli argument names.
 // Top level config objects and all values required for proper functioning are not "omitempty".  Any truly optional piece of config is allowed to be omitted.
 
 // Config holds the information needed to build connect to remote kubernetes clusters as a given user
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 type Config struct {
 	// Legacy field from pkg/api/types.go TypeMeta.
 	// TODO(jlowdermilk): remove this after eliminating downstream dependencies.
@@ -200,7 +200,7 @@ type AuthProviderConfig struct {
 // ExecConfig specifies a command to provide client credentials. The command is exec'd
 // and outputs structured stdout holding credentials.
 //
-// See the client.authentication.ck-kube/kubernetes API group for specifications of the exact input
+// See the client.authentication.github.com/fslqd/ck-kube/kubernetes API group for specifications of the exact input
 // and output format
 type ExecConfig struct {
 	// Command to execute.
@@ -226,7 +226,7 @@ type ExecConfig struct {
 	// ProvideClusterInfo determines whether or not to provide cluster information,
 	// which could potentially contain very large CA data, to this exec plugin as a
 	// part of the KUBERNETES_EXEC_INFO environment variable. By default, it is set
-	// to false. Package ck-kube/kubernetes/client-go/tools/auth/exec provides helper methods for
+	// to false. Package github.com/fslqd/ck-kube/kubernetes/client-go/tools/auth/exec provides helper methods for
 	// reading this environment variable.
 	ProvideClusterInfo bool `json:"provideClusterInfo"`
 
@@ -236,8 +236,8 @@ type ExecConfig struct {
 	// plugin requires standard input to function). See ExecInteractiveMode values for more
 	// details.
 	//
-	// If APIVersion is client.authentication.ck-kube/kubernetes/v1alpha1 or
-	// client.authentication.ck-kube/kubernetes/v1beta1, then this field is optional and defaults
+	// If APIVersion is client.authentication.github.com/fslqd/ck-kube/kubernetes/v1alpha1 or
+	// client.authentication.github.com/fslqd/ck-kube/kubernetes/v1beta1, then this field is optional and defaults
 	// to "IfAvailable" when unset. Otherwise, this field is required.
 	//+optional
 	InteractiveMode ExecInteractiveMode `json:"interactiveMode,omitempty"`

@@ -19,9 +19,9 @@ package managedfields
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/kube-openapi/pkg/schemaconv"
-	"ck-kube/kubernetes/kube-openapi/pkg/util/proto"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/schemaconv"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/util/proto"
 	smdschema "sigs.k8s.io/structured-merge-diff/v4/schema"
 	"sigs.k8s.io/structured-merge-diff/v4/typed"
 )

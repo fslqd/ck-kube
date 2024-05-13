@@ -17,10 +17,10 @@ limitations under the License.
 package scheme
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/internalversion"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/internalversion"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
 )
 
 // Scheme is the registry for any type that adheres to the meta API spec.

@@ -19,8 +19,8 @@ limitations under the License.
 package v2beta1
 
 import (
-	v1 "ck-kube/kubernetes/api/core/v1"
-	resource "ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	resource "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
 )
 
 // ResourceMetricSourceApplyConfiguration represents an declarative configuration of the ResourceMetricSource type for use

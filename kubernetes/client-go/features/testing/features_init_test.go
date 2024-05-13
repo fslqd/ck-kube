@@ -23,7 +23,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"ck-kube/kubernetes/client-go/features"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/features"
 )
 
 func TestDriveInitDefaultFeatureGates(t *testing.T) {

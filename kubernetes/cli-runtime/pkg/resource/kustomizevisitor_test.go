@@ -19,14 +19,14 @@ package resource
 import (
 	"testing"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/dump"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/dump"
 	"sigs.k8s.io/kustomize/api/konfig"
 	"sigs.k8s.io/kustomize/kyaml/filesys"
 )
 
 const (
 	kustomizationContent1 = `
-apiVersion: kustomize.config.ck-kube/kubernetes/v1beta1
+apiVersion: kustomize.config.github.com/fslqd/ck-kube/kubernetes/v1beta1
 kind: Kustomization
 namePrefix: foo-
 nameSuffix: -bar

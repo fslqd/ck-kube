@@ -19,4 +19,4 @@ limitations under the License.
 // +k8s:openapi-gen=true
 // +k8s:prerelease-lifecycle-gen=true
 
-package v1beta1 // import "ck-kube/kubernetes/api/extensions/v1beta1"
+package v1beta1 // import "github.com/fslqd/ck-kube/kubernetes/api/extensions/v1beta1"

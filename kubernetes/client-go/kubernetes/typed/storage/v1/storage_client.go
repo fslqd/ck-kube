@@ -21,9 +21,9 @@ package v1
 import (
 	"net/http"
 
-	v1 "ck-kube/kubernetes/api/storage/v1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/storage/v1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type StorageV1Interface interface {
@@ -35,7 +35,7 @@ type StorageV1Interface interface {
 	VolumeAttachmentsGetter
 }
 
-// StorageV1Client is used to interact with features provided by the storage.ck-kube/kubernetes group.
+// StorageV1Client is used to interact with features provided by the storage.github.com/fslqd/ck-kube/kubernetes group.
 type StorageV1Client struct {
 	restClient rest.Interface
 }

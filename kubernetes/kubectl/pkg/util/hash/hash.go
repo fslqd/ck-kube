@@ -21,7 +21,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"ck-kube/kubernetes/api/core/v1"
+	"github.com/fslqd/ck-kube/kubernetes/api/core/v1"
 )
 
 // ConfigMapHash returns a hash of the ConfigMap.

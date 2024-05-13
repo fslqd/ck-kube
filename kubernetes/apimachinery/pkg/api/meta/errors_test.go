@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"testing"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 func TestErrorMatching(t *testing.T) {

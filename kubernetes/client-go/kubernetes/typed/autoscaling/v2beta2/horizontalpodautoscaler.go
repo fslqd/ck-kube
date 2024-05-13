@@ -24,13 +24,13 @@ import (
 	"fmt"
 	"time"
 
-	v2beta2 "ck-kube/kubernetes/api/autoscaling/v2beta2"
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	watch "ck-kube/kubernetes/apimachinery/pkg/watch"
-	autoscalingv2beta2 "ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v2beta2"
-	scheme "ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v2beta2 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2beta2"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	watch "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	autoscalingv2beta2 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/autoscaling/v2beta2"
+	scheme "github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 // HorizontalPodAutoscalersGetter has a method to return a HorizontalPodAutoscalerInterface.

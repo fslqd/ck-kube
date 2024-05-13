@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/client-go/openapi3"
-	"ck-kube/kubernetes/kube-openapi/pkg/spec3"
-	"ck-kube/kubernetes/kube-openapi/pkg/validation/spec"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi3"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/spec3"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/validation/spec"
 )
 
 var _ Verifier = &queryParamVerifierV3{}

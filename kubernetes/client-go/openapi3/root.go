@@ -22,10 +22,10 @@ import (
 	"sort"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/client-go/openapi"
-	"ck-kube/kubernetes/kube-openapi/pkg/spec3"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/spec3"
 )
 
 // Root interface defines functions implemented against the root

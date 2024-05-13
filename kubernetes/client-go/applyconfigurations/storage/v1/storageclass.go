@@ -19,14 +19,14 @@ limitations under the License.
 package v1
 
 import (
-	corev1 "ck-kube/kubernetes/api/core/v1"
-	storagev1 "ck-kube/kubernetes/api/storage/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	applyconfigurationscorev1 "ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	storagev1 "github.com/fslqd/ck-kube/kubernetes/api/storage/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	applyconfigurationscorev1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // StorageClassApplyConfiguration represents an declarative configuration of the StorageClass type for use
@@ -49,7 +49,7 @@ func StorageClass(name string) *StorageClassApplyConfiguration {
 	b := &StorageClassApplyConfiguration{}
 	b.WithName(name)
 	b.WithKind("StorageClass")
-	b.WithAPIVersion("storage.ck-kube/kubernetes/v1")
+	b.WithAPIVersion("storage.github.com/fslqd/ck-kube/kubernetes/v1")
 	return b
 }
 
@@ -84,7 +84,7 @@ func extractStorageClass(storageClass *storagev1.StorageClass, fieldManager stri
 	b.WithName(storageClass.Name)
 
 	b.WithKind("StorageClass")
-	b.WithAPIVersion("storage.ck-kube/kubernetes/v1")
+	b.WithAPIVersion("storage.github.com/fslqd/ck-kube/kubernetes/v1")
 	return b, nil
 }
 

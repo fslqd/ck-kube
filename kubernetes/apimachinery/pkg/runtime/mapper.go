@@ -19,7 +19,7 @@ package runtime
 import (
 	"sync"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 type equivalentResourceRegistry struct {

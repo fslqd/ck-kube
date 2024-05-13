@@ -15,6 +15,6 @@ limitations under the License.
 */
 
 // +k8s:deepcopy-gen=package
-// +k8s:conversion-gen=ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1
+// +k8s:conversion-gen=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1
 
-package internalversion // import "ck-kube/kubernetes/apimachinery/pkg/apis/meta/internalversion"
+package internalversion // import "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/internalversion"

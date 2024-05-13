@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"sort"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 	"sigs.k8s.io/structured-merge-diff/v4/fieldpath"
 )
 

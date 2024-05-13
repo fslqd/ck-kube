@@ -19,7 +19,7 @@ limitations under the License.
 package v1beta1
 
 import (
-	rest "ck-kube/kubernetes/client-go/rest"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 // EvictionsGetter has a method to return a EvictionInterface.

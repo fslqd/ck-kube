@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
-	"ck-kube/kubernetes/apimachinery/pkg/util/wait"
-	"ck-kube/kubernetes/utils/clock"
-	testingclock "ck-kube/kubernetes/utils/clock/testing"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/wait"
+	"github.com/fslqd/ck-kube/kubernetes/utils/clock"
+	testingclock "github.com/fslqd/ck-kube/kubernetes/utils/clock/testing"
 )
 
 func TestTTLExpirationBasic(t *testing.T) {

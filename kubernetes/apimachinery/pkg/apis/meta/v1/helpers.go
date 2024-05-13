@@ -22,10 +22,10 @@ import (
 	"errors"
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/fields"
-	"ck-kube/kubernetes/apimachinery/pkg/labels"
-	"ck-kube/kubernetes/apimachinery/pkg/selection"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/fields"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/labels"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/selection"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
 )
 
 // LabelSelectorAsSelector converts the LabelSelector api type into a struct that implements

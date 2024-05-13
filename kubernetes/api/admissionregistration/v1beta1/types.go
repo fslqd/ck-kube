@@ -17,8 +17,8 @@ limitations under the License.
 package v1beta1
 
 import (
-	v1 "ck-kube/kubernetes/api/admissionregistration/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/admissionregistration/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // Rule is a tuple of APIGroups, APIVersion, and Resources.It is recommended
@@ -87,15 +87,15 @@ const (
 	SideEffectClassNoneOnDryRun SideEffectClass = "NoneOnDryRun"
 )
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.28
 // ValidatingAdmissionPolicy describes the definition of an admission validation policy that accepts or rejects an object without changing it.
 type ValidatingAdmissionPolicy struct {
 	metav1.TypeMeta `json:",inline"`
-	// Standard object metadata; More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
+	// Standard object metadata; More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// Specification of the desired behavior of the ValidatingAdmissionPolicy.
@@ -148,13 +148,13 @@ type ExpressionWarning struct {
 	Warning string `json:"warning" protobuf:"bytes,3,opt,name=warning"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.28
 // ValidatingAdmissionPolicyList is a list of ValidatingAdmissionPolicy.
 type ValidatingAdmissionPolicyList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// List of ValidatingAdmissionPolicy.
@@ -272,7 +272,7 @@ type Validation struct {
 	// - 'variables' - Map of composited variables, from its name to its lazily evaluated value.
 	//   For example, a variable named 'foo' can be accessed as 'variables.foo'.
 	// - 'authorizer' - A CEL Authorizer. May be used to perform authorization checks for the principal (user or service account) of the request.
-	//   See https://pkg.go.dev/ck-kube/kubernetes/apiserver/pkg/cel/library#Authz
+	//   See https://pkg.go.dev/github.com/fslqd/ck-kube/kubernetes/apiserver/pkg/cel/library#Authz
 	// - 'authorizer.requestResource' - A CEL ResourceCheck constructed from the 'authorizer' and configured with the
 	//   request resource.
 	//
@@ -385,7 +385,7 @@ type AuditAnnotation struct {
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.28
 
 // ValidatingAdmissionPolicyBinding binds the ValidatingAdmissionPolicy with paramerized resources.
@@ -401,21 +401,21 @@ type AuditAnnotation struct {
 // given (policy, binding, param) combination is within its own CEL budget.
 type ValidatingAdmissionPolicyBinding struct {
 	metav1.TypeMeta `json:",inline"`
-	// Standard object metadata; More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
+	// Standard object metadata; More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// Specification of the desired behavior of the ValidatingAdmissionPolicyBinding.
 	Spec ValidatingAdmissionPolicyBindingSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.28
 
 // ValidatingAdmissionPolicyBindingList is a list of ValidatingAdmissionPolicyBinding.
 type ValidatingAdmissionPolicyBindingList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// List of PolicyBinding.
@@ -464,7 +464,7 @@ type ValidatingAdmissionPolicyBindingSpec struct {
 	//
 	// "Audit" specifies that a validation failure is included in the published
 	// audit event for the request. The audit event will contain a
-	// `validation.policy.admission.ck-kube/kubernetes/validation_failure` audit annotation
+	// `validation.policy.admission.github.com/fslqd/ck-kube/kubernetes/validation_failure` audit annotation
 	// with a value containing the details of the validation failures, formatted as
 	// a JSON list of objects, each with the following fields:
 	// - message: The validation failure message string
@@ -473,7 +473,7 @@ type ValidatingAdmissionPolicyBindingSpec struct {
 	// - expressionIndex: The index of the failed validations in the ValidatingAdmissionPolicy
 	// - validationActions: The enforcement actions enacted for the validation failure
 	// Example audit annotation:
-	// `"validation.policy.admission.ck-kube/kubernetes/validation_failure": "[{\"message\": \"Invalid value\", {\"policy\": \"policy.example.com\", {\"binding\": \"policybinding.example.com\", {\"expressionIndex\": \"1\", {\"validationActions\": [\"Audit\"]}]"`
+	// `"validation.policy.admission.github.com/fslqd/ck-kube/kubernetes/validation_failure": "[{\"message\": \"Invalid value\", {\"policy\": \"policy.example.com\", {\"binding\": \"policybinding.example.com\", {\"expressionIndex\": \"1\", {\"validationActions\": [\"Audit\"]}]"`
 	//
 	// Clients should expect to handle additional values by ignoring
 	// any values not recognized.
@@ -649,7 +649,7 @@ const (
 	Warn ValidationAction = "Warn"
 	// Audit specifies that a validation failure is included in the published
 	// audit event for the request. The audit event will contain a
-	// `validation.policy.admission.ck-kube/kubernetes/validation_failure` audit annotation
+	// `validation.policy.admission.github.com/fslqd/ck-kube/kubernetes/validation_failure` audit annotation
 	// with a value containing the details of the validation failure.
 	Audit ValidationAction = "Audit"
 )
@@ -667,17 +667,17 @@ type NamedRuleWithOperations struct {
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.9
 // +k8s:prerelease-lifecycle-gen:deprecated=1.16
 // +k8s:prerelease-lifecycle-gen:removed=1.22
-// +k8s:prerelease-lifecycle-gen:replacement=admissionregistration.ck-kube/kubernetes,v1,ValidatingWebhookConfiguration
+// +k8s:prerelease-lifecycle-gen:replacement=admissionregistration.github.com/fslqd/ck-kube/kubernetes,v1,ValidatingWebhookConfiguration
 
 // ValidatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and object without changing it.
-// Deprecated in v1.16, planned for removal in v1.19. Use admissionregistration.ck-kube/kubernetes/v1 ValidatingWebhookConfiguration instead.
+// Deprecated in v1.16, planned for removal in v1.19. Use admissionregistration.github.com/fslqd/ck-kube/kubernetes/v1 ValidatingWebhookConfiguration instead.
 type ValidatingWebhookConfiguration struct {
 	metav1.TypeMeta `json:",inline"`
-	// Standard object metadata; More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
+	// Standard object metadata; More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// Webhooks is a list of webhooks and the affected resources and operations.
@@ -689,17 +689,17 @@ type ValidatingWebhookConfiguration struct {
 	Webhooks []ValidatingWebhook `json:"webhooks,omitempty" patchStrategy:"merge" patchMergeKey:"name" protobuf:"bytes,2,rep,name=Webhooks"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.9
 // +k8s:prerelease-lifecycle-gen:deprecated=1.16
 // +k8s:prerelease-lifecycle-gen:removed=1.22
-// +k8s:prerelease-lifecycle-gen:replacement=admissionregistration.ck-kube/kubernetes,v1,ValidatingWebhookConfigurationList
+// +k8s:prerelease-lifecycle-gen:replacement=admissionregistration.github.com/fslqd/ck-kube/kubernetes,v1,ValidatingWebhookConfigurationList
 
 // ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.
 type ValidatingWebhookConfigurationList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// List of ValidatingWebhookConfiguration.
@@ -708,17 +708,17 @@ type ValidatingWebhookConfigurationList struct {
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.9
 // +k8s:prerelease-lifecycle-gen:deprecated=1.16
 // +k8s:prerelease-lifecycle-gen:removed=1.22
-// +k8s:prerelease-lifecycle-gen:replacement=admissionregistration.ck-kube/kubernetes,v1,MutatingWebhookConfiguration
+// +k8s:prerelease-lifecycle-gen:replacement=admissionregistration.github.com/fslqd/ck-kube/kubernetes,v1,MutatingWebhookConfiguration
 
 // MutatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and may change the object.
-// Deprecated in v1.16, planned for removal in v1.19. Use admissionregistration.ck-kube/kubernetes/v1 MutatingWebhookConfiguration instead.
+// Deprecated in v1.16, planned for removal in v1.19. Use admissionregistration.github.com/fslqd/ck-kube/kubernetes/v1 MutatingWebhookConfiguration instead.
 type MutatingWebhookConfiguration struct {
 	metav1.TypeMeta `json:",inline"`
-	// Standard object metadata; More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
+	// Standard object metadata; More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// Webhooks is a list of webhooks and the affected resources and operations.
@@ -730,17 +730,17 @@ type MutatingWebhookConfiguration struct {
 	Webhooks []MutatingWebhook `json:"webhooks,omitempty" patchStrategy:"merge" patchMergeKey:"name" protobuf:"bytes,2,rep,name=Webhooks"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.9
 // +k8s:prerelease-lifecycle-gen:deprecated=1.16
 // +k8s:prerelease-lifecycle-gen:removed=1.22
-// +k8s:prerelease-lifecycle-gen:replacement=admissionregistration.ck-kube/kubernetes,v1,MutatingWebhookConfigurationList
+// +k8s:prerelease-lifecycle-gen:replacement=admissionregistration.github.com/fslqd/ck-kube/kubernetes,v1,MutatingWebhookConfigurationList
 
 // MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 type MutatingWebhookConfigurationList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// List of MutatingWebhookConfiguration.
@@ -1093,7 +1093,7 @@ type RuleWithOperations = v1.RuleWithOperations
 // +enum
 type OperationType = v1.OperationType
 
-// The constants should be kept in sync with those defined in ck-kube/kubernetes/kubernetes/pkg/admission/interface.go.
+// The constants should be kept in sync with those defined in github.com/fslqd/ck-kube/kubernetes/kubernetes/pkg/admission/interface.go.
 const (
 	OperationAll OperationType = v1.OperationAll
 	Create       OperationType = v1.Create
@@ -1148,7 +1148,7 @@ type WebhookClientConfig struct {
 	CABundle []byte `json:"caBundle,omitempty" protobuf:"bytes,2,opt,name=caBundle"`
 }
 
-// ServiceReference holds a reference to Service.legacy.ck-kube/kubernetes
+// ServiceReference holds a reference to Service.legacy.github.com/fslqd/ck-kube/kubernetes
 type ServiceReference struct {
 	// `namespace` is the namespace of the service.
 	// Required
@@ -1189,7 +1189,7 @@ type MatchCondition struct {
 	// 'oldObject' - The existing object. The value is null for CREATE requests.
 	// 'request' - Attributes of the admission request(/pkg/apis/admission/types.go#AdmissionRequest).
 	// 'authorizer' - A CEL Authorizer. May be used to perform authorization checks for the principal (user or service account) of the request.
-	//   See https://pkg.go.dev/ck-kube/kubernetes/apiserver/pkg/cel/library#Authz
+	//   See https://pkg.go.dev/github.com/fslqd/ck-kube/kubernetes/apiserver/pkg/cel/library#Authz
 	// 'authorizer.requestResource' - A CEL ResourceCheck constructed from the 'authorizer' and configured with the
 	//   request resource.
 	// Documentation on CEL: https://kubernetes.io/docs/reference/using-api/cel/

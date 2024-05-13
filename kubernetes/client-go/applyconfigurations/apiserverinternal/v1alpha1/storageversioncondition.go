@@ -19,8 +19,8 @@ limitations under the License.
 package v1alpha1
 
 import (
-	v1alpha1 "ck-kube/kubernetes/api/apiserverinternal/v1alpha1"
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/apiserverinternal/v1alpha1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // StorageVersionConditionApplyConfiguration represents an declarative configuration of the StorageVersionCondition type for use

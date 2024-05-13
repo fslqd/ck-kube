@@ -20,7 +20,7 @@ limitations under the License.
 package direct
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/cbor/internal/modes"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/cbor/internal/modes"
 )
 
 func Marshal(src interface{}) ([]byte, error) {

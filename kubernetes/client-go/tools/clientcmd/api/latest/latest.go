@@ -17,13 +17,13 @@ limitations under the License.
 package latest
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/json"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/versioning"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/client-go/tools/clientcmd/api"
-	"ck-kube/kubernetes/client-go/tools/clientcmd/api/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/json"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/versioning"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api/v1"
 )
 
 // Version is the string that represents the current external default version.

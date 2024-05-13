@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	metav1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // ValidatingAdmissionPolicyStatusApplyConfiguration represents an declarative configuration of the ValidatingAdmissionPolicyStatus type for use

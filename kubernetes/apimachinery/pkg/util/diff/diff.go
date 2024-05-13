@@ -23,7 +23,7 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/dump"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/dump"
 	"github.com/google/go-cmp/cmp"
 )
 

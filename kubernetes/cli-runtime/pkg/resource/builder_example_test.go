@@ -20,41 +20,41 @@ import (
 	"bytes"
 	"fmt"
 
-	"ck-kube/kubernetes/cli-runtime/pkg/resource"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
+	"github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/resource"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
 )
 
 var exampleManifest = `
-apiVersion: admissionregistration.ck-kube/kubernetes/v1
+apiVersion: admissionregistration.github.com/fslqd/ck-kube/kubernetes/v1
 kind: MutatingWebhookConfiguration
 metadata:
   name: mutating1
 ---
-apiVersion: admissionregistration.ck-kube/kubernetes/v1
+apiVersion: admissionregistration.github.com/fslqd/ck-kube/kubernetes/v1
 kind: MutatingWebhookConfigurationList
 items:
-- apiVersion: admissionregistration.ck-kube/kubernetes/v1
+- apiVersion: admissionregistration.github.com/fslqd/ck-kube/kubernetes/v1
   kind: MutatingWebhookConfiguration
   metadata:
     name: mutating2
-- apiVersion: admissionregistration.ck-kube/kubernetes/v1
+- apiVersion: admissionregistration.github.com/fslqd/ck-kube/kubernetes/v1
   kind: MutatingWebhookConfiguration
   metadata:
     name: mutating3
 ---
-apiVersion: admissionregistration.ck-kube/kubernetes/v1
+apiVersion: admissionregistration.github.com/fslqd/ck-kube/kubernetes/v1
 kind: ValidatingWebhookConfiguration
 metadata:
   name: validating1
 ---
-apiVersion: admissionregistration.ck-kube/kubernetes/v1
+apiVersion: admissionregistration.github.com/fslqd/ck-kube/kubernetes/v1
 kind: ValidatingWebhookConfigurationList
 items:
-- apiVersion: admissionregistration.ck-kube/kubernetes/v1
+- apiVersion: admissionregistration.github.com/fslqd/ck-kube/kubernetes/v1
   kind: ValidatingWebhookConfiguration
   metadata:
     name: validating2
-- apiVersion: admissionregistration.ck-kube/kubernetes/v1
+- apiVersion: admissionregistration.github.com/fslqd/ck-kube/kubernetes/v1
   kind: ValidatingWebhookConfiguration
   metadata:
     name: validating3
@@ -62,11 +62,11 @@ items:
 apiVersion: v1
 kind: List
 items:
-- apiVersion: admissionregistration.ck-kube/kubernetes/v1
+- apiVersion: admissionregistration.github.com/fslqd/ck-kube/kubernetes/v1
   kind: MutatingWebhookConfiguration
   metadata:
     name: mutating4
-- apiVersion: admissionregistration.ck-kube/kubernetes/v1
+- apiVersion: admissionregistration.github.com/fslqd/ck-kube/kubernetes/v1
   kind: ValidatingWebhookConfiguration
   metadata:
     name: validating4

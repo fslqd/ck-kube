@@ -17,8 +17,8 @@ limitations under the License.
 package v1alpha1
 
 import (
-	v1 "ck-kube/kubernetes/api/admissionregistration/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/admissionregistration/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // Rule is a tuple of APIGroups, APIVersion, and Resources.It is recommended
@@ -75,13 +75,13 @@ const (
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // ValidatingAdmissionPolicy describes the definition of an admission validation policy that accepts or rejects an object without changing it.
 type ValidatingAdmissionPolicy struct {
 	metav1.TypeMeta `json:",inline"`
-	// Standard object metadata; More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
+	// Standard object metadata; More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// Specification of the desired behavior of the ValidatingAdmissionPolicy.
@@ -131,14 +131,14 @@ type ExpressionWarning struct {
 	Warning string `json:"warning" protobuf:"bytes,3,opt,name=warning"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // ValidatingAdmissionPolicyList is a list of ValidatingAdmissionPolicy.
 type ValidatingAdmissionPolicyList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// List of ValidatingAdmissionPolicy.
@@ -258,7 +258,7 @@ type Validation struct {
 	// - 'variables' - Map of composited variables, from its name to its lazily evaluated value.
 	//   For example, a variable named 'foo' can be accessed as 'variables.foo'.
 	// - 'authorizer' - A CEL Authorizer. May be used to perform authorization checks for the principal (user or service account) of the request.
-	//   See https://pkg.go.dev/ck-kube/kubernetes/apiserver/pkg/cel/library#Authz
+	//   See https://pkg.go.dev/github.com/fslqd/ck-kube/kubernetes/apiserver/pkg/cel/library#Authz
 	// - 'authorizer.requestResource' - A CEL ResourceCheck constructed from the 'authorizer' and configured with the
 	//   request resource.
 	//
@@ -370,7 +370,7 @@ type AuditAnnotation struct {
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // ValidatingAdmissionPolicyBinding binds the ValidatingAdmissionPolicy with paramerized resources.
@@ -386,21 +386,21 @@ type AuditAnnotation struct {
 // given (policy, binding, param) combination is within its own CEL budget.
 type ValidatingAdmissionPolicyBinding struct {
 	metav1.TypeMeta `json:",inline"`
-	// Standard object metadata; More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
+	// Standard object metadata; More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 	// +optional
 	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// Specification of the desired behavior of the ValidatingAdmissionPolicyBinding.
 	Spec ValidatingAdmissionPolicyBindingSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 // +k8s:prerelease-lifecycle-gen:introduced=1.26
 
 // ValidatingAdmissionPolicyBindingList is a list of ValidatingAdmissionPolicyBinding.
 type ValidatingAdmissionPolicyBindingList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard list metadata.
-	// More info: https://git.ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+	// More info: https://git.github.com/fslqd/ck-kube/kubernetes/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	// +optional
 	metav1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	// List of PolicyBinding.
@@ -449,7 +449,7 @@ type ValidatingAdmissionPolicyBindingSpec struct {
 	//
 	// "Audit" specifies that a validation failure is included in the published
 	// audit event for the request. The audit event will contain a
-	// `validation.policy.admission.ck-kube/kubernetes/validation_failure` audit annotation
+	// `validation.policy.admission.github.com/fslqd/ck-kube/kubernetes/validation_failure` audit annotation
 	// with a value containing the details of the validation failures, formatted as
 	// a JSON list of objects, each with the following fields:
 	// - message: The validation failure message string
@@ -458,7 +458,7 @@ type ValidatingAdmissionPolicyBindingSpec struct {
 	// - expressionIndex: The index of the failed validations in the ValidatingAdmissionPolicy
 	// - validationActions: The enforcement actions enacted for the validation failure
 	// Example audit annotation:
-	// `"validation.policy.admission.ck-kube/kubernetes/validation_failure": "[{\"message\": \"Invalid value\", {\"policy\": \"policy.example.com\", {\"binding\": \"policybinding.example.com\", {\"expressionIndex\": \"1\", {\"validationActions\": [\"Audit\"]}]"`
+	// `"validation.policy.admission.github.com/fslqd/ck-kube/kubernetes/validation_failure": "[{\"message\": \"Invalid value\", {\"policy\": \"policy.example.com\", {\"binding\": \"policybinding.example.com\", {\"expressionIndex\": \"1\", {\"validationActions\": [\"Audit\"]}]"`
 	//
 	// Clients should expect to handle additional values by ignoring
 	// any values not recognized.
@@ -631,7 +631,7 @@ const (
 	Warn ValidationAction = "Warn"
 	// Audit specifies that a validation failure is included in the published
 	// audit event for the request. The audit event will contain a
-	// `validation.policy.admission.ck-kube/kubernetes/validation_failure` audit annotation
+	// `validation.policy.admission.github.com/fslqd/ck-kube/kubernetes/validation_failure` audit annotation
 	// with a value containing the details of the validation failure.
 	Audit ValidationAction = "Audit"
 )
@@ -655,7 +655,7 @@ type RuleWithOperations = v1.RuleWithOperations
 // +enum
 type OperationType = v1.OperationType
 
-// The constants should be kept in sync with those defined in ck-kube/kubernetes/kubernetes/pkg/admission/interface.go.
+// The constants should be kept in sync with those defined in github.com/fslqd/ck-kube/kubernetes/kubernetes/pkg/admission/interface.go.
 const (
 	OperationAll OperationType = v1.OperationAll
 	Create       OperationType = v1.Create

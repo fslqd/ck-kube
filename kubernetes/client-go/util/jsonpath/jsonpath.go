@@ -24,7 +24,7 @@ import (
 	"reflect"
 	"strings"
 
-	"ck-kube/kubernetes/client-go/third_party/forked/golang/template"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/third_party/forked/golang/template"
 )
 
 type JSONPath struct {

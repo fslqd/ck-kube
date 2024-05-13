@@ -23,9 +23,9 @@ import (
 	openapi_v2 "github.com/google/gnostic-models/openapiv2"
 	yaml "gopkg.in/yaml.v2"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/client-go/discovery"
-	"ck-kube/kubernetes/client-go/dynamic"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/discovery"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/dynamic"
 )
 
 func NewQueryParamVerifier(dynamicClient dynamic.Interface, openAPIGetter discovery.OpenAPISchemaInterface, queryParam VerifiableQueryParam) *QueryParamVerifier {

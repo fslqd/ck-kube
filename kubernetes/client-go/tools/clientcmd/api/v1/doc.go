@@ -14,8 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-// +k8s:conversion-gen=ck-kube/kubernetes/client-go/tools/clientcmd/api
+// +k8s:conversion-gen=github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api
 // +k8s:deepcopy-gen=package
 // +k8s:defaulter-gen=Kind
 
-package v1 // import "ck-kube/kubernetes/client-go/tools/clientcmd/api/v1"
+package v1 // import "github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api/v1"

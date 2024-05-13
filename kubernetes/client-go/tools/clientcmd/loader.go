@@ -27,13 +27,13 @@ import (
 	"github.com/imdario/mergo"
 	"k8s.io/klog/v2"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	utilerrors "ck-kube/kubernetes/apimachinery/pkg/util/errors"
-	restclient "ck-kube/kubernetes/client-go/rest"
-	clientcmdapi "ck-kube/kubernetes/client-go/tools/clientcmd/api"
-	clientcmdlatest "ck-kube/kubernetes/client-go/tools/clientcmd/api/latest"
-	"ck-kube/kubernetes/client-go/util/homedir"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	utilerrors "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/errors"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
+	clientcmdapi "github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api"
+	clientcmdlatest "github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api/latest"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/homedir"
 )
 
 const (

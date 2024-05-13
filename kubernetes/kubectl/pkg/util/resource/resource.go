@@ -22,9 +22,9 @@ import (
 	"strconv"
 	"strings"
 
-	corev1 "ck-kube/kubernetes/api/core/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/api/resource"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 )
 
 // PodRequestsAndLimits returns a dictionary of all defined resources summed up for all
@@ -35,8 +35,8 @@ func PodRequestsAndLimits(pod *corev1.Pod) (reqs, limits corev1.ResourceList) {
 	return podRequests(pod), podLimits(pod)
 }
 
-// podRequests is a simplified form of PodRequests from ck-kube/kubernetes/kubernetes/pkg/api/v1/resource that doesn't check
-// feature gate enablement and avoids adding a dependency on ck-kube/kubernetes/kubernetes/pkg/apis/core/v1 for kubectl.
+// podRequests is a simplified form of PodRequests from github.com/fslqd/ck-kube/kubernetes/kubernetes/pkg/api/v1/resource that doesn't check
+// feature gate enablement and avoids adding a dependency on github.com/fslqd/ck-kube/kubernetes/kubernetes/pkg/apis/core/v1 for kubectl.
 func podRequests(pod *corev1.Pod) corev1.ResourceList {
 	// attempt to reuse the maps if passed, or allocate otherwise
 	reqs := corev1.ResourceList{}
@@ -91,8 +91,8 @@ func podRequests(pod *corev1.Pod) corev1.ResourceList {
 	return reqs
 }
 
-// podLimits is a simplified form of PodLimits from ck-kube/kubernetes/kubernetes/pkg/api/v1/resource that doesn't check
-// feature gate enablement and avoids adding a dependency on ck-kube/kubernetes/kubernetes/pkg/apis/core/v1 for kubectl.
+// podLimits is a simplified form of PodLimits from github.com/fslqd/ck-kube/kubernetes/kubernetes/pkg/api/v1/resource that doesn't check
+// feature gate enablement and avoids adding a dependency on github.com/fslqd/ck-kube/kubernetes/kubernetes/pkg/apis/core/v1 for kubectl.
 func podLimits(pod *corev1.Pod) corev1.ResourceList {
 	limits := corev1.ResourceList{}
 

@@ -21,7 +21,7 @@ import (
 	"sync"
 	"time"
 
-	"ck-kube/kubernetes/utils/clock"
+	"github.com/fslqd/ck-kube/kubernetes/utils/clock"
 )
 
 // NewExpiring returns an initialized expiring cache.

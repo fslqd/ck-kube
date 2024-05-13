@@ -19,9 +19,9 @@ package internal
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	apimachineryvalidation "ck-kube/kubernetes/apimachinery/pkg/api/validation"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	apimachineryvalidation "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/validation"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 )
 
 // LastAppliedConfigAnnotation is the annotation used to store the previous

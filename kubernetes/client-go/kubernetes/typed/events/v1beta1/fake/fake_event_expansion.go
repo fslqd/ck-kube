@@ -17,9 +17,9 @@ limitations under the License.
 package fake
 
 import (
-	v1beta1 "ck-kube/kubernetes/api/events/v1beta1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	core "ck-kube/kubernetes/client-go/testing"
+	v1beta1 "github.com/fslqd/ck-kube/kubernetes/api/events/v1beta1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	core "github.com/fslqd/ck-kube/kubernetes/client-go/testing"
 )
 
 // CreateWithEventNamespace creats a new event. Returns the copy of the event the server returns, or an error.

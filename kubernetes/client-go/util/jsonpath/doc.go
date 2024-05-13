@@ -17,4 +17,4 @@ limitations under the License.
 // package jsonpath is a template engine using jsonpath syntax,
 // which can be seen at http://goessner.net/articles/JsonPath/.
 // In addition, it has {range} {end} function to iterate list and slice.
-package jsonpath // import "ck-kube/kubernetes/client-go/util/jsonpath"
+package jsonpath // import "github.com/fslqd/ck-kube/kubernetes/client-go/util/jsonpath"

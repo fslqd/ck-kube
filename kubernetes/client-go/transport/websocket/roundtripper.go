@@ -25,11 +25,11 @@ import (
 
 	gwebsocket "github.com/gorilla/websocket"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/httpstream"
-	"ck-kube/kubernetes/apimachinery/pkg/util/httpstream/wsstream"
-	utilnet "ck-kube/kubernetes/apimachinery/pkg/util/net"
-	restclient "ck-kube/kubernetes/client-go/rest"
-	"ck-kube/kubernetes/client-go/transport"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/httpstream"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/httpstream/wsstream"
+	utilnet "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/net"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/transport"
 )
 
 var (

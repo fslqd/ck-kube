@@ -21,10 +21,10 @@ import (
 	"strings"
 	"testing"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 func gvk(group, version, kind string) *schema.GroupVersionKind {
@@ -49,10 +49,10 @@ func TestDynamicCodecDecode(t *testing.T) {
 			expectObj: &metav1.Status{TypeMeta: metav1.TypeMeta{APIVersion: "v1", Kind: "Status"}},
 		},
 		{
-			name:      "meta.ck-kube/kubernetes/v1 Status",
-			data:      []byte(`{"apiVersion":"meta.ck-kube/kubernetes/v1","kind":"Status"}`),
-			expectGVK: gvk("meta.ck-kube/kubernetes", "v1", "Status"),
-			expectObj: &metav1.Status{TypeMeta: metav1.TypeMeta{APIVersion: "meta.ck-kube/kubernetes/v1", Kind: "Status"}},
+			name:      "meta.github.com/fslqd/ck-kube/kubernetes/v1 Status",
+			data:      []byte(`{"apiVersion":"meta.github.com/fslqd/ck-kube/kubernetes/v1","kind":"Status"}`),
+			expectGVK: gvk("meta.github.com/fslqd/ck-kube/kubernetes", "v1", "Status"),
+			expectObj: &metav1.Status{TypeMeta: metav1.TypeMeta{APIVersion: "meta.github.com/fslqd/ck-kube/kubernetes/v1", Kind: "Status"}},
 		},
 		{
 			name:      "example.com/v1 Status",

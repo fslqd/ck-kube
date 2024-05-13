@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	corev1 "ck-kube/kubernetes/api/core/v1"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
 )
 
 // SecurityContextApplyConfiguration represents an declarative configuration of the SecurityContext type for use

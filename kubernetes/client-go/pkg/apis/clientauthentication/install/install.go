@@ -19,11 +19,11 @@ limitations under the License.
 package install
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/client-go/pkg/apis/clientauthentication"
-	"ck-kube/kubernetes/client-go/pkg/apis/clientauthentication/v1"
-	"ck-kube/kubernetes/client-go/pkg/apis/clientauthentication/v1beta1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/pkg/apis/clientauthentication"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/pkg/apis/clientauthentication/v1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/pkg/apis/clientauthentication/v1beta1"
 )
 
 // Install registers the API group and adds types to a scheme

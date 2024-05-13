@@ -22,9 +22,9 @@ import (
 	"net/url"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/httpstream"
-	"ck-kube/kubernetes/apimachinery/pkg/util/httpstream/spdy"
-	restclient "ck-kube/kubernetes/client-go/rest"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/httpstream"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/httpstream/spdy"
+	restclient "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 // Upgrader validates a response from the server after a SPDY upgrade.

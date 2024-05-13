@@ -25,9 +25,9 @@ import (
 	"sync"
 	"time"
 
-	utilnet "ck-kube/kubernetes/apimachinery/pkg/util/net"
-	"ck-kube/kubernetes/apimachinery/pkg/util/wait"
-	"ck-kube/kubernetes/client-go/tools/metrics"
+	utilnet "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/net"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/wait"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/metrics"
 )
 
 // TlsTransportCache caches TLS http.RoundTrippers different configurations. The

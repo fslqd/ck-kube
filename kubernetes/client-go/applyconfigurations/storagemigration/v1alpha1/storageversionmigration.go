@@ -19,12 +19,12 @@ limitations under the License.
 package v1alpha1
 
 import (
-	storagemigrationv1alpha1 "ck-kube/kubernetes/api/storagemigration/v1alpha1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	storagemigrationv1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/storagemigration/v1alpha1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // StorageVersionMigrationApplyConfiguration represents an declarative configuration of the StorageVersionMigration type for use
@@ -42,7 +42,7 @@ func StorageVersionMigration(name string) *StorageVersionMigrationApplyConfigura
 	b := &StorageVersionMigrationApplyConfiguration{}
 	b.WithName(name)
 	b.WithKind("StorageVersionMigration")
-	b.WithAPIVersion("storagemigration.ck-kube/kubernetes/v1alpha1")
+	b.WithAPIVersion("storagemigration.github.com/fslqd/ck-kube/kubernetes/v1alpha1")
 	return b
 }
 
@@ -77,7 +77,7 @@ func extractStorageVersionMigration(storageVersionMigration *storagemigrationv1a
 	b.WithName(storageVersionMigration.Name)
 
 	b.WithKind("StorageVersionMigration")
-	b.WithAPIVersion("storagemigration.ck-kube/kubernetes/v1alpha1")
+	b.WithAPIVersion("storagemigration.github.com/fslqd/ck-kube/kubernetes/v1alpha1")
 	return b, nil
 }
 

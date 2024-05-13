@@ -17,10 +17,10 @@ limitations under the License.
 package testrestmapper
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 )
 
 // TestOnlyStaticRESTMapper returns a union RESTMapper of all known types with priorities chosen in the following order:
@@ -110,42 +110,42 @@ func newRESTMapper(group string, scheme *runtime.Scheme) meta.RESTMapper {
 
 // hardcoded is good enough for the test we're running
 var rootScopedKinds = map[schema.GroupKind]bool{
-	{Group: "admission.ck-kube/kubernetes", Kind: "AdmissionReview"}: true,
+	{Group: "admission.github.com/fslqd/ck-kube/kubernetes", Kind: "AdmissionReview"}: true,
 
-	{Group: "admissionregistration.ck-kube/kubernetes", Kind: "ValidatingWebhookConfiguration"}: true,
-	{Group: "admissionregistration.ck-kube/kubernetes", Kind: "MutatingWebhookConfiguration"}:   true,
+	{Group: "admissionregistration.github.com/fslqd/ck-kube/kubernetes", Kind: "ValidatingWebhookConfiguration"}: true,
+	{Group: "admissionregistration.github.com/fslqd/ck-kube/kubernetes", Kind: "MutatingWebhookConfiguration"}:   true,
 
-	{Group: "authentication.ck-kube/kubernetes", Kind: "TokenReview"}: true,
+	{Group: "authentication.github.com/fslqd/ck-kube/kubernetes", Kind: "TokenReview"}: true,
 
-	{Group: "authorization.ck-kube/kubernetes", Kind: "SubjectAccessReview"}:     true,
-	{Group: "authorization.ck-kube/kubernetes", Kind: "SelfSubjectAccessReview"}: true,
-	{Group: "authorization.ck-kube/kubernetes", Kind: "SelfSubjectRulesReview"}:  true,
+	{Group: "authorization.github.com/fslqd/ck-kube/kubernetes", Kind: "SubjectAccessReview"}:     true,
+	{Group: "authorization.github.com/fslqd/ck-kube/kubernetes", Kind: "SelfSubjectAccessReview"}: true,
+	{Group: "authorization.github.com/fslqd/ck-kube/kubernetes", Kind: "SelfSubjectRulesReview"}:  true,
 
-	{Group: "certificates.ck-kube/kubernetes", Kind: "CertificateSigningRequest"}: true,
+	{Group: "certificates.github.com/fslqd/ck-kube/kubernetes", Kind: "CertificateSigningRequest"}: true,
 
 	{Group: "", Kind: "Node"}:             true,
 	{Group: "", Kind: "Namespace"}:        true,
 	{Group: "", Kind: "PersistentVolume"}: true,
 	{Group: "", Kind: "ComponentStatus"}:  true,
 
-	{Group: "rbac.authorization.ck-kube/kubernetes", Kind: "ClusterRole"}:        true,
-	{Group: "rbac.authorization.ck-kube/kubernetes", Kind: "ClusterRoleBinding"}: true,
+	{Group: "rbac.authorization.github.com/fslqd/ck-kube/kubernetes", Kind: "ClusterRole"}:        true,
+	{Group: "rbac.authorization.github.com/fslqd/ck-kube/kubernetes", Kind: "ClusterRoleBinding"}: true,
 
-	{Group: "scheduling.ck-kube/kubernetes", Kind: "PriorityClass"}: true,
+	{Group: "scheduling.github.com/fslqd/ck-kube/kubernetes", Kind: "PriorityClass"}: true,
 
-	{Group: "storage.ck-kube/kubernetes", Kind: "StorageClass"}:     true,
-	{Group: "storage.ck-kube/kubernetes", Kind: "VolumeAttachment"}: true,
+	{Group: "storage.github.com/fslqd/ck-kube/kubernetes", Kind: "StorageClass"}:     true,
+	{Group: "storage.github.com/fslqd/ck-kube/kubernetes", Kind: "VolumeAttachment"}: true,
 
-	{Group: "apiextensions.ck-kube/kubernetes", Kind: "CustomResourceDefinition"}: true,
+	{Group: "apiextensions.github.com/fslqd/ck-kube/kubernetes", Kind: "CustomResourceDefinition"}: true,
 
-	{Group: "apiserver.ck-kube/kubernetes", Kind: "AdmissionConfiguration"}: true,
+	{Group: "apiserver.github.com/fslqd/ck-kube/kubernetes", Kind: "AdmissionConfiguration"}: true,
 
-	{Group: "audit.ck-kube/kubernetes", Kind: "Event"}:  true,
-	{Group: "audit.ck-kube/kubernetes", Kind: "Policy"}: true,
+	{Group: "audit.github.com/fslqd/ck-kube/kubernetes", Kind: "Event"}:  true,
+	{Group: "audit.github.com/fslqd/ck-kube/kubernetes", Kind: "Policy"}: true,
 
-	{Group: "apiregistration.ck-kube/kubernetes", Kind: "APIService"}: true,
+	{Group: "apiregistration.github.com/fslqd/ck-kube/kubernetes", Kind: "APIService"}: true,
 
-	{Group: "metrics.ck-kube/kubernetes", Kind: "NodeMetrics"}: true,
+	{Group: "metrics.github.com/fslqd/ck-kube/kubernetes", Kind: "NodeMetrics"}: true,
 
 	{Group: "wardle.example.com", Kind: "Fischer"}: true,
 }

@@ -22,10 +22,10 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/kube-openapi/pkg/util/proto"
-	"ck-kube/kubernetes/kube-openapi/pkg/util/proto/testing"
-	"ck-kube/kubernetes/kubectl/pkg/util/openapi"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/util/proto"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/util/proto/testing"
+	"github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/util/openapi"
 )
 
 var fakeSchema = testing.Fake{Path: filepath.Join("..", "..", "..", "testdata", "openapi", "swagger.json")}
@@ -56,7 +56,7 @@ var _ = Describe("Reading apps/v1/Deployment from openAPIData", func() {
 	})
 })
 
-var _ = Describe("Reading authorization.ck-kube/kubernetes/v1/SubjectAccessReview from openAPIData", func() {
+var _ = Describe("Reading authorization.github.com/fslqd/ck-kube/kubernetes/v1/SubjectAccessReview from openAPIData", func() {
 	var resources openapi.Resources
 	BeforeEach(func() {
 		s, err := fakeSchema.OpenAPISchema()
@@ -68,7 +68,7 @@ var _ = Describe("Reading authorization.ck-kube/kubernetes/v1/SubjectAccessRevie
 	gvk := schema.GroupVersionKind{
 		Kind:    "SubjectAccessReview",
 		Version: "v1",
-		Group:   "authorization.ck-kube/kubernetes",
+		Group:   "authorization.github.com/fslqd/ck-kube/kubernetes",
 	}
 
 	var schema proto.Schema

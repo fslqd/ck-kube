@@ -19,7 +19,7 @@ package wait
 import (
 	"time"
 
-	"ck-kube/kubernetes/utils/clock"
+	"github.com/fslqd/ck-kube/kubernetes/utils/clock"
 )
 
 // Timer abstracts how wait functions interact with time runtime efficiently. Test

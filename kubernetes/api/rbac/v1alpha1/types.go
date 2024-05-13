@@ -17,7 +17,7 @@ limitations under the License.
 package v1alpha1
 
 import (
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // Authorization is calculated against
@@ -81,7 +81,7 @@ type Subject struct {
 	Kind string `json:"kind" protobuf:"bytes,1,opt,name=kind"`
 	// APIVersion holds the API group and version of the referenced subject.
 	// Defaults to "v1" for ServiceAccount subjects.
-	// Defaults to "rbac.authorization.ck-kube/kubernetes/v1alpha1" for User and Group subjects.
+	// Defaults to "rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1alpha1" for User and Group subjects.
 	// +k8s:conversion-gen=false
 	// +optional
 	APIVersion string `json:"apiVersion,omitempty" protobuf:"bytes,2,opt.name=apiVersion"`
@@ -104,10 +104,10 @@ type RoleRef struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding.
-// Deprecated in v1.17 in favor of rbac.authorization.ck-kube/kubernetes/v1 Role, and will no longer be served in v1.22.
+// Deprecated in v1.17 in favor of rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1 Role, and will no longer be served in v1.22.
 type Role struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
@@ -121,12 +121,12 @@ type Role struct {
 }
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // RoleBinding references a role, but does not contain it.  It can reference a Role in the same namespace or a ClusterRole in the global namespace.
 // It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given
 // namespace only have effect in that namespace.
-// Deprecated in v1.17 in favor of rbac.authorization.ck-kube/kubernetes/v1 RoleBinding, and will no longer be served in v1.22.
+// Deprecated in v1.17 in favor of rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1 RoleBinding, and will no longer be served in v1.22.
 type RoleBinding struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
@@ -143,10 +143,10 @@ type RoleBinding struct {
 	RoleRef RoleRef `json:"roleRef" protobuf:"bytes,3,opt,name=roleRef"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // RoleBindingList is a collection of RoleBindings
-// Deprecated in v1.17 in favor of rbac.authorization.ck-kube/kubernetes/v1 RoleBindingList, and will no longer be served in v1.22.
+// Deprecated in v1.17 in favor of rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1 RoleBindingList, and will no longer be served in v1.22.
 type RoleBindingList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
@@ -157,10 +157,10 @@ type RoleBindingList struct {
 	Items []RoleBinding `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // RoleList is a collection of Roles.
-// Deprecated in v1.17 in favor of rbac.authorization.ck-kube/kubernetes/v1 RoleList, and will no longer be served in v1.22.
+// Deprecated in v1.17 in favor of rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1 RoleList, and will no longer be served in v1.22.
 type RoleList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
@@ -173,10 +173,10 @@ type RoleList struct {
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding.
-// Deprecated in v1.17 in favor of rbac.authorization.ck-kube/kubernetes/v1 ClusterRole, and will no longer be served in v1.22.
+// Deprecated in v1.17 in favor of rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1 ClusterRole, and will no longer be served in v1.22.
 type ClusterRole struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
@@ -206,11 +206,11 @@ type AggregationRule struct {
 
 // +genclient
 // +genclient:nonNamespaced
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole in the global namespace,
 // and adds who information via Subject.
-// Deprecated in v1.17 in favor of rbac.authorization.ck-kube/kubernetes/v1 ClusterRoleBinding, and will no longer be served in v1.22.
+// Deprecated in v1.17 in favor of rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1 ClusterRoleBinding, and will no longer be served in v1.22.
 type ClusterRoleBinding struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
@@ -227,10 +227,10 @@ type ClusterRoleBinding struct {
 	RoleRef RoleRef `json:"roleRef" protobuf:"bytes,3,opt,name=roleRef"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ClusterRoleBindingList is a collection of ClusterRoleBindings.
-// Deprecated in v1.17 in favor of rbac.authorization.ck-kube/kubernetes/v1 ClusterRoleBindings, and will no longer be served in v1.22.
+// Deprecated in v1.17 in favor of rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1 ClusterRoleBindings, and will no longer be served in v1.22.
 type ClusterRoleBindingList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
@@ -241,10 +241,10 @@ type ClusterRoleBindingList struct {
 	Items []ClusterRoleBinding `json:"items" protobuf:"bytes,2,rep,name=items"`
 }
 
-// +k8s:deepcopy-gen:interfaces=ck-kube/kubernetes/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime.Object
 
 // ClusterRoleList is a collection of ClusterRoles.
-// Deprecated in v1.17 in favor of rbac.authorization.ck-kube/kubernetes/v1 ClusterRoles, and will no longer be served in v1.22.
+// Deprecated in v1.17 in favor of rbac.authorization.github.com/fslqd/ck-kube/kubernetes/v1 ClusterRoles, and will no longer be served in v1.22.
 type ClusterRoleList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.

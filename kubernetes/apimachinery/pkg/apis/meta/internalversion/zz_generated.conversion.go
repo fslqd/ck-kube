@@ -24,9 +24,9 @@ package internalversion
 import (
 	unsafe "unsafe"
 
-	v1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	conversion "ck-kube/kubernetes/apimachinery/pkg/conversion"
-	runtime "ck-kube/kubernetes/apimachinery/pkg/runtime"
+	v1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	conversion "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/conversion"
+	runtime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 )
 
 func init() {

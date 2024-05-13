@@ -17,13 +17,13 @@ limitations under the License.
 package v1beta1
 
 import (
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 // GroupName is the group name use in this package
-const GroupName = "storage.ck-kube/kubernetes"
+const GroupName = "storage.github.com/fslqd/ck-kube/kubernetes"
 
 // SchemeGroupVersion is group version used to register these objects
 var SchemeGroupVersion = schema.GroupVersion{Group: GroupName, Version: "v1beta1"}
@@ -34,8 +34,8 @@ func Resource(resource string) schema.GroupResource {
 }
 
 var (
-	// TODO: move SchemeBuilder with zz_generated.deepcopy.go to ck-kube/kubernetes/api.
-	// localSchemeBuilder and AddToScheme will stay in ck-kube/kubernetes/kubernetes.
+	// TODO: move SchemeBuilder with zz_generated.deepcopy.go to github.com/fslqd/ck-kube/kubernetes/api.
+	// localSchemeBuilder and AddToScheme will stay in github.com/fslqd/ck-kube/kubernetes/kubernetes.
 	SchemeBuilder      = runtime.NewSchemeBuilder(addKnownTypes)
 	localSchemeBuilder = &SchemeBuilder
 	AddToScheme        = localSchemeBuilder.AddToScheme

@@ -19,13 +19,13 @@ limitations under the License.
 package v1alpha1
 
 import (
-	v1alpha1 "ck-kube/kubernetes/api/storage/v1alpha1"
-	resource "ck-kube/kubernetes/apimachinery/pkg/api/resource"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	v1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/storage/v1alpha1"
+	resource "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/resource"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // CSIStorageCapacityApplyConfiguration represents an declarative configuration of the CSIStorageCapacity type for use
@@ -46,7 +46,7 @@ func CSIStorageCapacity(name, namespace string) *CSIStorageCapacityApplyConfigur
 	b.WithName(name)
 	b.WithNamespace(namespace)
 	b.WithKind("CSIStorageCapacity")
-	b.WithAPIVersion("storage.ck-kube/kubernetes/v1alpha1")
+	b.WithAPIVersion("storage.github.com/fslqd/ck-kube/kubernetes/v1alpha1")
 	return b
 }
 
@@ -82,7 +82,7 @@ func extractCSIStorageCapacity(cSIStorageCapacity *v1alpha1.CSIStorageCapacity, 
 	b.WithNamespace(cSIStorageCapacity.Namespace)
 
 	b.WithKind("CSIStorageCapacity")
-	b.WithAPIVersion("storage.ck-kube/kubernetes/v1alpha1")
+	b.WithAPIVersion("storage.github.com/fslqd/ck-kube/kubernetes/v1alpha1")
 	return b, nil
 }
 

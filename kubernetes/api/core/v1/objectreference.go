@@ -17,7 +17,7 @@ limitations under the License.
 package v1
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 // IsAnAPIObject allows clients to preemptively get a reference to an API object and pass it to places that

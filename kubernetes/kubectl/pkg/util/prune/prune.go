@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/klog/v2"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/klog/v2"
 )
 
 // default allowlist of namespaced resources
@@ -36,7 +36,7 @@ var defaultNamespacedPruneResources = []Resource{
 	{"", "v1", "Service", true},
 	{"batch", "v1", "Job", true},
 	{"batch", "v1", "CronJob", true},
-	{"networking.ck-kube/kubernetes", "v1", "Ingress", true},
+	{"networking.github.com/fslqd/ck-kube/kubernetes", "v1", "Ingress", true},
 	{"apps", "v1", "DaemonSet", true},
 	{"apps", "v1", "Deployment", true},
 	{"apps", "v1", "ReplicaSet", true},

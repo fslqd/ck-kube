@@ -24,11 +24,11 @@ import (
 
 	"k8s.io/klog/v2"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	utilcache "ck-kube/kubernetes/apimachinery/pkg/util/cache"
-	utilruntime "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	utilcache "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/cache"
+	utilruntime "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 )
 
 // MutationCache is able to take the result of update operations and stores them in an LRU

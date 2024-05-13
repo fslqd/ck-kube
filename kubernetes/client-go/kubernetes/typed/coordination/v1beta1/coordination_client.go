@@ -21,9 +21,9 @@ package v1beta1
 import (
 	"net/http"
 
-	v1beta1 "ck-kube/kubernetes/api/coordination/v1beta1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1beta1 "github.com/fslqd/ck-kube/kubernetes/api/coordination/v1beta1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type CoordinationV1beta1Interface interface {
@@ -31,7 +31,7 @@ type CoordinationV1beta1Interface interface {
 	LeasesGetter
 }
 
-// CoordinationV1beta1Client is used to interact with features provided by the coordination.ck-kube/kubernetes group.
+// CoordinationV1beta1Client is used to interact with features provided by the coordination.github.com/fslqd/ck-kube/kubernetes group.
 type CoordinationV1beta1Client struct {
 	restClient rest.Interface
 }

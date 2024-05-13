@@ -36,7 +36,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	netutils "ck-kube/kubernetes/utils/net"
+	netutils "github.com/fslqd/ck-kube/kubernetes/utils/net"
 	"golang.org/x/net/http2"
 	"k8s.io/klog/v2"
 )

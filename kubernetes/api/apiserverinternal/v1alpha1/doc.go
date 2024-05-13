@@ -18,8 +18,8 @@ limitations under the License.
 // +k8s:protobuf-gen=package
 // +k8s:openapi-gen=true
 
-// +groupName=internal.apiserver.ck-kube/kubernetes
+// +groupName=internal.apiserver.github.com/fslqd/ck-kube/kubernetes
 
 // Package v1alpha1 contains the v1alpha1 version of the API used by the
 // apiservers themselves.
-package v1alpha1 // import "ck-kube/kubernetes/api/apiserverinternal/v1alpha1"
+package v1alpha1 // import "github.com/fslqd/ck-kube/kubernetes/api/apiserverinternal/v1alpha1"

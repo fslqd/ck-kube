@@ -17,8 +17,8 @@ limitations under the License.
 package memory
 
 import (
-	"ck-kube/kubernetes/client-go/discovery"
-	"ck-kube/kubernetes/client-go/discovery/cached/memory"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/discovery"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/discovery/cached/memory"
 )
 
 // NewMemCacheClient is DEPRECATED. Use memory.NewMemCacheClient directly.

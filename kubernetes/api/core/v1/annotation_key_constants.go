@@ -21,7 +21,7 @@ package v1
 const (
 	// ImagePolicyFailedOpenKey is added to pods created by failing open when the image policy
 	// webhook backend fails.
-	ImagePolicyFailedOpenKey string = "alpha.image-policy.ck-kube/kubernetes/failed-open"
+	ImagePolicyFailedOpenKey string = "alpha.image-policy.github.com/fslqd/ck-kube/kubernetes/failed-open"
 
 	// MirrorAnnotationKey represents the annotation key set by kubelets when creating mirror pods
 	MirrorPodAnnotationKey string = "kubernetes.io/config.mirror"

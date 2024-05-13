@@ -18,6 +18,6 @@ limitations under the License.
 // +k8s:protobuf-gen=package
 // +k8s:openapi-gen=true
 // +k8s:prerelease-lifecycle-gen=true
-// +groupName=networking.ck-kube/kubernetes
+// +groupName=networking.github.com/fslqd/ck-kube/kubernetes
 
-package v1beta1 // import "ck-kube/kubernetes/api/networking/v1beta1"
+package v1beta1 // import "github.com/fslqd/ck-kube/kubernetes/api/networking/v1beta1"

@@ -20,8 +20,8 @@ import (
 	"reflect"
 	"strconv"
 
-	"ck-kube/kubernetes/kube-openapi/pkg/internal"
-	jsonv2 "ck-kube/kubernetes/kube-openapi/pkg/internal/third_party/go-json-experiment/json"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/internal"
+	jsonv2 "github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/internal/third_party/go-json-experiment/json"
 	"github.com/go-openapi/swag"
 )
 

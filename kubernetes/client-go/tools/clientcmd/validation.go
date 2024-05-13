@@ -23,9 +23,9 @@ import (
 	"reflect"
 	"strings"
 
-	utilerrors "ck-kube/kubernetes/apimachinery/pkg/util/errors"
-	"ck-kube/kubernetes/apimachinery/pkg/util/validation"
-	clientcmdapi "ck-kube/kubernetes/client-go/tools/clientcmd/api"
+	utilerrors "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/errors"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/validation"
+	clientcmdapi "github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api"
 )
 
 var (

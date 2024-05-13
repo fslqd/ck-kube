@@ -19,9 +19,9 @@ limitations under the License.
 package v1
 
 import (
-	batchv1 "ck-kube/kubernetes/api/batch/v1"
-	corev1 "ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
-	metav1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	batchv1 "github.com/fslqd/ck-kube/kubernetes/api/batch/v1"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // JobSpecApplyConfiguration represents an declarative configuration of the JobSpec type for use

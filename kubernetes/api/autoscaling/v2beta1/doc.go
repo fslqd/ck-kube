@@ -19,4 +19,4 @@ limitations under the License.
 // +k8s:openapi-gen=true
 // +k8s:prerelease-lifecycle-gen=true
 
-package v2beta1 // import "ck-kube/kubernetes/api/autoscaling/v2beta1"
+package v2beta1 // import "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2beta1"

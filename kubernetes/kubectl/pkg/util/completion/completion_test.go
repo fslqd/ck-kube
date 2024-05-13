@@ -23,14 +23,14 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"ck-kube/kubernetes/cli-runtime/pkg/genericiooptions"
-	"ck-kube/kubernetes/cli-runtime/pkg/resource"
-	"ck-kube/kubernetes/client-go/rest/fake"
-	"ck-kube/kubernetes/client-go/tools/clientcmd"
-	"ck-kube/kubernetes/client-go/tools/clientcmd/api"
-	"ck-kube/kubernetes/kubectl/pkg/cmd/get"
-	cmdtesting "ck-kube/kubernetes/kubectl/pkg/cmd/testing"
-	"ck-kube/kubernetes/kubectl/pkg/scheme"
+	"github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/genericiooptions"
+	"github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/resource"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/rest/fake"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api"
+	"github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/cmd/get"
+	cmdtesting "github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/cmd/testing"
+	"github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/scheme"
 )
 
 func TestClusterCompletionFunc(t *testing.T) {

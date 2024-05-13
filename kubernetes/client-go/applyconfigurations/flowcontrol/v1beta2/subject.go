@@ -19,7 +19,7 @@ limitations under the License.
 package v1beta2
 
 import (
-	v1beta2 "ck-kube/kubernetes/api/flowcontrol/v1beta2"
+	v1beta2 "github.com/fslqd/ck-kube/kubernetes/api/flowcontrol/v1beta2"
 )
 
 // SubjectApplyConfiguration represents an declarative configuration of the Subject type for use

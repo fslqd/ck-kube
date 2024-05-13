@@ -19,7 +19,7 @@ package runtime
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 )
 
 // NegotiateError is returned when a ClientNegotiator is unable to locate

@@ -24,7 +24,7 @@ import (
 	"strconv"
 	"strings"
 
-	"ck-kube/kubernetes/apimachinery/pkg/conversion"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/conversion"
 )
 
 // DefaultMetaV1FieldSelectorConversion auto-accepts metav1 values for name and namespace.

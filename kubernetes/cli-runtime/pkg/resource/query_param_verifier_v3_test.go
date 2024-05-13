@@ -20,11 +20,11 @@ import (
 	"strings"
 	"testing"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/client-go/openapi/cached"
-	"ck-kube/kubernetes/client-go/openapi/openapitest"
-	"ck-kube/kubernetes/client-go/openapi3"
-	"ck-kube/kubernetes/kube-openapi/pkg/spec3"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi/cached"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi/openapitest"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi3"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/spec3"
 )
 
 func TestV3SupportsQueryParamBatchV1(t *testing.T) {

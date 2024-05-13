@@ -23,7 +23,7 @@ import (
 
 	"k8s.io/klog/v2"
 
-	clientcmdapi "ck-kube/kubernetes/client-go/tools/clientcmd/api"
+	clientcmdapi "github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api"
 )
 
 type AuthProvider interface {

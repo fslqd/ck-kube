@@ -23,7 +23,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 )
 
 // AsyncTracker helps propagate HasSynced in the face of multiple worker threads.

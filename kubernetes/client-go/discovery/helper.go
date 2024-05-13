@@ -19,11 +19,11 @@ package discovery
 import (
 	"fmt"
 
-	apierrors "ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
-	apimachineryversion "ck-kube/kubernetes/apimachinery/pkg/version"
+	apierrors "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	apimachineryversion "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/version"
 )
 
 // IsResourceEnabled queries the server to determine if the resource specified is present on the server.

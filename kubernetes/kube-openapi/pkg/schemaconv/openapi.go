@@ -21,7 +21,7 @@ import (
 	"path"
 	"strings"
 
-	"ck-kube/kubernetes/kube-openapi/pkg/validation/spec"
+	"github.com/fslqd/ck-kube/kubernetes/kube-openapi/pkg/validation/spec"
 	"sigs.k8s.io/structured-merge-diff/v4/schema"
 )
 

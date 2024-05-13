@@ -21,13 +21,13 @@ import (
 	"io"
 	"strings"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	"ck-kube/kubernetes/client-go/rest"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 // dynamicCodec is a codec that wraps the standard unstructured codec
@@ -41,7 +41,7 @@ func (dynamicCodec) Decode(data []byte, gvk *schema.GroupVersionKind, obj runtim
 		return nil, nil, err
 	}
 
-	if strings.EqualFold(gvk.Kind, "status") && gvk.Version == "v1" && (gvk.Group == "" || gvk.Group == "meta.ck-kube/kubernetes") {
+	if strings.EqualFold(gvk.Kind, "status") && gvk.Version == "v1" && (gvk.Group == "" || gvk.Group == "meta.github.com/fslqd/ck-kube/kubernetes") {
 		if _, ok := obj.(*metav1.Status); !ok {
 			obj = &metav1.Status{}
 			err := json.Unmarshal(data, obj)

@@ -19,12 +19,12 @@ limitations under the License.
 package v1
 
 import (
-	discoveryv1 "ck-kube/kubernetes/api/discovery/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	discoveryv1 "github.com/fslqd/ck-kube/kubernetes/api/discovery/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // EndpointSliceApplyConfiguration represents an declarative configuration of the EndpointSlice type for use
@@ -44,7 +44,7 @@ func EndpointSlice(name, namespace string) *EndpointSliceApplyConfiguration {
 	b.WithName(name)
 	b.WithNamespace(namespace)
 	b.WithKind("EndpointSlice")
-	b.WithAPIVersion("discovery.ck-kube/kubernetes/v1")
+	b.WithAPIVersion("discovery.github.com/fslqd/ck-kube/kubernetes/v1")
 	return b
 }
 
@@ -80,7 +80,7 @@ func extractEndpointSlice(endpointSlice *discoveryv1.EndpointSlice, fieldManager
 	b.WithNamespace(endpointSlice.Namespace)
 
 	b.WithKind("EndpointSlice")
-	b.WithAPIVersion("discovery.ck-kube/kubernetes/v1")
+	b.WithAPIVersion("discovery.github.com/fslqd/ck-kube/kubernetes/v1")
 	return b, nil
 }
 

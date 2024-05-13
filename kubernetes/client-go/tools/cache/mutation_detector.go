@@ -26,8 +26,8 @@ import (
 
 	"k8s.io/klog/v2"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/util/diff"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/diff"
 )
 
 var mutationDetectionEnabled = false

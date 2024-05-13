@@ -16,7 +16,7 @@ limitations under the License.
 
 package runtime
 
-import "ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+import "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 
 // SetGroupVersionKind satisfies the ObjectKind interface for all objects that embed TypeMeta
 func (obj *TypeMeta) SetGroupVersionKind(gvk schema.GroupVersionKind) {

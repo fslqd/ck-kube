@@ -22,9 +22,9 @@ import (
 	"sync"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 
-	utiltrace "ck-kube/kubernetes/utils/trace"
+	utiltrace "github.com/fslqd/ck-kube/kubernetes/utils/trace"
 	"k8s.io/klog/v2"
 )
 
@@ -216,7 +216,7 @@ type Deltas []Delta
 //
 //	Example:
 //	In case of sharedIndexInformer being a consumer
-//	(https://github.com/kubernetes/kubernetes/blob/0cdd940f/staging/src/ck-kube/kubernetes/client-go/tools/cache/shared_informer.go#L192),
+//	(https://github.com/kubernetes/kubernetes/blob/0cdd940f/staging/src/github.com/fslqd/ck-kube/kubernetes/client-go/tools/cache/shared_informer.go#L192),
 //	there is no race as knownObjects (s.indexer) is modified safely
 //	under DeltaFIFO's lock. The only exceptions are GetStore() and
 //	GetIndexer() methods, which expose ways to modify the underlying
@@ -228,7 +228,7 @@ type Deltas []Delta
 // Warning: This constructs a DeltaFIFO that does not differentiate between
 // events caused by a call to Replace (e.g., from a relist, which may
 // contain object updates), and synthetic events caused by a periodic resync
-// (which just emit the existing object). See https://issue.ck-kube/kubernetes/86015 for details.
+// (which just emit the existing object). See https://issue.github.com/fslqd/ck-kube/kubernetes/86015 for details.
 //
 // Use `NewDeltaFIFOWithOptions(DeltaFIFOOptions{..., EmitDeltaTypeReplaced: true})`
 // instead to receive a `Replaced` event depending on the type.

@@ -16,4 +16,4 @@ limitations under the License.
 
 // +k8s:deepcopy-gen=package
 
-package api // import "ck-kube/kubernetes/client-go/tools/clientcmd/api"
+package api // import "github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api"

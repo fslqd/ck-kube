@@ -28,7 +28,7 @@ import (
 	"testing"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/dump"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/dump"
 	"github.com/stretchr/testify/assert"
 )
 

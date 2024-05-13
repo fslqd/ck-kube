@@ -19,7 +19,7 @@ package meta
 import (
 	"time"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // SetStatusCondition sets the corresponding condition in conditions to newCondition and returns true

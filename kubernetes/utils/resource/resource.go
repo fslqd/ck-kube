@@ -3,8 +3,8 @@ package resource
 import (
 	"strings"
 
-	corev1 "ck-kube/kubernetes/core/v1"
-	"ck-kube/kubernetes/utils/sets"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/core/v1"
+	"github.com/fslqd/ck-kube/kubernetes/utils/sets"
 )
 
 func PodRequestsAndLimits(pod *corev1.Pod) (reqs, limits corev1.ResourceList) {

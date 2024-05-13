@@ -19,7 +19,7 @@ limitations under the License.
 package v2
 
 import (
-	v1 "ck-kube/kubernetes/api/core/v1"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
 )
 
 // ContainerResourceMetricSourceApplyConfiguration represents an declarative configuration of the ContainerResourceMetricSource type for use

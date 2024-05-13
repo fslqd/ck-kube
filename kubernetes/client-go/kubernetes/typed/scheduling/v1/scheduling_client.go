@@ -21,9 +21,9 @@ package v1
 import (
 	"net/http"
 
-	v1 "ck-kube/kubernetes/api/scheduling/v1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/scheduling/v1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type SchedulingV1Interface interface {
@@ -31,7 +31,7 @@ type SchedulingV1Interface interface {
 	PriorityClassesGetter
 }
 
-// SchedulingV1Client is used to interact with features provided by the scheduling.ck-kube/kubernetes group.
+// SchedulingV1Client is used to interact with features provided by the scheduling.github.com/fslqd/ck-kube/kubernetes group.
 type SchedulingV1Client struct {
 	restClient rest.Interface
 }

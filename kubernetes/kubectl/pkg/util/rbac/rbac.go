@@ -17,8 +17,8 @@ limitations under the License.
 package rbac
 
 import (
-	rbacv1 "ck-kube/kubernetes/api/rbac/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	rbacv1 "github.com/fslqd/ck-kube/kubernetes/api/rbac/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 	"reflect"
 )
 

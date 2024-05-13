@@ -22,8 +22,8 @@ import (
 	"sync"
 	"time"
 
-	"ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"ck-kube/kubernetes/utils/clock"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/utils/clock"
 )
 
 // Backoff holds parameters applied to a Backoff function.

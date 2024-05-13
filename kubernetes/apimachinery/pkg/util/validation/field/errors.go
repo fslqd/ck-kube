@@ -22,8 +22,8 @@ import (
 	"strconv"
 	"strings"
 
-	utilerrors "ck-kube/kubernetes/apimachinery/pkg/util/errors"
-	"ck-kube/kubernetes/apimachinery/pkg/util/sets"
+	utilerrors "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/errors"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/sets"
 )
 
 // Error is an implementation of the 'error' interface, which represents a

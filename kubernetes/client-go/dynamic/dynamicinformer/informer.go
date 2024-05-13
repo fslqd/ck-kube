@@ -21,15 +21,15 @@ import (
 	"sync"
 	"time"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/watch"
-	"ck-kube/kubernetes/client-go/dynamic"
-	"ck-kube/kubernetes/client-go/dynamic/dynamiclister"
-	"ck-kube/kubernetes/client-go/informers"
-	"ck-kube/kubernetes/client-go/tools/cache"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1/unstructured"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/watch"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/dynamic"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/dynamic/dynamiclister"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/informers"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/cache"
 )
 
 // NewDynamicSharedInformerFactory constructs a new instance of dynamicSharedInformerFactory for all namespaces.

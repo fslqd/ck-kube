@@ -24,7 +24,7 @@ import (
 
 	"golang.org/x/term"
 
-	clientauth "ck-kube/kubernetes/client-go/tools/auth"
+	clientauth "github.com/fslqd/ck-kube/kubernetes/client-go/tools/auth"
 )
 
 // AuthLoaders are used to build clientauth.Info objects.

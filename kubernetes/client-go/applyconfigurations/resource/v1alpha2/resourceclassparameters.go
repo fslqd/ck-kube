@@ -19,12 +19,12 @@ limitations under the License.
 package v1alpha2
 
 import (
-	resourcev1alpha2 "ck-kube/kubernetes/api/resource/v1alpha2"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	resourcev1alpha2 "github.com/fslqd/ck-kube/kubernetes/api/resource/v1alpha2"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // ResourceClassParametersApplyConfiguration represents an declarative configuration of the ResourceClassParameters type for use
@@ -44,7 +44,7 @@ func ResourceClassParameters(name, namespace string) *ResourceClassParametersApp
 	b.WithName(name)
 	b.WithNamespace(namespace)
 	b.WithKind("ResourceClassParameters")
-	b.WithAPIVersion("resource.ck-kube/kubernetes/v1alpha2")
+	b.WithAPIVersion("resource.github.com/fslqd/ck-kube/kubernetes/v1alpha2")
 	return b
 }
 
@@ -80,7 +80,7 @@ func extractResourceClassParameters(resourceClassParameters *resourcev1alpha2.Re
 	b.WithNamespace(resourceClassParameters.Namespace)
 
 	b.WithKind("ResourceClassParameters")
-	b.WithAPIVersion("resource.ck-kube/kubernetes/v1alpha2")
+	b.WithAPIVersion("resource.github.com/fslqd/ck-kube/kubernetes/v1alpha2")
 	return b, nil
 }
 

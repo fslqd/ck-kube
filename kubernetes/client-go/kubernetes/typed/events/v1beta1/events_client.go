@@ -21,9 +21,9 @@ package v1beta1
 import (
 	"net/http"
 
-	v1beta1 "ck-kube/kubernetes/api/events/v1beta1"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1beta1 "github.com/fslqd/ck-kube/kubernetes/api/events/v1beta1"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type EventsV1beta1Interface interface {
@@ -31,7 +31,7 @@ type EventsV1beta1Interface interface {
 	EventsGetter
 }
 
-// EventsV1beta1Client is used to interact with features provided by the events.ck-kube/kubernetes group.
+// EventsV1beta1Client is used to interact with features provided by the events.github.com/fslqd/ck-kube/kubernetes group.
 type EventsV1beta1Client struct {
 	restClient rest.Interface
 }

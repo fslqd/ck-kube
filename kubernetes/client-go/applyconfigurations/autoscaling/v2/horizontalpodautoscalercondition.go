@@ -19,9 +19,9 @@ limitations under the License.
 package v2
 
 import (
-	v2 "ck-kube/kubernetes/api/autoscaling/v2"
-	v1 "ck-kube/kubernetes/api/core/v1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	v2 "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2"
+	v1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
 )
 
 // HorizontalPodAutoscalerConditionApplyConfiguration represents an declarative configuration of the HorizontalPodAutoscalerCondition type for use

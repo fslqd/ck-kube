@@ -26,15 +26,15 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/cli-runtime/pkg/genericclioptions"
-	"ck-kube/kubernetes/cli-runtime/pkg/genericiooptions"
-	"ck-kube/kubernetes/cli-runtime/pkg/printers"
-	"ck-kube/kubernetes/kubectl/pkg/cmd/apiresources"
-	"ck-kube/kubernetes/kubectl/pkg/cmd/get"
-	cmdutil "ck-kube/kubernetes/kubectl/pkg/cmd/util"
-	"ck-kube/kubernetes/kubectl/pkg/polymorphichelpers"
-	"ck-kube/kubernetes/kubectl/pkg/scheme"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/genericclioptions"
+	"github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/genericiooptions"
+	"github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/printers"
+	"github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/cmd/apiresources"
+	"github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/cmd/get"
+	cmdutil "github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/cmd/util"
+	"github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/polymorphichelpers"
+	"github.com/fslqd/ck-kube/kubernetes/kubectl/pkg/scheme"
 )
 
 var factory cmdutil.Factory

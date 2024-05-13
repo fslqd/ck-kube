@@ -21,9 +21,9 @@ package v1beta2
 import (
 	"net/http"
 
-	v1beta2 "ck-kube/kubernetes/api/apps/v1beta2"
-	"ck-kube/kubernetes/client-go/kubernetes/scheme"
-	rest "ck-kube/kubernetes/client-go/rest"
+	v1beta2 "github.com/fslqd/ck-kube/kubernetes/api/apps/v1beta2"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/kubernetes/scheme"
+	rest "github.com/fslqd/ck-kube/kubernetes/client-go/rest"
 )
 
 type AppsV1beta2Interface interface {

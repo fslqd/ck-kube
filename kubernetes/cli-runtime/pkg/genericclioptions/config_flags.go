@@ -26,16 +26,16 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/cli-runtime/pkg/genericiooptions"
-	"ck-kube/kubernetes/cli-runtime/pkg/printers"
-	"ck-kube/kubernetes/client-go/discovery"
-	diskcached "ck-kube/kubernetes/client-go/discovery/cached/disk"
-	"ck-kube/kubernetes/client-go/rest"
-	"ck-kube/kubernetes/client-go/restmapper"
-	"ck-kube/kubernetes/client-go/tools/clientcmd"
-	"ck-kube/kubernetes/client-go/util/homedir"
-	utilpointer "ck-kube/kubernetes/utils/pointer"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/genericiooptions"
+	"github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/printers"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/discovery"
+	diskcached "github.com/fslqd/ck-kube/kubernetes/client-go/discovery/cached/disk"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/rest"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/restmapper"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/util/homedir"
+	utilpointer "github.com/fslqd/ck-kube/kubernetes/utils/pointer"
 )
 
 const (

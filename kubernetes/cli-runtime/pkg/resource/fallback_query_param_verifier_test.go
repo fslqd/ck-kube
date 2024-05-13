@@ -20,12 +20,12 @@ import (
 	"fmt"
 	"testing"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/errors"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/client-go/discovery"
-	"ck-kube/kubernetes/client-go/openapi/cached"
-	"ck-kube/kubernetes/client-go/openapi/openapitest"
-	"ck-kube/kubernetes/client-go/openapi3"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/errors"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/discovery"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi/cached"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi/openapitest"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/openapi3"
 )
 
 func TestFallbackQueryParamVerifier_PrimaryNoFallback(t *testing.T) {

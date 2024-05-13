@@ -19,7 +19,7 @@ package internal
 import (
 	"fmt"
 
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
 	"sigs.k8s.io/structured-merge-diff/v4/fieldpath"
 )
 

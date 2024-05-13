@@ -21,4 +21,4 @@ limitations under the License.
 // standard command line arguments and parameters into a Visitor that can iterate
 // over all of the identified resources, whether on the server or on the local
 // filesystem.
-package resource // import "ck-kube/kubernetes/cli-runtime/pkg/resource"
+package resource // import "github.com/fslqd/ck-kube/kubernetes/cli-runtime/pkg/resource"

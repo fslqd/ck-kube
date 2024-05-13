@@ -19,8 +19,8 @@ package scheme
 import (
 	"testing"
 
-	"ck-kube/kubernetes/apimachinery/pkg/api/apitesting/roundtrip"
-	"ck-kube/kubernetes/apimachinery/pkg/apis/meta/fuzzer"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/apitesting/roundtrip"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/fuzzer"
 )
 
 func TestRoundTrip(t *testing.T) {

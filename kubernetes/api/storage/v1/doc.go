@@ -16,7 +16,7 @@ limitations under the License.
 
 // +k8s:deepcopy-gen=package
 // +k8s:protobuf-gen=package
-// +groupName=storage.ck-kube/kubernetes
+// +groupName=storage.github.com/fslqd/ck-kube/kubernetes
 // +k8s:openapi-gen=true
 
-package v1 // import "ck-kube/kubernetes/api/storage/v1"
+package v1 // import "github.com/fslqd/ck-kube/kubernetes/api/storage/v1"

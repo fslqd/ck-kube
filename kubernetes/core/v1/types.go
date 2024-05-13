@@ -2,8 +2,8 @@ package v1
 
 import (
 	"fmt"
-	//"ck-kube/kubernetes/api/resource"
-	metav1 "ck-kube/kubernetes/apis/meta/v1"
+	//"github.com/fslqd/ck-kube/kubernetes/api/resource"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apis/meta/v1"
 	"strconv"
 )
 

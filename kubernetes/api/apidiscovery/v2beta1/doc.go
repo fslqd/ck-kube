@@ -19,6 +19,6 @@ limitations under the License.
 // +k8s:openapi-gen=true
 // +k8s:prerelease-lifecycle-gen=true
 
-// +groupName=apidiscovery.ck-kube/kubernetes
+// +groupName=apidiscovery.github.com/fslqd/ck-kube/kubernetes
 
-package v2beta1 // import "ck-kube/kubernetes/api/apidiscovery/v2beta1"
+package v2beta1 // import "github.com/fslqd/ck-kube/kubernetes/api/apidiscovery/v2beta1"

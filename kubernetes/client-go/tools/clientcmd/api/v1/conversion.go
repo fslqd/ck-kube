@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"sort"
 
-	"ck-kube/kubernetes/apimachinery/pkg/conversion"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/client-go/tools/clientcmd/api"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/conversion"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/clientcmd/api"
 )
 
 func Convert_Slice_v1_NamedCluster_To_Map_string_To_Pointer_api_Cluster(in *[]NamedCluster, out *map[string]*api.Cluster, s conversion.Scope) error {

@@ -23,12 +23,12 @@ import (
 	"fmt"
 	"io"
 
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/cbor/internal/modes"
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/recognizer"
-	util "ck-kube/kubernetes/apimachinery/pkg/util/runtime"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/cbor/internal/modes"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/serializer/recognizer"
+	util "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
 
 	"github.com/fxamacker/cbor/v2"
 )

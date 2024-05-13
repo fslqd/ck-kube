@@ -18,4 +18,4 @@ limitations under the License.
 // +k8s:protobuf-gen=package
 // +k8s:openapi-gen=true
 
-package v2 // import "ck-kube/kubernetes/api/autoscaling/v2"
+package v2 // import "github.com/fslqd/ck-kube/kubernetes/api/autoscaling/v2"

@@ -17,11 +17,11 @@ limitations under the License.
 package resource
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/api/meta"
-	"ck-kube/kubernetes/apimachinery/pkg/types"
-	"ck-kube/kubernetes/client-go/discovery"
-	"ck-kube/kubernetes/client-go/rest"
-	"ck-kube/kubernetes/client-go/restmapper"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/discovery"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/rest"
+	"github.com/fslqd/ck-kube/kubernetes/client-go/restmapper"
 )
 
 type RESTClientGetter interface {

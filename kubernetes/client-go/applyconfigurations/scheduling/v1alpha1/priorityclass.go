@@ -19,13 +19,13 @@ limitations under the License.
 package v1alpha1
 
 import (
-	corev1 "ck-kube/kubernetes/api/core/v1"
-	v1alpha1 "ck-kube/kubernetes/api/scheduling/v1alpha1"
-	metav1 "ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
-	types "ck-kube/kubernetes/apimachinery/pkg/types"
-	managedfields "ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
-	internal "ck-kube/kubernetes/client-go/applyconfigurations/internal"
-	v1 "ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
+	corev1 "github.com/fslqd/ck-kube/kubernetes/api/core/v1"
+	v1alpha1 "github.com/fslqd/ck-kube/kubernetes/api/scheduling/v1alpha1"
+	metav1 "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/apis/meta/v1"
+	types "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/types"
+	managedfields "github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/managedfields"
+	internal "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/internal"
+	v1 "github.com/fslqd/ck-kube/kubernetes/client-go/applyconfigurations/meta/v1"
 )
 
 // PriorityClassApplyConfiguration represents an declarative configuration of the PriorityClass type for use
@@ -45,7 +45,7 @@ func PriorityClass(name string) *PriorityClassApplyConfiguration {
 	b := &PriorityClassApplyConfiguration{}
 	b.WithName(name)
 	b.WithKind("PriorityClass")
-	b.WithAPIVersion("scheduling.ck-kube/kubernetes/v1alpha1")
+	b.WithAPIVersion("scheduling.github.com/fslqd/ck-kube/kubernetes/v1alpha1")
 	return b
 }
 
@@ -80,7 +80,7 @@ func extractPriorityClass(priorityClass *v1alpha1.PriorityClass, fieldManager st
 	b.WithName(priorityClass.Name)
 
 	b.WithKind("PriorityClass")
-	b.WithAPIVersion("scheduling.ck-kube/kubernetes/v1alpha1")
+	b.WithAPIVersion("scheduling.github.com/fslqd/ck-kube/kubernetes/v1alpha1")
 	return b, nil
 }
 

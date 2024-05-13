@@ -17,7 +17,7 @@ limitations under the License.
 package resource
 
 import (
-	"ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
+	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
 	"k8s.io/klog/v2"
 )
 

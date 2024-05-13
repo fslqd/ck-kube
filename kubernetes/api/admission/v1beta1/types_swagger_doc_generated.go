@@ -43,7 +43,7 @@ var map_AdmissionRequest = map[string]string{
 	"object":             "Object is the object from the incoming request.",
 	"oldObject":          "OldObject is the existing object. Only populated for DELETE and UPDATE requests.",
 	"dryRun":             "DryRun indicates that modifications will definitely not be persisted for this request. Defaults to false.",
-	"options":            "Options is the operation option structure of the operation being performed. e.g. `meta.ck-kube/kubernetes/v1.DeleteOptions` or `meta.ck-kube/kubernetes/v1.CreateOptions`. This may be different than the options the caller provided. e.g. for a patch request the performed Operation might be a CREATE, in which case the Options will a `meta.ck-kube/kubernetes/v1.CreateOptions` even though the caller provided `meta.ck-kube/kubernetes/v1.PatchOptions`.",
+	"options":            "Options is the operation option structure of the operation being performed. e.g. `meta.github.com/fslqd/ck-kube/kubernetes/v1.DeleteOptions` or `meta.github.com/fslqd/ck-kube/kubernetes/v1.CreateOptions`. This may be different than the options the caller provided. e.g. for a patch request the performed Operation might be a CREATE, in which case the Options will a `meta.github.com/fslqd/ck-kube/kubernetes/v1.CreateOptions` even though the caller provided `meta.github.com/fslqd/ck-kube/kubernetes/v1.PatchOptions`.",
 }
 
 func (AdmissionRequest) SwaggerDoc() map[string]string {
