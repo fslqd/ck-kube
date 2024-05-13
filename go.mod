@@ -1,4 +1,4 @@
-module ck-kube
+module github.com/fslqd/ck-kube
 
 go 1.22.0
 
