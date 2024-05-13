@@ -22,7 +22,7 @@ import (
 
 	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/api/meta"
 	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/runtime/schema"
-	"github.com/fslqd/ck-kube/kubernetes/klog/v2"
+	"k8s.io/klog/v2"
 )
 
 // default allowlist of namespaced resources

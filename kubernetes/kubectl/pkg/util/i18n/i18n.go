@@ -28,7 +28,7 @@ import (
 
 	"github.com/chai2010/gettext-go"
 
-	"github.com/fslqd/ck-kube/kubernetes/klog/v2"
+	"k8s.io/klog/v2"
 )
 
 //go:embed translations

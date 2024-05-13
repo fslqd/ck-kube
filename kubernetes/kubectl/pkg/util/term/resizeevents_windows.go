@@ -20,7 +20,7 @@ import (
 	"time"
 
 	"github.com/fslqd/ck-kube/kubernetes/apimachinery/pkg/util/runtime"
-	"github.com/fslqd/ck-kube/kubernetes/client-go/tools/remotecommand"
+	//"github.com/fslqd/ck-kube/kubernetes/client-go/tools/remotecommand"
 )
 
 // monitorResizeEvents spawns a goroutine that periodically gets the terminal size and tries to send
